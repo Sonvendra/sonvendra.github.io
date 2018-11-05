@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css?family=Arizonia');
 body{margin: 0;
     font-family: 'Roboto Condensed', sans-serif;
     color: #252525;
@@ -23,11 +24,15 @@ header{
     box-shadow: 0 0 15px black;
 }
 .logo{
+    font-family: 'Arizonia', cursive;
     color: white;
-    font-size: 25px;
+    font-size: 45px;
     float: left;
     display: block;
-    margin: 13px 60px;
+    margin-left: 60px;
+}
+.logo a{
+    text-decoration: none;color: white;font-weight: 400;
 }
 nav{
     float: right;
@@ -262,6 +267,15 @@ footer{
     border-radius: 10px;
 }
 */
+.m-nav label{
+    color: #fff;
+    font-size: 31px;
+    padding: 2px;
+    cursor: pointer;
+}
+.m-nav, .m-nav input{
+    display: none;
+}
 .social a{
     text-decoration: none;
     color: gray;
@@ -295,4 +309,102 @@ color: #dc4a25;
 }
 .fa-paint-brush{
     color: #efb41f;
+}
+
+/* =========== Media Query ============= */
+
+@media(min-width:576px) {
+    
+}
+@media(max-width: 575px) {
+    .m-nav{
+        display: block;
+        float: right;
+        margin: 0;
+        width: 12%;
+        padding: 10px;
+    }
+    .logo{
+        padding: 10px;
+        margin: auto;
+        font-size: 28px;
+    }
+    nav{
+        margin: 0;
+        width: 100%;
+    }
+    header{
+        padding: 0;
+    }
+    nav ul{
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        background-color: #32415c80;
+    }
+    
+    nav ul li a{
+        display: block;
+        padding: 10px;
+    }
+    nav ul li a:hover{
+        background-color: #ad5c51;
+    }
+    nav{display: none}
+    #tuggle:checked + nav{display:block}
+
+    .profile-img{
+        width: 300px;
+        margin: 15px auto;
+        display: block;
+        float: none;
+        height: 300px;
+    }
+    .about-sec aside{
+        width: 90%;
+    margin: 10px auto;
+    float: none;
+
+}
+.project-sec {
+    margin: 10px;
+}
+.project-sec .proj-gal{
+    width: 90%;
+    float: none;
+    margin: 15px auto;
+}
+.skill-sec{
+    margin: auto;
+}
+.skill-left ul{
+    padding: 0;
+}
+.skill-left{
+    width: 95%;
+    margin: auto;
+}
+.skill-right{
+    width: 95%;
+    margin: auto;
+}
+.cont{
+    padding: 20px;
+}
+.cont-left{
+    width: 100%;
+    padding-bottom: 30px;
+    border-bottom: 2px solid #8a2be233;
+    margin-bottom: 30px;
+}
+.cont-right{
+    width: 100%;
+    margin: auto;
+}
+}
+@media(min-width:992px) {
+
+}
+@media(min-width:1200px) {
+
 }

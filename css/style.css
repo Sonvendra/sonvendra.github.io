@@ -10,6 +10,7 @@ h1{
 h2{
     text-align: center;
     font-size: 30px;
+    text-shadow: 0 0 5px white;
 }
 p{
     line-height: 22px;
@@ -315,8 +316,7 @@ color: #dc4a25;
 
 /* =========== Media Query ============= */
 
-
-@media(max-width: 575px) {
+@media screen and (min-width: 280px) and (max-width: 575px) {
     nav label{
         display: block;
         float: right;
@@ -346,22 +346,39 @@ color: #dc4a25;
     #tuggle:checked + .m-nav{
         display: block;
     }
+    nav{
+        margin: 0;
+        width: 100%;
+    }
     
     .logo{
         padding: 10px;
         margin: auto;
         font-size: 28px;
     }
-    nav{
-        margin: 0;
-        width: 100%;
-    }
+    
     header{
         padding: 0;
     }
+    .about-sec a{
+        text-decoration: none;
+        padding: 10px 18px;
+        border-radius: 30px;
+        display: inline-block;
+        transition: all 0.4s;
+    }
+    .cont-btn {
+        color: #1e293d99;
+        border: 2px solid #1e293d99;
+        background-color: #ffffffe6;
+    }
+    .cont-down-btn {
+        background-color: #1e293d99;
+        color: #ffffff;
+        border: 2px solid #ffffff;
+        margin-left: 7px;
+    }
     
-    
-
     .profile-img{
         width: 300px;
         margin: 15px auto;
@@ -413,9 +430,127 @@ color: #dc4a25;
     margin: auto;
 }
 }
-@media(min-width:992px) {
 
+@media screen and (min-width:575px) and (max-width:768px) {
+    nav label{
+        display: block;
+        float: right;
+        width: 12%;
+        padding: 10px;
+        position: absolute;
+        top: 0;
+        right: 0;
+    }
+    nav ul{
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        background-color: #32415c80;
+        display: none;
+    }
+    nav ul li a{
+        display: block;
+        padding: 10px;
+    }
+    nav ul li a:hover{
+        background-color: #ad5c51;
+    }
+    .m-nav{  
+        transition: all 1s;
+    }
+    #tuggle:checked + .m-nav{
+        display: block;
+    }
+    nav{
+        margin: 0;
+        width: 100%;
+    }
+    .profile-img{
+        width: 200px;
+        height: 200px;
+        margin: 20px auto;
+        float: none;
+        border-radius: 50%;
+    }
+    .about-sec aside {
+        float: left;
+        width: 100%;
+        padding: 20px;
+        margin-top: 0;
+    }
+    .project-sec {
+        margin: 20px;
+    }
+    .project-sec .proj-gal {
+        width: 44%;
+    }
+    .skill-sec {
+        margin: 20px 0 0;
+        padding: 10px;
+    }
+    .skill-sec h2{
+        color: #fff;
+    }
+    .cont {
+        padding: 20px;    
+    }
+    .cont-left {
+        width: 100%;
+        padding-bottom: 49px;
+    }
+    .cont-right {
+        width: 100%;
+        margin: 0;
+    }
 }
-@media(min-width:1200px) {
 
+@media screen and (min-width: 769px) and (max-width:992px){
+    .profile-img {
+        width: 200px;
+        height: 200px;
+        border-radius: 50%;
+        margin: 30px;
+    }
+    .about-sec aside{
+        width: 60%;
+        margin: 20px auto;
+    }
+    .logo{
+        margin-left: 20px;
+        font-size: 30px;
+    }
+    nav{
+        margin: 0;
+    }
+    .project-sec {
+        margin: 20px;
+    }
+    .project-sec .proj-gal {
+        width: 29%;
+    }
+    .skill-sec {
+        margin: 60px 0 0;
+        padding: 30px 0;
+    }
+    .skill-sec h2{
+        color: #fff;
+    }
+    .cont{
+        padding: 20px;
+    }
 }
+/*@media only screen and (min-width:993px) and (max-width:1200px;){
+    .profile-img {
+        width: 200px;
+        height: 200px;
+        border-radius: 50%;
+        margin: 30px;
+    }
+    .about-sec aside{
+        width: 50%;
+        margin: 20px auto;
+    }
+    .project-sec .proj-gal {
+        width: 29.6%;
+    }
+}*/

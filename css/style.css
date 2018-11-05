@@ -112,6 +112,7 @@ nav ul li a{
     width: 30.3%;
     float: left;
     border: 2px solid #1e293d99;
+    -webkit-border: 2px solid #1e293d99;
     border-radius: 15px;
     padding: 10px;
     margin: 0.5%;
@@ -364,7 +365,6 @@ color: #dc4a25;
         width: 90%;
     margin: 10px auto;
     float: none;
-
 }
 .project-sec {
     margin: 10px;
@@ -376,6 +376,9 @@ color: #dc4a25;
 }
 .skill-sec{
     margin: auto;
+}
+.skill-sec h2{
+    color: #fff;
 }
 .skill-left ul{
     padding: 0;

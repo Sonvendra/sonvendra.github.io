@@ -268,13 +268,14 @@ footer{
     border-radius: 10px;
 }
 */
-.m-nav label{
+nav label{
     color: #fff;
     font-size: 31px;
     padding: 2px;
     cursor: pointer;
+    display: none;
 }
-.m-nav, .m-nav input{
+nav input{
     display: none;
 }
 .social a{
@@ -314,17 +315,38 @@ color: #dc4a25;
 
 /* =========== Media Query ============= */
 
-@media(min-width:576px) {
-    
-}
+
 @media(max-width: 575px) {
-    .m-nav{
+    nav label{
         display: block;
         float: right;
-        margin: 0;
         width: 12%;
         padding: 10px;
+        position: absolute;
+        top: 0;
+        right: 0;
     }
+    nav ul{
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        background-color: #32415c80;
+        display: none;
+    }
+    nav ul li a{
+        display: block;
+        padding: 10px;
+    }
+    nav ul li a:hover{
+        background-color: #ad5c51;
+    }
+    .m-nav{  
+        transition: all 1s;
+    }
+    #tuggle:checked + .m-nav{
+        display: block;
+    }
+    
     .logo{
         padding: 10px;
         margin: auto;
@@ -337,22 +359,8 @@ color: #dc4a25;
     header{
         padding: 0;
     }
-    nav ul{
-        margin: 0;
-        padding: 0;
-        width: 100%;
-        background-color: #32415c80;
-    }
     
-    nav ul li a{
-        display: block;
-        padding: 10px;
-    }
-    nav ul li a:hover{
-        background-color: #ad5c51;
-    }
-    nav{display: none}
-    #tuggle:checked + nav{display:block}
+    
 
     .profile-img{
         width: 300px;

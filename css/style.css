@@ -211,6 +211,13 @@ nav ul li a{
     margin: 5px;
     height: 100px;
 }
+.tel-email a{
+    text-decoration: none;
+    color: inherit;
+}
+.tel-email a:hover{
+    color: #20739b;
+}
 .cont-right .frm-msg input[type='reset'], input[type='submit']{
     margin:5px;
     padding: 14px 30px;
@@ -314,6 +321,16 @@ color: #dc4a25;
     color: #efb41f;
 }
 
+#scrollBtn{
+    position: fixed;
+    z-index: 99;
+    bottom: 0;
+    margin: 5px;
+    cursor: pointer;
+    right: 0;
+    font-size: 40px;
+    color: #1e293d;
+}
 /* =========== Media Query ============= */
 
 @media screen and (min-width: 280px) and (max-width: 575px) {

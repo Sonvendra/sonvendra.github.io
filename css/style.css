@@ -91,18 +91,18 @@ nav ul li a{
     transition: all 0.4s;
 }
 .cont-btn{
-    color: #1e293d99;
-    border: 2px solid #1e293d99;
-    background-color: #ffffffe6;
+    color: #787e8a;
+    border: 2px solid #787e8a;
+    background-color: #ffffff;
 }
 .cont-down-btn{
-    background-color:#1e293d99;
+    background-color:#787e8a;
     color: #ffffff;
     border: 2px solid #ffffff;
     margin-left: 7px; 
 }
 .cont-down-btn:hover{
-    color: #1e293d99;
+    color: #1e293d98;
     border: 2px solid #1e293d99;
     background-color: #ffffffe6;
 }
@@ -112,8 +112,8 @@ nav ul li a{
 .project-sec .proj-gal{
     width: 30.3%;
     float: left;
-    border: 2px solid #1e293d99;
-    -webkit-border: 2px solid #1e293d99;
+    border: 2px solid #787e8a;
+    -webkit-border: 2px solid #787e8a;
     border-radius: 15px;
     padding: 10px;
     margin: 0.5%;
@@ -218,12 +218,12 @@ nav ul li a{
     cursor: pointer;
 }
 .cont-right .frm-msg input[type='reset']{
-    color: #1e293d99;
-    border: 2px solid #1e293d99;
-    background-color: #ffffffe6;
+    color: #787e8a;
+    border: 2px solid #787e8a;
+    background-color: #ffffff;
 }
 .cont-right .frm-msg input[type='submit']{
-    background-color:#1e293d99;
+    background-color:#787e8a;
     color: #ffffff;
     border: 2px solid #ffffff;
     margin-left: 7px;

@@ -453,7 +453,7 @@ color: #dc4a25;
         padding: 10px;
     }
     nav ul li a:hover{
-        background-color: #ad5c51;
+        background-color: rgba(0, 0, 0, 0.1);
     }
     .m-nav{  
         transition: all 1s;
@@ -504,7 +504,7 @@ color: #dc4a25;
     }
 }
 
-@media screen and (min-width: 769px) and (max-width:992px){
+@media screen and (min-width: 769px) and (max-width:1200px){
     .profile-img {
         width: 200px;
         height: 200px;
@@ -539,18 +539,4 @@ color: #dc4a25;
         padding: 20px;
     }
 }
-/*@media only screen and (min-width:993px) and (max-width:1200px;){
-    .profile-img {
-        width: 200px;
-        height: 200px;
-        border-radius: 50%;
-        margin: 30px;
-    }
-    .about-sec aside{
-        width: 50%;
-        margin: 20px auto;
-    }
-    .project-sec .proj-gal {
-        width: 29.6%;
-    }
-}*/
+

@@ -248,9 +248,7 @@ input[type='text']:focus, input[type='email']:focus, textarea:focus{
     border: 3px solid #ffffff;
     box-shadow: 0 0 10px black;
 }
-.cont-left i{
-    letter-spacing: 25px;
-}
+
 .cont-left table td{
     padding: 5px;
 }
@@ -289,21 +287,32 @@ nav input{
 .social a{
     text-decoration: none;
     color: gray;
+    margin: 10px;
 }
 .fa-facebook-f:hover{
     color: #3b5998;
+    transform: rotate(360deg);
+    transition: all 0.8s;
 }
 .fa-linkedin-in:hover{
 color: #007bb6;
+transform: rotate(360deg);
+    transition: all 0.8s;
 }
 .fa-rss:hover{
     color: #fb8f3d;
+    transform: rotate(360deg);
+    transition: all 0.8s;
 }
 .fa-instagram:hover{
     color: #bc2a8d;
+    transform: rotate(360deg);
+    transition: all 0.8s;
 }
 .fa-github:hover{
     color: #ad5c51;
+    transform: rotate(360deg);
+    transition: all 0.8s;
 }
 .fa-html5{
 color: #dc4a25;

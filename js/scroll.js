@@ -1,3 +1,5 @@
+// Don't forget to follow me @ https://github.com/Sonvendra/
+
 window.onscroll=function() {scrollFunction()};
 
 function scrollFunction(){

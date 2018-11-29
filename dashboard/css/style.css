@@ -1,0 +1,11 @@
+body{
+    font-family: "Helvetica Neue",sans-serif;
+    font-size: 18px;
+}
+.text-teal{
+    color: #00796b;
+}
+.view{
+    box-shadow: 0 0 15px black;
+    border-radius: 10px;
+}

@@ -1,0 +1,156 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/fontawesome-all.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/mdb.css">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Admin Dashboard</title>
+</head>
+<body>
+<nav class="navbar navbar-dark bg-dark navbar-expand-sm">
+    <div class="container">
+        <a href="index.html" class="navbar-brand text-warning">
+            <i class="fa fa-snowflake"></i> Admin
+        </a>
+        <button class="navbar-toggler" data-toggle="collapse" data-target="#UiNav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="navbar-collapse collapse" id="UiNav">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a href="index.html" class="nav-link">
+                        <i class="fa fa-chart-bar text-muted"></i> Dashboard
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="tasks.html" class="nav-link">
+                        <i class="fa fa-list text-muted"></i> Tasks
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="categories.html" class="nav-link">
+                        <i class="fa fa-sitemap text-muted"></i> Categories
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="employee.html" class="nav-link">
+                        <i class="fa fa-users text-muted"></i> Employees
+                    </a>
+                </li>
+            </ul>
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item dropdown">
+                    <a href="" class="nav-link" data-toggle="dropdown">
+                        <i class="fa fa-sign-in-alt text-muted"></i> Sonvendra <i class="fa fa-caret-down"></i>
+                    </a>
+                    <div class="dropdown-menu">
+                        <a href="profile.html" class="dropdown-item">
+                            <i class="fa fa-user-circle"></i> Profile
+                        </a>
+                        <a href="settings.html" class="dropdown-item">
+                            <i class="fa fa-cog"></i> Settings
+                        </a>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a href="login.html" class="nav-link">
+                        <i class="fa fa-sign-out-alt text-muted"></i> LogOut
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<section class="bg-teal text-white p-2">
+    <div class="container">
+        <div class="row">
+            <h1><i class="fa fa-user-circle"></i> Profile</h1>
+        </div>
+    </div>
+</section>
+
+<section class="p-3">
+    <div class="container">
+        <div class="row animated fadeInDown">
+            <div class="col-md-3">
+                <button class="btn btn-secondary btn-block"><i class="fa fa-arrow-alt-circle-left"></i> Dashboard</button>
+            </div>
+            <div class="col-md-3"></div>
+            <div class="col-md-3">
+                <button class="btn btn-success btn-block"><i class="fa fa-lock"></i> Change Password</button>
+            </div>
+            <div class="col-md-3">
+                <button class="btn btn-warning btn-block"><i class="fa fa-window-close"></i> Dashboard</button>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="p-3">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-9 animated fadeInLeft">
+                <div class="card">
+                    <div class="card-header bg-teal text-white">
+                        <h2>About Me</h2>
+                    </div>
+                    <div class="card-body">
+                        <div class="card">
+                            <div class="card-body">
+                                <h2>Sonvendra Chaurasia</h2>
+                            </div>
+                        </div>
+                        <div class="card mt-2">
+                            <div class="card-body">
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem enim est nulla possimus quam quibusdam quo ratione reiciendis veniam vitae.</p>
+                            </div>
+                        </div>
+                        <div class="card mt-2">
+                            <div class="card-body">
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur nemo odit ratione. Dignissimos dolore enim fugiat incidunt itaque nihil officiis placeat quam, quas, quia quidem ratione sapiente, similique tempora vitae.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-footer">
+                        <h3>Thank You ! <i class="fa fa-smile text-teal"></i> </h3>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 animated fadeInRight">
+                <div class="view hm-zoom animated flip">
+                    <img src="profile.png" class="img-fluid">
+                </div>
+                <a href="" class="btn btn-primary btn-block mt-4">Edit Image</a>
+                <a href="" class="btn btn-block btn-danger mt-4">Delete Image</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<footer class="bg-dark text-white p-3 mt-3">
+    <div class="container text-center">
+        <h3>Copyright &copy; 2018</h3>
+        <h6>All Rights Reserved</h6>
+        <h6>Developed & Maintained by  <a href="https://sonvendra.github.io/" class="text-warning"><i class="fa fa-user-circle"></i> Sonvendra Chaurasia</a></h6>
+    </div>
+</footer>
+
+<!-- Optional JavaScript -->
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<!-- BODY ENDS -->
+<script src="js/fontawesome-all.js"></script>
+<script src="js/jquery-3.2.1.min.js"></script>
+<script src="js/popper.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/mdb.min.js"></script>
+<script src="https://cdn.ckeditor.com/4.8.0/standard/ckeditor.js"></script>
+<script>
+    CKEDITOR.replace( 'editor1' );
+</script>
+</body>
+</html>

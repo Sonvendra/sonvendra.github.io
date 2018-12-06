@@ -316,7 +316,7 @@ transform: rotate(360deg);
     transition: all 0.8s;
 }
 .fa-angular{
-    color:#dd1b16;}
+    color:#dd1b16;border:2px solid #b3b3b3;}
 .fa-html5{
 color: #dc4a25;
 }

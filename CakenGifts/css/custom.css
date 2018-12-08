@@ -89,6 +89,7 @@ body{overflow-x: hidden;}
   .navbar-light .navbar-toggler{border: 0;}
   .mob-cart{padding: 0 5px; margin-left: auto;}
   .mob-cart i{font-size: 30px; padding: 0 5px;}
+  .mob-cart a i{color: #808080;}
   .top-cat div img{width: 35px;}
   .top-cat{padding: 7px 0; background-color: #fff;}
   .top-cat div{text-align: center;border-left: 1px solid #eae7e5;}

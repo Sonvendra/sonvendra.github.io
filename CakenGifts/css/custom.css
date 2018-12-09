@@ -96,7 +96,7 @@ body{overflow-x: hidden;}
   .top-cat div:first-child{border: none;}
   .top-cat div p{margin: 0;color: #808080;}
   nav{border-bottom: 2px solid #808080;}
-  .sticky-top{box-shadow: 0 0 2px #6c757d;}
+  .stickyTop{position:-webkit-sticky;position:sticky;top:0;z-index:1020;box-shadow: 0 0 2px #6c757d;}
   .active, .bg-nav{background: transparent;}
   .navbar-nav{background-color: #ff3a5e;} 
   .cat-2{padding: 10px; border-radius: 10px;}

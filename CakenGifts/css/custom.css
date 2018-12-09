@@ -101,5 +101,7 @@ body{overflow-x: hidden;}
   .navbar-nav{background-color: #ff3a5e;} 
   .cat-2{padding: 10px; border-radius: 10px;}
   .deck-hide{display: block;} 
+  .filter a{border-radius: 0;}
+  .filter{position: fixed; bottom: 0;z-index: 1;}
 }
 

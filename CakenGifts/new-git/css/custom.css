@@ -3,6 +3,7 @@ body{margin: 0;
     font-family: 'Roboto Condensed', sans-serif;
     color: #252525;
     scroll-behavior: smooth;
+  background-color: #fbf3f3;
 }
 h1{
     font-size: 32px;
@@ -10,22 +11,27 @@ h1{
 h2{
     font-size: 30px;
 }
-.logo img{height: 60px; margin: 9px auto;}
+.cNo{font-size:18px;color:#ff3a5e;font-weight: bold;}
+.desk-cat .col-md-2{text-align: center;}
+.desk-cat a{display:block;box-shadow: 0 0 5px gray;background-color:#fff;border-radius:10px;color: grey; transition: all 0.5s;}
+.desk-cat a:hover{color:#ff3a5e;text-decoration: none; transform:scale(1.1,1.1)}
+.cart a:hover{text-decoration: none;color: #ff3c5f;}
 .bg-nav{background-color:#ff3a5e}.bg-nav a{color:#fff!important}
 nav{height: 40px}
 .dropdown:hover > .dropdown-menu {
   display: block;
 }
 .dropdown-menu{margin: 0; border-radius: 0; transition: all .5s;}
+
 .shortBy ul li{
-  list-style: none;display: inline-block;font-weight: bold;font-size: 12px;
+  list-style: none;display: inline-block;padding: 10px;
 }
 .shortBy ul li a{
-  text-decoration: none;color: #000;padding: 2px 7px; transition: all .5s;
+  text-decoration:none;color:#9a9a9a;padding: 2px 7px;transition: all .5s;font-size:14px;text-transform: uppercase;
 }
-.shortBy ul li a:hover, a:active{
-  background-color: #ff3a5e;border-radius: 10px;color: #fff;
-}
+.shortBy ul li a:hover, a:active{color:#ff3a5e;border-bottom: 2px solid gray;}
+.filter-top a{color:#9a9a9a; text-transform: uppercase;text-decoration: none;}
+.filter-top a:hover{color:#ff3a5e;}
 .topRight{position: absolute;z-index: 1;top:5px;right: 5px;border-radius: 50%; background-color:#ff3a5e;line-height: 37px; padding: 5px;
 color: #fff; font-weight: bold;}
 .product .card .card-body{overflow: hidden;padding: .25rem;}
@@ -36,7 +42,11 @@ color: #fff; font-weight: bold;}
 .product .card p span{font-weight: bold;color: #ff3a5e; text-decoration: line-through;}
 .product .card .card-footer a{color:#040505;}
 .product .card .card-footer a:hover{text-decoration: none;}
-.bgSec{box-shadow: 0 0 5px gray}
+.bgSec{box-shadow: 0 0 5px gray; background-color: #fff;}
+.stiky{position: sticky;
+  top:0;z-index:1;}
+.stiky1{position: sticky;
+  top:40px;z-index:1;}
 footer{background-color:#ff3a5e;color: #fff;}footer a{color:#fff;}footer a:hover{color:#fff;text-decoration:underline;}
 .pay{font-size: 14px;}
 .pay span {

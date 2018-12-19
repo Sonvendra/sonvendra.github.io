@@ -21,7 +21,7 @@ nav{height: 40px}
 .dropdown:hover > .dropdown-menu {
   display: block;
 }
-.dropdown-menu{margin: 0; border-radius: 0; transition: all .5s;}
+.dropdown-menu{margin: 0;border-radius: 0;transition: all .5s;border: none;}
 
 .shortBy ul li{
   list-style: none;display: inline-block;padding: 10px;

@@ -38,15 +38,73 @@
     </div>
     <div class="container-fluid filter deck-hide">
         <div class="row">
-            <a href="" class="btn btn-dark col">
+            <a href="" class="btn btn-dark col" data-toggle="modal" data-target="#filterModal">
                 <i class="fa fa-filter"></i> FILTER
             </a>
-            <a href="" class="btn btn-secondary col">
+            <a href="" class="btn btn-secondary col" data-target="#filterSort" data-toggle="modal">
                 <i class="fa fa-signal" aria-hidden="true"></i> SORT
             </a>
         </div>
     </div>
-
+  <div class="modal fade" id="filterModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+          <div class="modal-content">
+              <div class="modal-header">
+                  <h5 class="modal-title" id="exampleModalLabel">Filter</h5>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                      <span aria-hidden="true">&times;</span>
+                  </button>
+              </div>
+              <div class="modal-body">
+                  ...
+              </div>
+              <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                  <button type="button" class="btn btn-primary">Save changes</button>
+              </div>
+          </div>
+      </div>
+  </div>
+  <div class="modal fade" id="filterSort" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+          <div class="modal-content">
+              <div class="modal-header">
+                  <h5 class="modal-title">Sort</h5>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                      <span aria-hidden="true">&times;</span>
+                  </button>
+              </div>
+              <div class="modal-body">
+                  <form>
+                      <div class="form-group text-left">
+                          <table class="table border-0">
+                              <tr>
+                                  <td><input type="radio" name="sort" value="" class="form-control" id="pop"></td>
+                                  <td><label for="pop">Popularity</label></td>
+                              </tr>
+                              <tr>
+                                  <td><input type="radio" name="sort" value="" class="form-control" id="plh"></td>
+                                  <td><label for="plh">Price Low to High</label></td>
+                              </tr>
+                              <tr>
+                                  <td><input type="radio" name="sort" value="" class="form-control" id="phl"></td>
+                                  <td><label for="phl">Price High to Low</label></td>
+                              </tr>
+                              <tr>
+                                  <td><input type="radio" name="sort" value="" class="form-control" id="dis"></td>
+                                  <td><label for="dis">Discount</label></td>
+                              </tr>
+                              <tr>
+                                  <td><input type="radio" name="sort" value="" class="form-control" id="newAri"></td>
+                                  <td><label for="newAri">New Arrivals </label></td>
+                              </tr>
+                          </table>
+                      </div>
+                  </form>
+              </div>
+          </div>
+      </div>
+  </div>
     <nav class="navbar navbar-expand-lg navbar-light bg-nav">
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -547,49 +605,5 @@
     <script src="js/popper.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
   <script src="js/custom.js"></script>
-    <script language="JavaScript">
-  /**
-    * Disable right-click of mouse, F12 key, and save key combinations on page
-    
-    * For full source code, visit https://mycyberuniverse.com
-    */
-  window.onload = function() {
-    document.addEventListener("contextmenu", function(e){
-      e.preventDefault();
-    }, false);
-    document.addEventListener("keydown", function(e) {
-    //document.onkeydown = function(e) {
-      // "I" key
-      if (e.ctrlKey && e.shiftKey && e.keyCode == 73) {
-        disabledEvent(e);
-      }
-      // "J" key
-      if (e.ctrlKey && e.shiftKey && e.keyCode == 74) {
-        disabledEvent(e);
-      }
-      // "S" key + macOS
-      if (e.keyCode == 83 && (navigator.platform.match("Mac") ? e.metaKey : e.ctrlKey)) {
-        disabledEvent(e);
-      }
-      // "U" key
-      if (e.ctrlKey && e.keyCode == 85) {
-        disabledEvent(e);
-      }
-      // "F12" key
-      if (e.keyCode == 123) {
-        disabledEvent(e);
-      }
-    }, false);
-    function disabledEvent(e){
-      if (e.stopPropagation){
-        e.stopPropagation();
-      } else if (window.event){
-        window.event.cancelBubble = true;
-      }
-      e.preventDefault();
-      return false;
-    }
-  };
-</script>
   </body>
 </html>

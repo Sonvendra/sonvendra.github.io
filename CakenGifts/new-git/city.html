@@ -312,7 +312,7 @@
   <section class="container-fluid bg-white my-auto hide">
       <div class="row">
           <div class="col-md-2 my-auto filter-top">
-              <a href=""><i class="fa fa-align-left"></i> Filters</a>
+              <a href="" data-target="#filter-modal" data-toggle="modal"><i class="fa fa-align-left"></i> Filters</a>
           </div>
           <div class="col-md-6 text-md-right shortBy hide">
               <ul class="my-auto">
@@ -323,6 +323,25 @@
           </div>
       </div>
   </section>
+<section class="modal animated zoomIn" id="filter-modal">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 class="modal-title">Filters</h3>
+                <button class="close btn-sm text-danger" data-dismiss="modal">
+                    X
+                </button>
+            </div>
+            <div class="modal-body">
+
+            </div>
+            <div class="modal-footer">
+                <a class="btn btn-outline-danger" href="">Clear All</a>
+                <a href="" class="btn btn-outline-success">Apply</a>
+            </div>
+        </div>
+    </div>
+</section>
 
     <section class="container-fluid product">
             <div class="row p-2">
@@ -467,6 +486,50 @@
         <p><b>“Ye Shahar nahi, mehfil hai”</b>, someone has rightly said about Delhi. Being referred as the city of joy, Delhi is always full of people ready to celebrate every moment of their life. To make your occasions more special and memorable, <b>CakenGifts</b> is trying to make a small effort through designer cake delivery in Delhi. So, order cake online in Delhi now.</p>
         <p>Cakes are the lure of every occasion whether it be Birthday, Anniversary or any other function. A party without cake is just a meeting. Cakes hold the power of sweetening up any occasion and adding a special aroma to it. In this age of digitalization, online delivery of cakes is the best option.Realizing this, CakenGifts has brought excellent same day online cake delivery in Delhi.</p>
         <h2>Why online?</h2>
+
+        <table class="table table-striped table-hover border">
+            <thead class="thead-dark">
+            <tr>
+                <th>Occasion</th>
+                <th>Flavor</th>
+                <th>Price</th>
+            </tr>
+            </thead>
+            <tbody>
+
+            <tr>
+                <td>Birthday</td>
+                <td>Chocolate Cake</td>
+                <td>545</td>
+            </tr>
+            <tr>
+                <td>Anniversary</td>
+                <td>Butterscotch Cake</td>
+                <td>545</td>
+            </tr>
+            <tr>
+                <td>Mother's Day</td>
+                <td>Fruit Cake</td>
+                <td>645</td>
+            </tr>
+            <tr>
+                <td>Father's Day</td>
+                <td>Blueberry Cake</td>
+                <td>695</td>
+            </tr>
+            <tr>
+                <td>Congratulations</td>
+                <td>Caramel Cake</td>
+                <td>495</td>
+            </tr>
+            <tr>
+                <td>Valentine's Day</td>
+                <td>Black Forest Cake</td>
+                <td>495</td>
+            </tr>
+            </tbody>
+        </table>
+
         <p>Baking and decorating a cake is not a cake walk. It is an art not everyone can acquire. Even if they have the relevant art, people may not have sufficient time to prepare the cake themselves. In this busy world of today, people can’t get time to step out of their daily routine and buy cake from the bakery.</p>
         <p>Further, the <b>wide range</b> of cakes provided by online services cannot be availed at your local bakery shop.</p>
         <h2>Enjoy your occasions a more dramatic way with a cake from our best cake shop in Delhi</h2>
@@ -605,49 +668,5 @@
     <script src="js/popper.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
   <script src="js/custom.js"></script>
-    <script language="JavaScript">
-  /**
-    * Disable right-click of mouse, F12 key, and save key combinations on page
-    
-    * For full source code, visit https://mycyberuniverse.com
-    */
-  window.onload = function() {
-    document.addEventListener("contextmenu", function(e){
-      e.preventDefault();
-    }, false);
-    document.addEventListener("keydown", function(e) {
-    //document.onkeydown = function(e) {
-      // "I" key
-      if (e.ctrlKey && e.shiftKey && e.keyCode == 73) {
-        disabledEvent(e);
-      }
-      // "J" key
-      if (e.ctrlKey && e.shiftKey && e.keyCode == 74) {
-        disabledEvent(e);
-      }
-      // "S" key + macOS
-      if (e.keyCode == 83 && (navigator.platform.match("Mac") ? e.metaKey : e.ctrlKey)) {
-        disabledEvent(e);
-      }
-      // "U" key
-      if (e.ctrlKey && e.keyCode == 85) {
-        disabledEvent(e);
-      }
-      // "F12" key
-      if (e.keyCode == 123) {
-        disabledEvent(e);
-      }
-    }, false);
-    function disabledEvent(e){
-      if (e.stopPropagation){
-        e.stopPropagation();
-      } else if (window.event){
-        window.event.cancelBubble = true;
-      }
-      e.preventDefault();
-      return false;
-    }
-  };
-</script>
   </body>
 </html>

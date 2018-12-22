@@ -11,8 +11,10 @@ h1{
 h2{
     font-size: 30px;
 }
+.ml-6{margin-left: 6rem !important;}
 .cNo{font-size:18px;color:#ff3a5e;font-weight: bold;}
-.desk-cat .col-md-2{text-align: center;}
+.desk-cat .col{text-align: center;}
+.headBoy{height: 240px;}
 .desk-cat a{display:block;box-shadow: 0 0 5px gray;background-color:#fff;border-radius:10px;color: grey; transition: all 0.5s;}
 .desk-cat a:hover{color:#ff3a5e;text-decoration: none; transform:scale(1.1,1.1)}
 .cart a:hover{text-decoration: none;color: #ff3c5f;}
@@ -27,9 +29,9 @@ nav{height: 40px}
   list-style: none;display: inline-block;padding: 10px;
 }
 .shortBy ul li a{
-  text-decoration:none;color:#9a9a9a;padding: 2px 7px;transition: all .5s;font-size:14px;text-transform: uppercase;
+  text-decoration:none;color:#9a9a9a;padding: 2px 7px;transition: all .2s;font-size:14px;text-transform: uppercase;font-weight: bold;
 }
-.shortBy ul li a:hover, a:active{color:#ff3a5e;border-bottom: 2px solid gray;}
+.shortBy ul li a:hover, a:active{color:#ff3a5e;border-bottom: 2px solid #fff;}
 .filter-top a{color:#9a9a9a; text-transform: uppercase;text-decoration: none;}
 .filter-top a:hover{color:#ff3a5e;}
 .topRight{position: absolute;z-index: 1;top:5px;right: 5px;border-radius: 50%; background-color:#ff3a5e;line-height: 37px; padding: 5px;
@@ -40,13 +42,32 @@ color: #fff; font-weight: bold;}
 .product .card .card-body img{transition: all 1s;}
 .product .card .card-body img:hover{transform: scale(1.2,1.2);}
 .product .card p span{font-weight: bold;color: #ff3a5e; text-decoration: line-through;}
-.product .card .card-footer a{color:#040505;}
-.product .card .card-footer a:hover{text-decoration: none;}
+.product .card hr{border: 1px solid #CC181E;margin: 5px 0 5px 0;}
+.product a span{color:#FF3C5F; font-weight: bold}
+.product a:hover{text-decoration: none;}
 .bgSec{box-shadow: 0 0 5px gray; background-color: #fff;}
+.cityList{list-style: none;padding: 0;}
+.cityList li{color: #181818;
+  display: inline;
+  float: left;text-align: center;
+  font-size: 12px;
+  line-height: 25px;
+  list-style: outside none none;
+  padding: 0;
+  width: 20%;
+  border: 1px solid #cccccc;
+  margin: 0 -1px -1px 0;}
+.map ul{ list-style: none;padding: 0}
+.review{box-shadow:0 0 5px gray; padding:10px;background-color:#fff;}
+.review p{margin: 0;}
+.review span{color:#ff1e47;font-weight: bold;}
+.review li i{color:#ffc315;}
+.review ul{list-style: none;}
 .stiky{position: sticky;
   top:0;z-index:1;}
 .stiky1{position: sticky;
   top:40px;z-index:1;}
+.cityList li:hover{background-color:#fff;}
 footer{background-color:#ff3a5e;color: #fff;}footer a{color:#fff;}footer a:hover{color:#fff;text-decoration:underline;}
 .pay{font-size: 14px;}
 .pay span {
@@ -101,4 +122,6 @@ footer{background-color:#ff3a5e;color: #fff;}footer a{color:#fff;}footer a:hover
   .filter{position: fixed; bottom: 0;z-index: 1;}
   .navbar{padding:0;}
   .m-auto{padding-left: 10px;}
+  .cityList li{width:50%;}
+  .ml-6{margin-left: 0 !important;padding: 10px;}
 }

@@ -98,7 +98,7 @@ footer{background-color:#ff3a5e;color: #fff;}footer a{color:#fff;}footer a:hover
 }
 /* Mobile Code */
 .deck-hide{display: none;}
-@media screen and (max-width: 640px){
+@media screen and (max-width: 768px){
   header{display: none;}
   .mt-4{margin-top: 0 !important;}
   .hide{display: none;}

@@ -18,7 +18,8 @@ h2{
 .desk-cat a{display:block;box-shadow: 0 0 5px gray;background-color:#fff;border-radius:10px;color: grey; transition: all 0.5s;}
 .desk-cat a:hover{color:#ff3a5e;text-decoration: none; transform:scale(1.1,1.1)}
 .cart a:hover{text-decoration: none;color: #ff3c5f;}
-.bg-nav{background-color:#ff3a5e}.bg-nav a{color:#fff!important}
+.bg-nav{background-color:#ff3a5e}.bg-nav a{color:#fff !important;}
+.bg-filter{background-color:#ff5775;}.bg-filter a{color:#fff !important;}
 nav{height: 40px}
 .dropdown:hover > .dropdown-menu {
   display: block;
@@ -98,6 +99,7 @@ footer{background-color:#ff3a5e;color: #fff;}footer a{color:#fff;}footer a:hover
 }
 /* Mobile Code */
 .deck-hide{display: none;}
+
 @media screen and (max-width: 768px){
   header{display: none;}
   .mt-4{margin-top: 0 !important;}

@@ -106,6 +106,7 @@
       </div>
   </div>
     <nav class="navbar navbar-expand-lg navbar-light bg-nav">
+
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
@@ -116,7 +117,7 @@
             <a href=""><i class="fa fa-user"></i></a>
             <a href=""><i class="fa fa-shopping-cart"></i></a>
         </div>
-    
+
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav ml-6 nav-m">
                 <li class="nav-item active">
@@ -240,10 +241,10 @@
     <section class="bg-light hide">
         <div class="container-fluid px-5">
             <div class="row align-content-center">
-                <div class="col-md-1 text-left my-auto animated fadeInLeft">
+                <div class="col-md-1 text-left my-auto pr-0 animated fadeInLeft">
                     <img src="img/lad.png" class="img-fluid headBoy">
                 </div>
-                <div class="col-md-11 my-auto animated fadeInRight">
+                <div class="col-md-11 my-auto pl-0 animated fadeInRight">
                     <div class="col-12 pt-2">
                         <h1>Cake Delivery In Delhi</h1>
                         <p>Everyone wants surprise on his or her special day and cake is one of the best gift ever, so you may go for cake and flower delivery in Delhi where your loved ones live in Delhi because we deliver in whole Delhi. Avail our same day or midnight cake delivery in Delhi for those who forgot to arrange gifts before. We deliver cake and flowers in 2-3 hours from our best cake shop in Delhi with your given love and emotion.</p>
@@ -316,12 +317,11 @@
                         </ol>
                     </nav>
                 </div>
-
             </div>
         </div>
     </section>
 
-  <section class="container-fluid my-auto hide bg-nav">
+  <section class="container-fluid my-auto hide bg-filter">
       <div class="row">
           <div class="col-md-2 my-auto filter-top">
               <a href=""><i class="fa fa-align-left"></i> Filters</a>
@@ -340,9 +340,7 @@
         <div class="modal-content">
             <div class="modal-header">
                 <h3 class="modal-title">Filters</h3>
-                <button class="close btn-sm text-danger" data-dismiss="modal">
-                    X
-                </button>
+                <button class="close btn-sm text-danger" data-dismiss="modal"> X </button>
             </div>
             <div class="modal-body">
 
@@ -1025,11 +1023,21 @@
     </div>
 </article>
   <section class="container-fluid">
+      <div class="row text-center bg-white">
+          <h3 class="col-12 bg-filter text-white py-1">Video</h3>
+          <div class="col-12 p-4">
+
+              <iframe width="600" height="315" src="https://www.youtube.com/embed/ntjZEBobMec" frameborder="0"
+                      allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          </div>
+      </div>
+  </section>
+  <section class="container-fluid">
       <div class="row m-2">
           <div class="col-md-3 map my-auto">
               <ul>
-                  <li>Address: 73, Vijay Block, Laxmi Nagar, Delhi-92</li>
-                  <li>Mobile: +91 9540 338 338</li>
+                  <li><strong>Address:</strong> 73, Vijay Block, Laxmi Nagar, Delhi-92</li>
+                  <li><strong>Mobile:</strong> +91 9540 338 338</li>
               </ul>
           </div>
           <div class="col-md-9">
@@ -1220,49 +1228,5 @@
     <script src="js/popper.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
   <script src="js/custom.js"></script>
-    <script language="JavaScript">
-  /**
-    * Disable right-click of mouse, F12 key, and save key combinations on page
-    
-    * For full source code, visit https://mycyberuniverse.com
-    */
-  window.onload = function() {
-    document.addEventListener("contextmenu", function(e){
-      e.preventDefault();
-    }, false);
-    document.addEventListener("keydown", function(e) {
-    //document.onkeydown = function(e) {
-      // "I" key
-      if (e.ctrlKey && e.shiftKey && e.keyCode == 73) {
-        disabledEvent(e);
-      }
-      // "J" key
-      if (e.ctrlKey && e.shiftKey && e.keyCode == 74) {
-        disabledEvent(e);
-      }
-      // "S" key + macOS
-      if (e.keyCode == 83 && (navigator.platform.match("Mac") ? e.metaKey : e.ctrlKey)) {
-        disabledEvent(e);
-      }
-      // "U" key
-      if (e.ctrlKey && e.keyCode == 85) {
-        disabledEvent(e);
-      }
-      // "F12" key
-      if (e.keyCode == 123) {
-        disabledEvent(e);
-      }
-    }, false);
-    function disabledEvent(e){
-      if (e.stopPropagation){
-        e.stopPropagation();
-      } else if (window.event){
-        window.event.cancelBubble = true;
-      }
-      e.preventDefault();
-      return false;
-    }
-  };
-</script>
   </body>
 </html>

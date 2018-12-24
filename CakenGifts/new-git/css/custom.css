@@ -97,6 +97,7 @@ footer{background-color:#ff3a5e;color: #fff;}footer a{color:#fff;}footer a:hover
 .copy-bg-cont a {
   color: #fff;
 }
+.video{width:600px;height:350px;}
 /* Mobile Code */
 .deck-hide{display: none;}
 
@@ -126,4 +127,5 @@ footer{background-color:#ff3a5e;color: #fff;}footer a{color:#fff;}footer a:hover
   .m-auto{padding-left: 10px;}
   .cityList li{width:50%;}
   .ml-6{margin-left: 0 !important;padding: 10px;}
+  .video{width:95%;height:150px;}
 }

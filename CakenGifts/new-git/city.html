@@ -237,7 +237,34 @@
             </ul>
         </div>
     </nav>
-
+  <div class="container-fluid stickyTop deck-hide">
+      <div class="row top-cat">
+          <div class="col-3">
+              <a href="">
+                  <img src="https://www.cakengifts.in/img/cake.png">
+                  <p>Cake</p>
+              </a>
+          </div>
+          <div class="col-3">
+              <a href="">
+                  <img src="https://www.cakengifts.in/img/flowers.png">
+                  <p>Flowers</p>
+              </a>
+          </div>
+          <div class="col-3">
+              <a href="">
+                  <img src="https://www.cakengifts.in/img/cake-n-flower.png">
+                  <p>Combos</p>
+              </a>
+          </div>
+          <div class="col-3">
+              <a href="">
+                  <img src="https://www.cakengifts.in/img/birthday.png">
+                  <p>Birthday</p>
+              </a>
+          </div>
+      </div>
+  </div>
     <section class="bg-light hide">
         <div class="container-fluid px-5">
             <div class="row align-content-center">
@@ -1026,7 +1053,6 @@
       <div class="row text-center bg-white">
           <h3 class="col-12 bg-filter text-white py-1">Video</h3>
           <div class="col-12 p-4">
-
               <iframe class="video" src="https://www.youtube.com/embed/ntjZEBobMec" frameborder="0"
                       allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
           </div>
@@ -1228,49 +1254,5 @@
     <script src="js/popper.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
   <script src="js/custom.js"></script>
-    <script language="JavaScript">
-  /**
-    * Disable right-click of mouse, F12 key, and save key combinations on page
-    
-    * For full source code, visit https://mycyberuniverse.com
-    */
-  window.onload = function() {
-    document.addEventListener("contextmenu", function(e){
-      e.preventDefault();
-    }, false);
-    document.addEventListener("keydown", function(e) {
-    //document.onkeydown = function(e) {
-      // "I" key
-      if (e.ctrlKey && e.shiftKey && e.keyCode == 73) {
-        disabledEvent(e);
-      }
-      // "J" key
-      if (e.ctrlKey && e.shiftKey && e.keyCode == 74) {
-        disabledEvent(e);
-      }
-      // "S" key + macOS
-      if (e.keyCode == 83 && (navigator.platform.match("Mac") ? e.metaKey : e.ctrlKey)) {
-        disabledEvent(e);
-      }
-      // "U" key
-      if (e.ctrlKey && e.keyCode == 85) {
-        disabledEvent(e);
-      }
-      // "F12" key
-      if (e.keyCode == 123) {
-        disabledEvent(e);
-      }
-    }, false);
-    function disabledEvent(e){
-      if (e.stopPropagation){
-        e.stopPropagation();
-      } else if (window.event){
-        window.event.cancelBubble = true;
-      }
-      e.preventDefault();
-      return false;
-    }
-  };
-</script>
   </body>
 </html>

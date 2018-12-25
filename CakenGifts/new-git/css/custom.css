@@ -11,6 +11,7 @@ h1{
 h2{
     font-size: 30px;
 }
+body a:hover{text-decoration: none !important; color: #ff3a5e;}
 .ml-6{margin-left: 6rem !important;}
 .cNo{font-size:18px;color:#ff3a5e;font-weight: bold;}
 .desk-cat .col{text-align: center;}
@@ -58,6 +59,17 @@ color: #fff; font-weight: bold;}
   width: 20%;
   border: 1px solid #cccccc;
   margin: 0 -1px -1px 0;}
+.h-cat a{display: block; transition: all 0.4s;}
+.h-cat a:hover {
+  color: #ff3a5e;
+  text-decoration: none;
+  transform: scale(1.1,1.1);
+}
+
+.category .col-md-2 a{color:grey; box-shadow: 0 0 5px gray; border-radius: 10px}
+.category .col-md-2 a:hover{color:#ff3a5e;text-decoration:none;transition:all .2s;box-shadow: 0 0 2px;}
+
+
 .map ul{ list-style: none;padding: 0}
 .review{box-shadow:0 0 5px gray; padding:10px;background-color:#fff;}
 .review p{margin: 0;}

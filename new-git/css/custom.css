@@ -20,7 +20,8 @@ body a:hover{text-decoration: none !important; color: #ff3a5e;}
 .desk-cat a:hover{color:#ff3a5e;text-decoration: none; transform:scale(1.1,1.1)}
 .cart a:hover{text-decoration: none;color: #ff3c5f;}
 .bg-nav{background-color:#ff3a5e}.bg-nav a{color:#fff !important;}
-.bg-filter{background-color:#ff5775;}.bg-filter a{color:#fff !important;}
+.bg-filter{background-color:#fff; box-shadow: 0 0 3px gray;}.bg-filter a{color:#007bff !important;}
+.bg-filter a:hover{color:#ff3a5e !important;text-decoration: none;}
 nav{height: 40px}
 .dropdown:hover > .dropdown-menu {
   display: block;
@@ -59,6 +60,15 @@ color: #fff; font-weight: bold;}
   width: 20%;
   border: 1px solid #cccccc;
   margin: 0 -1px -1px 0;}
+.cityLinkF li{color: #181818;
+  float: left;
+  font-size: 15px;
+  line-height: 25px;
+  padding: 0;
+  width: 14%;
+  margin: 0 -1px -1px 0;}
+.cityLinkF a{color:#000;}.cityLinkF a:hover{color:#ff3a5e;}
+
 .h-cat a{display: block; transition: all 0.4s;}
 .h-cat a:hover {
   color: #ff3a5e;
@@ -96,7 +106,7 @@ color: #fff; font-weight: bold;}
   top:40px;z-index:1;}
 .cityList li:hover{background-color:#fff;}
 footer{background-color:#ff3a5e;color: #fff;}footer a{color:#fff;}footer a:hover{color:#fff;text-decoration:underline;}
-.pay{font-size: 14px;}
+.pay{font-size: 14px;margin-top: 15px;}
 .pay span {
   text-transform: uppercase;
   color: #666666;font-weight: bold;
@@ -124,10 +134,26 @@ footer{background-color:#ff3a5e;color: #fff;}footer a{color:#fff;}footer a:hover
   color: #fff;
 }
 .video{width:600px;height:350px;}
+table{width: 75% !important;}
 /* Mobile Code */
 .deck-hide{display: none;}
+@media screen and (max-width: 991px){
+  .cityList li,.cityLinkF li{width:25%;}
+  .video{width: 100%;}
+  .desk-cat a img{width:50px;height: auto;}
+  .desk-cat .col{padding: 5px;}
+  .navbar-collapse{background-color:rgb(255, 58, 94);z-index: 1;}
+  header.container{max-width: 99%; margin: 0;padding: 2px}
+  .cNo {
+    font-size: 17px;}
+  table{width: 95% !important;}
 
-@media screen and (max-width: 768px){
+}
+
+@media screen and (max-width: 800px){
+  body{overflow-x:hidden;}
+  .shadow{box-shadow:none !important;}
+  .bgSec{box-shadow:none !important;}
   header{display: none;}
   .mt-4{margin-top: 0 !important;}
   .hide{display: none;}
@@ -154,4 +180,13 @@ footer{background-color:#ff3a5e;color: #fff;}footer a{color:#fff;}footer a:hover
   .cityList li{width:50%;}
   .ml-6{margin-left: 0 !important;padding: 10px;}
   .video{width:95%;height:150px;}
+  .cityLinkF li{width: 50%;}
+  .border-right{border: 0 !important;}
+
+}
+@media screen and (max-width: 400px) {
+  .cityLinkF{margin: 10px 0;}
+  .cityLinkF li{width: 90%;}
+  .cityList li{width: 90%;}
+  .carousel-caption a.btn{display: none;}
 }

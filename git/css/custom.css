@@ -147,7 +147,9 @@ table{width: 75% !important;}
   table{width: 95% !important;}
 
 }
-
+.dropdown:hover > .dropdown-menu {
+    display: block;
+}
 @media screen and (min-width: 859px) and (max-width: 1250px) {
   .dropdown:hover > .dropdown-menu {
     display: block;

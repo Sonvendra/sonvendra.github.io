@@ -150,11 +150,7 @@ table{width: 75% !important;}
 .dropdown:hover > .dropdown-menu {
     display: block;
 }
-@media screen and (min-width: 859px) and (max-width: 1250px) {
-  .dropdown:hover > .dropdown-menu {
-    display: block;
-  }
-}
+
 @media screen and (max-width: 800px){
   body{overflow-x:hidden;}
   .shadow{box-shadow:none !important;}
@@ -187,7 +183,9 @@ table{width: 75% !important;}
   .video{width:95%;height:150px;}
   .cityLinkF li{width: 50%;}
   .border-right{border: 0 !important;}
-
+.dropdown:hover > .dropdown-menu {
+    display: none;
+  }
 }
 @media screen and (max-width: 400px) {
   .cityLinkF{margin: 10px 0;}

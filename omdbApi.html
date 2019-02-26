@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html ng-app="AppModule">
+<head>
+	<title>OMDB - API</title>
+	<script type="text/javascript" src="../../js/angular.js"></script>
+	<script type="text/javascript">
+		var app = angular.module("AppModule",[]);
+
+		app.controller("ctrl",function($scope,$http){
+			$scope.movie=[];
+			$scope.movieName="";
+			$scope.load=function(){
+				$http.get("http://www.omdbapi.com/?apikey=6a25e32a&t="+$scope.movieName).then(function(response){
+					$scope.movie=response.data;
+				})
+			}
+		});
+	</script>
+
+	<style type="text/css">
+		body{
+			text-align: center;
+		}
+		input[type="text"]{
+			width: 500px;
+			padding: 5px;
+			height: 30px;
+			border-radius: 10px;
+			font-size: 18px;
+		}
+	</style>
+</head>
+<body ng-controller="ctrl">
+
+	<input type="text" ng-model="movieName" ng-keyup="load()" placeholder="Enter movie name">
+		
+<h2>{{movie.Title}}</h2>
+<img ng-src="{{movie.Poster}}" width="300">
+<p><strong>Released Date:</strong> {{movie.Released | date}}</p>
+<p><strong>Genre :</strong> {{movie.Genre}}</p>
+<p><strong>Actors :</strong> {{movie.Actors}}</p>
+<p><strong>IMDB Rating :</strong> {{movie.imdbRating}}</p>
+<p><strong>Production :</strong> {{movie.Production}}</p>
+<p><strong>Language :</strong> {{movie.Language}}</p>
+<p><strong>BoxOffice Collection :</strong> {{movie.BoxOffice}}</p>
+<p><a href="{{movie.Website}}" target="_blank">Website</a></p>
+
+
+
+</body>
+</html>

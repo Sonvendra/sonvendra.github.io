@@ -151,6 +151,10 @@ nav ul li a{
     padding: 30px;
     background: #ffffff url(../img/bg-paint.jpg) no-repeat top left fixed;
     overflow: hidden;
+    background-size: cover;
+}
+.skill-sec.h2{
+    color:#fff;
 }
 .skill-left{
     width: 70%;

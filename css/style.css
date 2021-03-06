@@ -153,16 +153,24 @@ nav ul li a{
     overflow: hidden;
 }
 .skill-left{
-    width: 35%;
-    float: left;
+    width: 70%;
+    text-align: center;
+    margin: auto;
+/*     width: 35%;
+    float: left; */
 }
 .skill-left ul li{
     list-style: none;
+    display: inline-block;
+    font-size: 20px;
+    padding: 10px 15px;
+    margin: 5px;
+/*     list-style: none;
     display: block;
     font-size: 20px;
     padding: 5px 7px;
     width: 100%;
-    margin: 5px 0;
+    margin: 5px 0; */
 }
 .skill-left ul li:nth-child(odd){
     background-color: #ffffff;

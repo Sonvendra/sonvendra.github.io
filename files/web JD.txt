@@ -1,3 +1,0 @@
-•	Good knowledge and passion on HTML, CSS, JavaScript frameworks, bootstrap/mediaqueries and unit level testing
-•	Deep expertise and hands on experience with Web Applications and programming languages such as HTML, CSS, JavaScript, JQuery and API's
-•	Experience writing Angular 2+ and/or Angular Material

@@ -1,0 +1,31 @@
+Own software design and architectural decisions for different research projects
+• Document and maintain architecture, requirements, algorithms, interfaces and
+designs
+• Keep track of and actively reduce technical debt.
+• Maintains relationships and partnerships with customers, stakeholders, peers, and
+partners
+• Individual will be a skilled, highly professional engineer, work collaboratively with
+an international team comprising software development and research engineers.
+• Should have excellent communication and presentation skills
+• Support development teams across multiple engagements working as Technical
+SME contributing to software architecture/design
+• Help in the adoption of new tools and technology, perform Proof-of-concepts and
+help engagements implement & take it over.
+• Hands on knowledge in the Architecting, Designing and developing full stack
+modules.
+• Has excellent programming skills in the latest tools & technology frameworks like
+ReactJS, AngularJS, PHP NodeJS, Bootstrap, HTML5, CSS3, Javascript, JQuery,
+Java8/J2EE or/and Microsoft .NET, Python, R, Docker, Kubernetes, Cloud-based
+managed services (DB, Error Logging, etc of various types) etc.
+• Have experience in ALM tools (GitLab, TFS, Gradle, Maven, Jenkins, Docker,
+Artifactory, Pivotal Cloud Foundry, SonarQube, Ansible, Urbancode, ClearCase,
+SVN).
+• Should have strong experience in object-oriented programming and advanced
+concepts around enterprise & cloud applications
+• Good understanding of any one of the Cloud Platform (Microsoft Azure, Google
+Cloud Platform, Amazon Web Services)
+• Good understanding of Relational database experience and demonstrated abilities
+in SQL and data modelling is required.
+• Ability to develop new and innovative applications as well as maintaining existing
+code.
+• Working exposure with Agile (Scrum) and DevOps is a must

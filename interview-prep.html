@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Angular Interview Q&A</title>
+
+  <!-- Prism.js for syntax highlighting -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css" />
+
+  <style>
+    :root {
+      --bg: #f5f7fa;
+      --card: #ffffff;
+      --text: #1f2937;
+      --muted: #64748b;
+      --primary: #2563eb;
+    }
+
+    body.dark {
+      --bg: #0f172a;
+      --card: #1e293b;
+      --text: #e5e7eb;
+      --muted: #94a3b8;
+    }
+
+    body {
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+      margin: 0;
+      background: var(--bg);
+      color: var(--text);
+      transition: background 0.3s, color 0.3s;
+    }
+
+    header {
+      background: var(--primary);
+      color: #fff;
+      padding: 16px;
+      text-align: center;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 1.4rem;
+    }
+
+    header p {
+      margin: 6px 0 0;
+      font-size: 0.9rem;
+      opacity: 0.9;
+    }
+
+    .toolbar {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin: 16px auto;
+      max-width: 1100px;
+      padding: 0 12px;
+    }
+
+    .toolbar input {
+      flex: 1 1 100%;
+      padding: 10px;
+      border-radius: 6px;
+      border: 1px solid #cbd5f5;
+      font-size: 0.95rem;
+    }
+
+    .toolbar button {
+      flex: 1 1 auto;
+      padding: 10px 12px;
+      border-radius: 6px;
+      border: none;
+      cursor: pointer;
+      background: var(--primary);
+      color: white;
+      font-size: 0.9rem;
+    }
+
+    .container {
+      max-width: 1100px;
+      margin: auto;
+      padding: 0 12px 30px;
+    }
+
+    .card {
+      background: var(--card);
+      border-radius: 8px;
+      margin-bottom: 12px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      overflow: hidden;
+    }
+
+    .question {
+      padding: 14px 16px;
+      cursor: pointer;
+      font-weight: 600;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 0.95rem;
+    }
+
+    .answer {
+      padding: 0 16px 16px;
+      display: none;
+      white-space: pre-wrap;
+      font-size: 0.9rem;
+    }
+
+    .card.active .answer {
+      display: block;
+    }
+
+    .icon {
+      font-size: 1.2rem;
+      margin-left: 10px;
+    }
+
+    pre {
+      font-size: 0.8rem;
+      border-radius: 6px;
+    }
+
+    footer {
+      text-align: center;
+      padding: 14px;
+      font-size: 0.8rem;
+      color: var(--muted);
+    }
+
+    /* Desktop enhancements */
+    @media (min-width: 768px) {
+      header h1 {
+        font-size: 1.8rem;
+      }
+
+      .toolbar input {
+        flex: 2;
+      }
+
+      .toolbar button {
+        flex: none;
+      }
+
+      .question {
+        font-size: 1rem;
+      }
+
+      .answer {
+        font-size: 0.95rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Angular / RxJS Interview Q&A</h1>
+  <p>Search • Accordion • Dark Mode • Mobile Friendly</p>
+</header>
+
+<div class="toolbar">
+  <input type="text" id="search" placeholder="Search questions..." />
+  <button onclick="expandAll()">➕ Expand All</button>
+  <button onclick="collapseAll()">➖ Collapse All</button>
+  <button onclick="toggleDarkMode()">🌙 Dark Mode</button>
+</div>
+
+<div class="container" id="qaContainer">
+
+  <div class="card">
+    <div class="question">Q1. What is the full form of RxJS? <span class="icon">+</span></div>
+    <div class="answer">Reactive Extensions for JavaScript</div>
+  </div>
+
+  <div class="card">
+    <div class="question">Q2. What is RxJS? <span class="icon">+</span></div>
+    <div class="answer">
+RxJS is a library for composing asynchronous and event-based programs using observable sequences.
+
+Core concepts:
+- Observable
+- Observer
+- Subjects
+- Operators
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="question">Q3. Purpose of RxJS? <span class="icon">+</span></div>
+    <div class="answer">Handles async data streams like HTTP, events, and callbacks.</div>
+  </div>
+
+  <div class="card">
+    <div class="question">Q4. What is forkJoin? <span class="icon">+</span></div>
+    <div class="answer">
+<pre><code class="language-ts">forkJoin([obs1, obs2]).subscribe(result => {
+  console.log(result);
+});</code></pre>
+Emits once when all observables complete.
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="question">Q5. What is RegExp? <span class="icon">+</span></div>
+    <div class="answer">
+<pre><code class="language-js">const text = 'anil goes to school';
+const regex = /[aeiou]/gi;
+const vowels = text.match(regex);</code></pre>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="question">Q6. What is NgRx? <span class="icon">+</span></div>
+    <div class="answer">NgRx is a reactive state management library for Angular inspired by Redux.</div>
+  </div>
+
+</div>
+
+<footer>© 2025 Interview Prep</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+
+<script>
+  const cards = document.querySelectorAll('.card');
+
+  // Accordion toggle
+  document.querySelectorAll('.question').forEach(q => {
+    q.addEventListener('click', () => {
+      const card = q.parentElement;
+      card.classList.toggle('active');
+      q.querySelector('.icon').textContent = card.classList.contains('active') ? '−' : '+';
+    });
+  });
+
+  // Expand all
+  function expandAll() {
+    cards.forEach(card => {
+      card.classList.add('active');
+      card.querySelector('.icon').textContent = '−';
+    });
+  }
+
+  // Collapse all
+  function collapseAll() {
+    cards.forEach(card => {
+      card.classList.remove('active');
+      card.querySelector('.icon').textContent = '+';
+    });
+  }
+
+  // Search filter
+  document.getElementById('search').addEventListener('input', function () {
+    const value = this.value.toLowerCase();
+    cards.forEach(card => {
+      card.style.display = card.innerText.toLowerCase().includes(value) ? '' : 'none';
+    });
+  });
+
+  // Dark mode toggle
+  function toggleDarkMode() {
+    document.body.classList.toggle('dark');
+  }
+</script>
+
+</body>
+</html>

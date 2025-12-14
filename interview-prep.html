@@ -171,54 +171,291 @@
 
 <div class="container" id="qaContainer">
 
+  <!-- Q1 -->
   <div class="card">
-    <div class="question">Q1. What is the full form of RxJS? <span class="icon">+</span></div>
-    <div class="answer">Reactive Extensions for JavaScript</div>
-  </div>
-
-  <div class="card">
-    <div class="question">Q2. What is RxJS? <span class="icon">+</span></div>
+    <div class="question">
+      <u>Q1. What’s the full form of <strong>RxJS</strong>?</u>
+      <span class="icon">+</span>
+    </div>
     <div class="answer">
-RxJS is a library for composing asynchronous and event-based programs using observable sequences.
-
-Core concepts:
-- Observable
-- Observer
-- Subjects
-- Operators
+      <ul>
+        <li><strong>RxJS</strong> = <mark>Reactive Extensions for JavaScript</mark></li>
+        <li>Closely related to <em>zone.js</em> in Angular for async context handling</li>
+      </ul>
     </div>
   </div>
 
+  <!-- Q2 -->
   <div class="card">
-    <div class="question">Q3. Purpose of RxJS? <span class="icon">+</span></div>
-    <div class="answer">Handles async data streams like HTTP, events, and callbacks.</div>
-  </div>
-
-  <div class="card">
-    <div class="question">Q4. What is forkJoin? <span class="icon">+</span></div>
+    <div class="question">
+      <u>Q2. What is RxJS?</u>
+      <span class="icon">+</span>
+    </div>
     <div class="answer">
-<pre><code class="language-ts">forkJoin([obs1, obs2]).subscribe(result => {
-  console.log(result);
-});</code></pre>
-Emits once when all observables complete.
+      <p><strong>RxJS</strong> is a library for composing <mark>asynchronous</mark> and <mark>event-based</mark> programs using <em>Observable sequences</em>.</p>
+      <ul>
+        <li><strong>Core type:</strong> Observable</li>
+        <li><strong>Satellite types:</strong> Observer, Subject, Scheduler</li>
+        <li><strong>Operators:</strong> map, filter, reduce, every, etc.</li>
+        <li>Handles async events as <em>collections</em></li>
+      </ul>
     </div>
   </div>
 
+  <!-- Q3 -->
   <div class="card">
-    <div class="question">Q5. What is RegExp? <span class="icon">+</span></div>
+    <div class="question">
+      <u>Q3. What is the purpose of RxJS?</u>
+      <span class="icon">+</span>
+    </div>
     <div class="answer">
-<pre><code class="language-js">const text = 'anil goes to school';
+      <ul>
+        <li>Manage <strong>asynchronous data streams</strong></li>
+        <li>Works with:
+          <ol>
+            <li>HTTP calls</li>
+            <li>Callbacks</li>
+            <li>Events</li>
+          </ol>
+        </li>
+        <li>Provides an <mark>extensive list of operators</mark> to transform data</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Q4 -->
+  <div class="card">
+    <div class="question">
+      <u>Q4. What are Observables in RxJS?</u>
+      <span class="icon">+</span>
+    </div>
+    <div class="answer">
+      <p>
+        <strong>Observables</strong> act as an interface to handle:
+      </p>
+      <ul>
+        <li>Asynchronous operations</li>
+        <li>Streams of data</li>
+        <li>Events and HTTP responses</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- ForkJoin -->
+  <div class="card">
+    <div class="question">
+      <u>What is <strong>forkJoin</strong>?</u>
+      <span class="icon">+</span>
+    </div>
+    <div class="answer">
+      <p>
+        <strong>forkJoin</strong> is an RxJS operator that:
+      </p>
+      <ul>
+        <li>Runs multiple observables <mark>in parallel</mark></li>
+        <li>Waits for <strong>all</strong> to complete</li>
+        <li>Emits only <em>once</em> with last values</li>
+      </ul>
+
+<pre><code class="language-ts">
+const finalVal = forkJoin([json1, json2, json3]);
+</code></pre>
+
+      <ul>
+        <li>❌ Never emits if any observable never completes</li>
+        <li>❌ Errors immediately if any observable errors</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Q5 -->
+  <div class="card">
+    <div class="question">
+      <u>Q5. What is <strong>RegExp</strong>?</u>
+      <span class="icon">+</span>
+    </div>
+    <div class="answer">
+      <p>
+        <strong>Regular Expressions</strong> are patterns used to match text in strings.
+      </p>
+      <ul>
+        <li>Methods: exec(), test(), match(), replace(), split()</li>
+      </ul>
+
+<pre><code class="language-js">
+const a = 'anil goes to school';
 const regex = /[aeiou]/gi;
-const vowels = text.match(regex);</code></pre>
+const vowelsCount = a.match(regex);
+</code></pre>
     </div>
   </div>
 
+  <!-- Q6 -->
   <div class="card">
-    <div class="question">Q6. What is NgRx? <span class="icon">+</span></div>
-    <div class="answer">NgRx is a reactive state management library for Angular inspired by Redux.</div>
+    <div class="question">
+      <u>Q6. What is <strong>NgRx</strong>?</u>
+      <span class="icon">+</span>
+    </div>
+    <div class="answer">
+      <p>
+        <strong>NgRx</strong> is a <mark>reactive state management</mark> library for Angular inspired by Redux.
+      </p>
+      <ul>
+        <li>Single-direction data flow</li>
+        <li>Centralized Store</li>
+        <li>Isolation of side effects</li>
+      </ul>
+
+      <strong>Core building blocks:</strong>
+      <ol>
+        <li>Actions</li>
+        <li>Reducers</li>
+        <li>Selectors</li>
+        <li>Store</li>
+      </ol>
+
+<pre><code class="language-ts">
+// app.module.ts
+StoreModule.forRoot({ hero: heroReducer });
+</code></pre>
+
+<pre><code class="language-ts">
+// Dispatch
+this.store.dispatch(setData({ data: 'Test' }));
+</code></pre>
+
+<pre><code class="language-ts">
+// Select
+this.hero$ = this.store.select(selectHeroData);
+</code></pre>
+    </div>
+  </div>
+
+  <!-- Q7 -->
+  <div class="card">
+    <div class="question">
+      <u>Q7. Access Modifiers?</u>
+      <span class="icon">+</span>
+    </div>
+    <div class="answer">
+      <p><strong>Encapsulation</strong> controls member visibility.</p>
+      <ul>
+        <li><strong>public</strong></li>
+        <li><strong>private</strong></li>
+        <li><strong>protected</strong></li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Q8 -->
+  <div class="card">
+    <div class="question">
+      <u>Q8. CI/CD tools?</u>
+      <span class="icon">+</span>
+    </div>
+    <div class="answer">
+      <p><strong>CI/CD</strong> automates build, test, and deployment.</p>
+      <ul>
+        <li>GitLab</li>
+        <li>Jenkins</li>
+        <li>GitHub Actions</li>
+        <li>Azure DevOps</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Q9 -->
+  <div class="card">
+    <div class="question">
+      <u>Q9. What is Mock API?</u>
+      <span class="icon">+</span>
+    </div>
+    <div class="answer">
+      <ul>
+        <li>Simulates backend APIs</li>
+        <li>Used for <em>testing & prototyping</em></li>
+        <li>Supports REST operations</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Q10 -->
+  <div class="card">
+    <div class="question">
+      <u>Q10. Git Basic Commands</u>
+      <span class="icon">+</span>
+    </div>
+    <div class="answer">
+<pre><code class="language-bash">
+git clone
+git pull
+git status
+git add
+git commit -m "message"
+git push
+git branch
+git checkout
+git log
+git reset --hard
+git revert
+git stash
+</code></pre>
+    </div>
+  </div>
+
+  <!-- Q11 -->
+  <div class="card">
+    <div class="question">
+      <u>Q11. Cherry-picking & Patch strategy</u>
+      <span class="icon">+</span>
+    </div>
+    <div class="answer">
+      <p>
+        <strong>Cherry-picking</strong> applies specific commits from one branch to another.
+      </p>
+<pre><code class="language-bash">
+git cherry-pick &lt;commit-id&gt;
+</code></pre>
+    </div>
+  </div>
+
+  <!-- Micro Frontend -->
+  <div class="card">
+    <div class="question">
+      <u>Micro Frontend</u>
+      <span class="icon">+</span>
+    </div>
+    <div class="answer">
+      <ul>
+        <li>Frontend split into <mark>independently deployed</mark> apps</li>
+        <li>Similar to backend microservices</li>
+        <li>Teams work independently</li>
+      </ul>
+<pre><code class="language-bash">
+npm install --save-dev @angular-architects/module-federation
+</code></pre>
+    </div>
+  </div>
+
+  <!-- Module Federation -->
+  <div class="card">
+    <div class="question">
+      <u>Module Federation</u>
+      <span class="icon">+</span>
+    </div>
+    <div class="answer">
+      <p>
+        <strong>Webpack 5 Module Federation</strong> allows sharing modules at runtime.
+      </p>
+      <ul>
+        <li><strong>Host:</strong> consumes modules</li>
+        <li><strong>Remote:</strong> exposes modules</li>
+      </ul>
+    </div>
   </div>
 
 </div>
+
 
 <footer>© 2025 Interview Prep</footer>
 

@@ -1,392 +1,413 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Angular Interview Q&A</title>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Angular Interview Q&A</title>
 
-  <!-- Prism.js for syntax highlighting -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css" />
+    <!-- Prism.js for syntax highlighting -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css"
+    />
 
-  <style>
-    :root {
-      --bg: #f5f7fa;
-      --card: #ffffff;
-      --text: #1f2937;
-      --muted: #64748b;
-      --primary: #2563eb;
-    }
+    <style>
+      :root {
+        --bg: #f5f7fa;
+        --card: #ffffff;
+        --text: #1f2937;
+        --muted: #64748b;
+        --primary: #2563eb;
+      }
 
-    body.dark {
-      --bg: #0f172a;
-      --card: #1e293b;
-      --text: #e5e7eb;
-      --muted: #94a3b8;
-    }
+      body.dark {
+        --bg: #0f172a;
+        --card: #1e293b;
+        --text: #e5e7eb;
+        --muted: #94a3b8;
+      }
 
-    body {
-      font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
-      margin: 0;
-      background: var(--bg);
-      color: var(--text);
-      transition: background 0.3s, color 0.3s;
-    }
+      body {
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+        margin: 0;
+        background: var(--bg);
+        color: var(--text);
+        transition: background 0.3s, color 0.3s;
+      }
 
-    header {
-      background: var(--primary);
-      color: #fff;
-      padding: 16px;
-      text-align: center;
-    }
+      header {
+        background: var(--primary);
+        color: #fff;
+        padding: 16px;
+        text-align: center;
+      }
 
-    header h1 {
-      margin: 0;
-      font-size: 1.4rem;
-    }
-
-    header p {
-      margin: 6px 0 0;
-      font-size: 0.9rem;
-      opacity: 0.9;
-    }
-
-    .toolbar {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 10px;
-      margin: 16px auto;
-      max-width: 1100px;
-      padding: 0 12px;
-    }
-
-    .toolbar input {
-      flex: 1 1 100%;
-      padding: 10px;
-      border-radius: 6px;
-      border: 1px solid #cbd5f5;
-      font-size: 0.95rem;
-    }
-
-    .toolbar button {
-      flex: 1 1 auto;
-      padding: 10px 12px;
-      border-radius: 6px;
-      border: none;
-      cursor: pointer;
-      background: var(--primary);
-      color: white;
-      font-size: 0.9rem;
-    }
-
-    .container {
-      max-width: 1100px;
-      margin: auto;
-      padding: 0 12px 30px;
-    }
-
-    .card {
-      background: var(--card);
-      border-radius: 8px;
-      margin-bottom: 12px;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-      overflow: hidden;
-    }
-
-    .question {
-      padding: 14px 16px;
-      cursor: pointer;
-      font-weight: 600;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      font-size: 0.95rem;
-    }
-
-    .answer {
-      padding: 0 16px 16px;
-      display: none;
-      white-space: pre-wrap;
-      font-size: 0.9rem;
-    }
-
-    .card.active .answer {
-      display: block;
-    }
-
-    .icon {
-      font-size: 1.2rem;
-      margin-left: 10px;
-    }
-
-    pre {
-      font-size: 0.8rem;
-      border-radius: 6px;
-    }
-
-    footer {
-      text-align: center;
-      padding: 14px;
-      font-size: 0.8rem;
-      color: var(--muted);
-    }
-
-    /* Desktop enhancements */
-    @media (min-width: 768px) {
       header h1 {
-        font-size: 1.8rem;
+        margin: 0;
+        font-size: 1.4rem;
+      }
+
+      header p {
+        margin: 6px 0 0;
+        font-size: 0.9rem;
+        opacity: 0.9;
+      }
+
+      .toolbar {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        margin: 16px auto;
+        max-width: 1100px;
+        padding: 0 12px;
       }
 
       .toolbar input {
-        flex: 2;
+        flex: 1 1 100%;
+        padding: 10px;
+        border-radius: 6px;
+        border: 1px solid #cbd5f5;
+        font-size: 0.95rem;
       }
 
       .toolbar button {
-        flex: none;
+        flex: 1 1 auto;
+        padding: 10px 12px;
+        border-radius: 6px;
+        border: none;
+        cursor: pointer;
+        background: var(--primary);
+        color: white;
+        font-size: 0.9rem;
+      }
+
+      .container {
+        max-width: 1100px;
+        margin: auto;
+        padding: 0 12px 30px;
+      }
+
+      .card {
+        background: var(--card);
+        border-radius: 8px;
+        margin-bottom: 12px;
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+        overflow: hidden;
       }
 
       .question {
-        font-size: 1rem;
+        padding: 14px 16px;
+        cursor: pointer;
+        font-weight: 600;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-size: 0.95rem;
       }
 
       .answer {
-        font-size: 0.95rem;
+        padding: 0 16px 16px;
+        display: none;
+        white-space: pre-wrap;
+        font-size: 0.9rem;
       }
-    }
-  </style>
-</head>
-<body>
 
-<header>
-  <h1>Angular / RxJS Interview Q&A</h1>
-  <p>Search • Accordion • Dark Mode • Mobile Friendly</p>
-</header>
+      .card.active .answer {
+        display: block;
+      }
 
-<div class="toolbar">
-  <input type="text" id="search" placeholder="Search questions..." />
-  <button onclick="expandAll()">➕ Expand All</button>
-  <button onclick="collapseAll()">➖ Collapse All</button>
-  <button onclick="toggleDarkMode()">🌙 Dark Mode</button>
-</div>
+      .icon {
+        font-size: 1.2rem;
+        margin-left: 10px;
+      }
 
-<div class="container" id="qaContainer">
+      pre {
+        font-size: 0.8rem;
+        border-radius: 6px;
+      }
 
-  <!-- Q1 -->
-  <div class="card">
-    <div class="question">
-      <u>Q1. What’s the full form of <strong>RxJS</strong>?</u>
-      <span class="icon">+</span>
-    </div>
-    <div class="answer">
-      <ul>
-        <li><strong>RxJS</strong> = <mark>Reactive Extensions for JavaScript</mark></li>
-        <li>Closely related to <em>zone.js</em> in Angular for async context handling</li>
-      </ul>
-    </div>
-  </div>
+      footer {
+        text-align: center;
+        padding: 14px;
+        font-size: 0.8rem;
+        color: var(--muted);
+      }
 
-  <!-- Q2 -->
-  <div class="card">
-    <div class="question">
-      <u>Q2. What is RxJS?</u>
-      <span class="icon">+</span>
-    </div>
-    <div class="answer">
-      <p><strong>RxJS</strong> is a library for composing <mark>asynchronous</mark> and <mark>event-based</mark> programs using <em>Observable sequences</em>.</p>
-      <ul>
-        <li><strong>Core type:</strong> Observable</li>
-        <li><strong>Satellite types:</strong> Observer, Subject, Scheduler</li>
-        <li><strong>Operators:</strong> map, filter, reduce, every, etc.</li>
-        <li>Handles async events as <em>collections</em></li>
-      </ul>
-    </div>
-  </div>
+      /* Desktop enhancements */
+      @media (min-width: 768px) {
+        header h1 {
+          font-size: 1.8rem;
+        }
 
-  <!-- Q3 -->
-  <div class="card">
-    <div class="question">
-      <u>Q3. What is the purpose of RxJS?</u>
-      <span class="icon">+</span>
-    </div>
-    <div class="answer">
-      <ul>
-        <li>Manage <strong>asynchronous data streams</strong></li>
-        <li>Works with:
-          <ol>
-            <li>HTTP calls</li>
-            <li>Callbacks</li>
-            <li>Events</li>
-          </ol>
-        </li>
-        <li>Provides an <mark>extensive list of operators</mark> to transform data</li>
-      </ul>
-    </div>
-  </div>
+        .toolbar input {
+          flex: 2;
+        }
 
-  <!-- Q4 -->
-  <div class="card">
-    <div class="question">
-      <u>Q4. What are Observables in RxJS?</u>
-      <span class="icon">+</span>
-    </div>
-    <div class="answer">
-      <p>
-        <strong>Observables</strong> act as an interface to handle:
-      </p>
-      <ul>
-        <li>Asynchronous operations</li>
-        <li>Streams of data</li>
-        <li>Events and HTTP responses</li>
-      </ul>
-    </div>
-  </div>
+        .toolbar button {
+          flex: none;
+        }
 
-  <!-- ForkJoin -->
-  <div class="card">
-    <div class="question">
-      <u>What is <strong>forkJoin</strong>?</u>
-      <span class="icon">+</span>
-    </div>
-    <div class="answer">
-      <p>
-        <strong>forkJoin</strong> is an RxJS operator that:
-      </p>
-      <ul>
-        <li>Runs multiple observables <mark>in parallel</mark></li>
-        <li>Waits for <strong>all</strong> to complete</li>
-        <li>Emits only <em>once</em> with last values</li>
-      </ul>
+        .question {
+          font-size: 1rem;
+        }
 
-<pre><code class="language-ts">
+        .answer {
+          font-size: 0.95rem;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>Angular / RxJS Interview Q&A</h1>
+      <p>Search • Accordion • Dark Mode • Mobile Friendly</p>
+    </header>
+
+    <div class="toolbar">
+      <input type="text" id="search" placeholder="Search questions..." />
+      <button onclick="expandAll()">➕ Expand All</button>
+      <button onclick="collapseAll()">➖ Collapse All</button>
+      <button onclick="toggleDarkMode()">🌙 Dark Mode</button>
+    </div>
+
+    <div class="container" id="qaContainer">
+      <!-- Q1 -->
+      <div class="card">
+        <div class="question">
+          <u>Q1. What’s the full form of <strong>RxJS</strong>?</u>
+          <span class="icon">+</span>
+        </div>
+        <div class="answer">
+          <ul>
+            <li>
+              <strong>RxJS</strong> =
+              <mark>Reactive Extensions for JavaScript</mark>
+            </li>
+            <li>
+              Closely related to <em>zone.js</em> in Angular for async context
+              handling
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Q2 -->
+      <div class="card">
+        <div class="question">
+          <u>Q2. What is RxJS?</u>
+          <span class="icon">+</span>
+        </div>
+        <div class="answer">
+          <p>
+            <strong>RxJS</strong> is a library for composing
+            <mark>asynchronous</mark> and <mark>event-based</mark> programs
+            using <em>Observable sequences</em>.
+          </p>
+          <ul>
+            <li><strong>Core type:</strong> Observable</li>
+            <li>
+              <strong>Satellite types:</strong> Observer, Subject, Scheduler
+            </li>
+            <li>
+              <strong>Operators:</strong> map, filter, reduce, every, etc.
+            </li>
+            <li>Handles async events as <em>collections</em></li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Q3 -->
+      <div class="card">
+        <div class="question">
+          <u>Q3. What is the purpose of RxJS?</u>
+          <span class="icon">+</span>
+        </div>
+        <div class="answer">
+          <ul>
+            <li>Manage <strong>asynchronous data streams</strong></li>
+            <li>
+              Works with:
+              <ol>
+                <li>HTTP calls</li>
+                <li>Callbacks</li>
+                <li>Events</li>
+              </ol>
+            </li>
+            <li>
+              Provides an <mark>extensive list of operators</mark> to transform
+              data
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Q4 -->
+      <div class="card">
+        <div class="question">
+          <u>Q4. What are Observables in RxJS?</u>
+          <span class="icon">+</span>
+        </div>
+        <div class="answer">
+          <p><strong>Observables</strong> act as an interface to handle:</p>
+          <ul>
+            <li>Asynchronous operations</li>
+            <li>Streams of data</li>
+            <li>Events and HTTP responses</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- ForkJoin -->
+      <div class="card">
+        <div class="question">
+          <u>What is <strong>forkJoin</strong>?</u>
+          <span class="icon">+</span>
+        </div>
+        <div class="answer">
+          <p><strong>forkJoin</strong> is an RxJS operator that:</p>
+          <ul>
+            <li>Runs multiple observables <mark>in parallel</mark></li>
+            <li>Waits for <strong>all</strong> to complete</li>
+            <li>Emits only <em>once</em> with last values</li>
+          </ul>
+
+          <pre><code class="language-ts">
 const finalVal = forkJoin([json1, json2, json3]);
 </code></pre>
 
-      <ul>
-        <li>❌ Never emits if any observable never completes</li>
-        <li>❌ Errors immediately if any observable errors</li>
-      </ul>
-    </div>
-  </div>
+          <ul>
+            <li>❌ Never emits if any observable never completes</li>
+            <li>❌ Errors immediately if any observable errors</li>
+          </ul>
+        </div>
+      </div>
 
-  <!-- Q5 -->
-  <div class="card">
-    <div class="question">
-      <u>Q5. What is <strong>RegExp</strong>?</u>
-      <span class="icon">+</span>
-    </div>
-    <div class="answer">
-      <p>
-        <strong>Regular Expressions</strong> are patterns used to match text in strings.
-      </p>
-      <ul>
-        <li>Methods: exec(), test(), match(), replace(), split()</li>
-      </ul>
+      <!-- Q5 -->
+      <div class="card">
+        <div class="question">
+          <u>Q5. What is <strong>RegExp</strong>?</u>
+          <span class="icon">+</span>
+        </div>
+        <div class="answer">
+          <p>
+            <strong>Regular Expressions</strong> are patterns used to match text
+            in strings.
+          </p>
+          <ul>
+            <li>Methods: exec(), test(), match(), replace(), split()</li>
+          </ul>
 
-<pre><code class="language-js">
+          <pre><code class="language-js">
 const a = 'anil goes to school';
 const regex = /[aeiou]/gi;
 const vowelsCount = a.match(regex);
 </code></pre>
-    </div>
-  </div>
+        </div>
+      </div>
 
-  <!-- Q6 -->
-  <div class="card">
-    <div class="question">
-      <u>Q6. What is <strong>NgRx</strong>?</u>
-      <span class="icon">+</span>
-    </div>
-    <div class="answer">
-      <p>
-        <strong>NgRx</strong> is a <mark>reactive state management</mark> library for Angular inspired by Redux.
-      </p>
-      <ul>
-        <li>Single-direction data flow</li>
-        <li>Centralized Store</li>
-        <li>Isolation of side effects</li>
-      </ul>
+      <!-- Q6 -->
+      <div class="card">
+        <div class="question">
+          <u>Q6. What is <strong>NgRx</strong>?</u>
+          <span class="icon">+</span>
+        </div>
+        <div class="answer">
+          <p>
+            <strong>NgRx</strong> is a
+            <mark>reactive state management</mark> library for Angular inspired
+            by Redux.
+          </p>
+          <ul>
+            <li>Single-direction data flow</li>
+            <li>Centralized Store</li>
+            <li>Isolation of side effects</li>
+          </ul>
 
-      <strong>Core building blocks:</strong>
-      <ol>
-        <li>Actions</li>
-        <li>Reducers</li>
-        <li>Selectors</li>
-        <li>Store</li>
-      </ol>
+          <strong>Core building blocks:</strong>
+          <ol>
+            <li>Actions</li>
+            <li>Reducers</li>
+            <li>Selectors</li>
+            <li>Store</li>
+          </ol>
 
-<pre><code class="language-ts">
+          <pre><code class="language-ts">
 // app.module.ts
 StoreModule.forRoot({ hero: heroReducer });
 </code></pre>
 
-<pre><code class="language-ts">
+          <pre><code class="language-ts">
 // Dispatch
 this.store.dispatch(setData({ data: 'Test' }));
 </code></pre>
 
-<pre><code class="language-ts">
+          <pre><code class="language-ts">
 // Select
 this.hero$ = this.store.select(selectHeroData);
 </code></pre>
-    </div>
-  </div>
+        </div>
+      </div>
 
-  <!-- Q7 -->
-  <div class="card">
-    <div class="question">
-      <u>Q7. Access Modifiers?</u>
-      <span class="icon">+</span>
-    </div>
-    <div class="answer">
-      <p><strong>Encapsulation</strong> controls member visibility.</p>
-      <ul>
-        <li><strong>public</strong></li>
-        <li><strong>private</strong></li>
-        <li><strong>protected</strong></li>
-      </ul>
-    </div>
-  </div>
+      <!-- Q7 -->
+      <div class="card">
+        <div class="question">
+          <u>Q7. Access Modifiers?</u>
+          <span class="icon">+</span>
+        </div>
+        <div class="answer">
+          <p><strong>Encapsulation</strong> controls member visibility.</p>
+          <ul>
+            <li><strong>public</strong></li>
+            <li><strong>private</strong></li>
+            <li><strong>protected</strong></li>
+          </ul>
+        </div>
+      </div>
 
-  <!-- Q8 -->
-  <div class="card">
-    <div class="question">
-      <u>Q8. CI/CD tools?</u>
-      <span class="icon">+</span>
-    </div>
-    <div class="answer">
-      <p><strong>CI/CD</strong> automates build, test, and deployment.</p>
-      <ul>
-        <li>GitLab</li>
-        <li>Jenkins</li>
-        <li>GitHub Actions</li>
-        <li>Azure DevOps</li>
-      </ul>
-    </div>
-  </div>
+      <!-- Q8 -->
+      <div class="card">
+        <div class="question">
+          <u>Q8. CI/CD tools?</u>
+          <span class="icon">+</span>
+        </div>
+        <div class="answer">
+          <p><strong>CI/CD</strong> automates build, test, and deployment.</p>
+          <ul>
+            <li>GitLab</li>
+            <li>Jenkins</li>
+            <li>GitHub Actions</li>
+            <li>Azure DevOps</li>
+          </ul>
+        </div>
+      </div>
 
-  <!-- Q9 -->
-  <div class="card">
-    <div class="question">
-      <u>Q9. What is Mock API?</u>
-      <span class="icon">+</span>
-    </div>
-    <div class="answer">
-      <ul>
-        <li>Simulates backend APIs</li>
-        <li>Used for <em>testing & prototyping</em></li>
-        <li>Supports REST operations</li>
-      </ul>
-    </div>
-  </div>
+      <!-- Q9 -->
+      <div class="card">
+        <div class="question">
+          <u>Q9. What is Mock API?</u>
+          <span class="icon">+</span>
+        </div>
+        <div class="answer">
+          <ul>
+            <li>Simulates backend APIs</li>
+            <li>Used for <em>testing & prototyping</em></li>
+            <li>Supports REST operations</li>
+          </ul>
+        </div>
+      </div>
 
-  <!-- Q10 -->
-  <div class="card">
-    <div class="question">
-      <u>Q10. Git Basic Commands</u>
-      <span class="icon">+</span>
-    </div>
-    <div class="answer">
-<pre><code class="language-bash">
+      <!-- Q10 -->
+      <div class="card">
+        <div class="question">
+          <u>Q10. Git Basic Commands</u>
+          <span class="icon">+</span>
+        </div>
+        <div class="answer">
+          <pre><code class="language-bash">
 git clone
 git pull
 git status
@@ -400,108 +421,173 @@ git reset --hard
 git revert
 git stash
 </code></pre>
-    </div>
-  </div>
+        </div>
+      </div>
 
-  <!-- Q11 -->
-  <div class="card">
-    <div class="question">
-      <u>Q11. Cherry-picking & Patch strategy</u>
-      <span class="icon">+</span>
-    </div>
-    <div class="answer">
-      <p>
-        <strong>Cherry-picking</strong> applies specific commits from one branch to another.
-      </p>
-<pre><code class="language-bash">
+      <!-- Q11 -->
+      <div class="card">
+        <div class="question">
+          <u>Q11. Cherry-picking & Patch strategy</u>
+          <span class="icon">+</span>
+        </div>
+        <div class="answer">
+          <p>
+            <strong>Cherry-picking</strong> applies specific commits from one
+            branch to another.
+          </p>
+          <pre><code class="language-bash">
 git cherry-pick &lt;commit-id&gt;
 </code></pre>
-    </div>
-  </div>
+        </div>
+      </div>
 
-  <!-- Micro Frontend -->
-  <div class="card">
-    <div class="question">
-      <u>Micro Frontend</u>
-      <span class="icon">+</span>
-    </div>
-    <div class="answer">
-      <ul>
-        <li>Frontend split into <mark>independently deployed</mark> apps</li>
-        <li>Similar to backend microservices</li>
-        <li>Teams work independently</li>
-      </ul>
-<pre><code class="language-bash">
+      <!-- Micro Frontend -->
+      <div class="card">
+        <div class="question">
+          <u>Micro Frontend</u>
+          <span class="icon">+</span>
+        </div>
+        <div class="answer">
+          <ul>
+            <li>
+              Frontend split into <mark>independently deployed</mark> apps
+            </li>
+            <li>Similar to backend microservices</li>
+            <li>Teams work independently</li>
+          </ul>
+          <pre><code class="language-bash">
 npm install --save-dev @angular-architects/module-federation
 </code></pre>
-    </div>
-  </div>
+        </div>
+      </div>
 
-  <!-- Module Federation -->
-  <div class="card">
-    <div class="question">
-      <u>Module Federation</u>
-      <span class="icon">+</span>
+      <!-- Module Federation -->
+      <div class="card">
+        <div class="question">
+          <u>Module Federation</u>
+          <span class="icon">+</span>
+        </div>
+        <div class="answer">
+          <p>
+            <strong>Webpack 5 Module Federation</strong> allows sharing modules
+            at runtime.
+          </p>
+          <ul>
+            <li><strong>Host:</strong> consumes modules</li>
+            <li><strong>Remote:</strong> exposes modules</li>
+          </ul>
+        </div>
+      </div>
     </div>
-    <div class="answer">
-      <p>
-        <strong>Webpack 5 Module Federation</strong> allows sharing modules at runtime.
-      </p>
-      <ul>
-        <li><strong>Host:</strong> consumes modules</li>
-        <li><strong>Remote:</strong> exposes modules</li>
-      </ul>
-    </div>
-  </div>
-
+    
+    <div class="container" id="qaContainer">
+</div>
 </div>
 
 
-<footer>© 2025 Interview Prep</footer>
+<div class="qa-item">
+<button class="qa-question">Imperative vs Declarative programming?</button>
+<div class="qa-answer">
+<p><strong>Imperative:</strong> Describes how to do something step by step.</p>
+<p><strong>Declarative:</strong> Describes what should be done.</p>
+</div>
+</div>
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
 
-<script>
-  const cards = document.querySelectorAll('.card');
+<div class="qa-item">
+<button class="qa-question">What is filter() in JavaScript?</button>
+<div class="qa-answer">
+<p>The <code>filter()</code> method creates a new array with elements that pass a condition.</p>
+</div>
+</div>
 
-  // Accordion toggle
-  document.querySelectorAll('.question').forEach(q => {
-    q.addEventListener('click', () => {
-      const card = q.parentElement;
-      card.classList.toggle('active');
-      q.querySelector('.icon').textContent = card.classList.contains('active') ? '−' : '+';
-    });
-  });
 
-  // Expand all
-  function expandAll() {
-    cards.forEach(card => {
-      card.classList.add('active');
-      card.querySelector('.icon').textContent = '−';
-    });
-  }
+<div class="qa-item">
+<button class="qa-question">What is reduce() in JavaScript?</button>
+<div class="qa-answer">
+<p>The <code>reduce()</code> method reduces an array to a single value.</p>
+</div>
+</div>
 
-  // Collapse all
-  function collapseAll() {
-    cards.forEach(card => {
-      card.classList.remove('active');
-      card.querySelector('.icon').textContent = '+';
-    });
-  }
 
-  // Search filter
-  document.getElementById('search').addEventListener('input', function () {
-    const value = this.value.toLowerCase();
-    cards.forEach(card => {
-      card.style.display = card.innerText.toLowerCase().includes(value) ? '' : 'none';
-    });
-  });
+<div class="qa-item">
+<button class="qa-question">How to validate Angular Reactive Forms?</button>
+<div class="qa-answer">
+<p>Using built-in validators like <code>Validators.required</code>, <code>Validators.minLength</code>, or custom validators.</p>
+</div>
+</div>
 
-  // Dark mode toggle
-  function toggleDarkMode() {
-    document.body.classList.toggle('dark');
-  }
-</script>
 
-</body>
+<div class="qa-item">
+<button class="qa-question">How do you handle API security in Angular?</button>
+<div class="qa-answer">
+<ul>
+<li>Use HTTPS</li>
+<li>Token-based authentication</li>
+<li>Role-based authorization</li>
+<li>Secure storage</li>
+<li>CORS configuration</li>
+<li>Proper error handling</li>
+</ul>
+</div>
+</div>
+
+
+</div>
+<div class="answer">Reactive Extensions for JavaScript</div>
+</div>
+
+
+    <footer>© 2025 Interview Prep</footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+
+    <script>
+      const cards = document.querySelectorAll(".card");
+
+      // Accordion toggle
+      document.querySelectorAll(".question").forEach((q) => {
+        q.addEventListener("click", () => {
+          const card = q.parentElement;
+          card.classList.toggle("active");
+          q.querySelector(".icon").textContent = card.classList.contains(
+            "active"
+          )
+            ? "−"
+            : "+";
+        });
+      });
+
+      // Expand all
+      function expandAll() {
+        cards.forEach((card) => {
+          card.classList.add("active");
+          card.querySelector(".icon").textContent = "−";
+        });
+      }
+
+      // Collapse all
+      function collapseAll() {
+        cards.forEach((card) => {
+          card.classList.remove("active");
+          card.querySelector(".icon").textContent = "+";
+        });
+      }
+
+      // Search filter
+      document.getElementById("search").addEventListener("input", function () {
+        const value = this.value.toLowerCase();
+        cards.forEach((card) => {
+          card.style.display = card.innerText.toLowerCase().includes(value)
+            ? ""
+            : "none";
+        });
+      });
+
+      // Dark mode toggle
+      function toggleDarkMode() {
+        document.body.classList.toggle("dark");
+      }
+    </script>
+  </body>
 </html>

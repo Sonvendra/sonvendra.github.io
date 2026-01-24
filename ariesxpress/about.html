@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About - Cargo Logistics & Shipping Services</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="main-header">
+        <div class="container">
+            <div class="header-top">
+                <div class="logo">
+                    <a href="index.html"><img src="img/logo.jpg" alt="Logo"></a>
+                </div>
+                <div class="header-right">
+                    <div class="social-icons">
+                        <a href="#" target="_blank"><img src="img/facebook.jpg" alt="Facebook"></a>
+                        <a href="#" target="_blank"><img src="img/twitter.jpg" alt="Twitter"></a>
+                        <a href="#" target="_blank"><img src="img/in.jpg" alt="LinkedIn"></a>
+                    </div>
+                    <button class="quote-btn" onclick="openQuoteModal()">Request A Quote</button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Navigation -->
+    <nav class="main-nav">
+        <div class="container">
+            <button class="mobile-menu-toggle" onclick="toggleMobileMenu()" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html" class="active">About</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <h1>About AXL</h1>
+            <nav class="breadcrumb">
+                <a href="index.html">Home</a> / <span>About AXL</span>
+            </nav>
+        </div>
+    </section>
+
+    <!-- About Content -->
+    <section class="page-content">
+        <div class="container">
+            <div class="content-wrapper">
+                <h2>Overview</h2>
+                <p>ARIES XPRESS LOGISTICS PVT. LTD. is a leading cargo logistics and shipping services provider in India. With a strong commitment to excellence and customer satisfaction, we have established ourselves as a trusted partner for businesses across various industries.</p>
+                
+                <h2>Our Journey</h2>
+                <p>Since our inception, AXL has been dedicated to providing comprehensive logistics solutions that meet the diverse needs of our clients. We have built a robust network spanning across India, ensuring timely and secure delivery of cargo through multiple transportation modes.</p>
+
+                <h2>Our Services</h2>
+                <p>We offer a wide range of logistics services including:</p>
+                <ul>
+                    <li>Air Cargo Services</li>
+                    <li>Train Cargo Services</li>
+                    <li>Surface Express Cargo</li>
+                    <li>Warehousing Solutions</li>
+                    <li>Packaging Solutions</li>
+                </ul>
+
+                <h2>Why Choose AXL</h2>
+                <div class="features-grid">
+                    <div class="feature-item">
+                        <img src="img/arow.png" alt="Arrow">
+                        <h3>On Time Delivery</h3>
+                        <p>We at AXL ensure on time delivery of your cargo with our nationwide network and excellent services. We take special care of committed date of delivery and put in all the efforts to accomplish it.</p>
+                    </div>
+                    <div class="feature-item">
+                        <img src="img/arow.png" alt="Arrow">
+                        <h3>Maximum Customer Satisfaction</h3>
+                        <p>Customer satisfaction is one of our prime goals. We provide 100% customized services, based on the personal needs and requirements of our customers. Happy costumer is all what we work for.</p>
+                    </div>
+                    <div class="feature-item">
+                        <img src="img/arow.png" alt="Arrow">
+                        <h3>Wide Network</h3>
+                        <p>Our extensive network ensures that your cargo reaches its destination safely and on time, no matter where it needs to go.</p>
+                    </div>
+                    <div class="feature-item">
+                        <img src="img/arow.png" alt="Arrow">
+                        <h3>Quality Assurance</h3>
+                        <p>We maintain the highest standards of quality in all our operations, ensuring that your cargo is handled with care and professionalism.</p>
+                    </div>
+                </div>
+
+                <h2>Our Commitment</h2>
+                <p>At AXL, we are committed to providing reliable, efficient, and cost-effective logistics solutions. Our team of experienced professionals works tirelessly to ensure that every shipment is handled with the utmost care and delivered on time.</p>
+
+                <h2>Certifications</h2>
+                <p>We are proud to be ISO 9001:2015 certified, which reflects our commitment to maintaining the highest standards of quality in all our operations.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="main-footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h4>Navigation</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>ARIES XPRESS LOGISTICS PVT. LTD</h4>
+                    <!-- <p></p>
+                    <p>Email: <a href="mailto:info@rcpl.net.in"></a></p>
+                    <p>Phone: <a href="tel:+91-11-43922222">+91-11-22222222</a></p> -->
+                    <div class="footer-social">
+                        <a href="#" target="_blank"><img src="img/facebook.jpg" alt="Facebook"></a>
+                        <a href="#" target="_blank"><img src="img/twitter.jpg" alt="Twitter"></a>
+                        <a href="#" target="_blank"><img src="img/in.jpg" alt="LinkedIn"></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>Copyright @ 2026 AXL. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Quote Modal -->
+    <div id="quoteModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeQuoteModal()">&times;</span>
+            <h2>Request A Quote</h2>
+            <form class="quote-form">
+                <input type="text" placeholder="Name" required>
+                <input type="tel" placeholder="Mobile No" required>
+                <input type="email" placeholder="Email Id" required>
+                <input type="text" placeholder="City" required>
+                <textarea placeholder="Query" rows="5" required></textarea>
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

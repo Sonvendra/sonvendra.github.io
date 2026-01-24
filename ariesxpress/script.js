@@ -93,16 +93,75 @@ window.addEventListener('click', (event) => {
     }
 });
 
-// Form submissions
-document.querySelectorAll('.quote-form, .contact-form, .track-form').forEach(form => {
+// Track form submissions (quote form is handled separately below)
+document.querySelectorAll('.track-form').forEach(form => {
     form.addEventListener('submit', (e) => {
         e.preventDefault();
         alert('Thank you for your submission! We will contact you soon.');
         form.reset();
-        if (form.classList.contains('quote-form')) {
-            closeQuoteModal();
-        }
     });
+});
+
+// Handle quote form submission with PHP
+document.addEventListener('DOMContentLoaded', function() {
+    const quoteForm = document.getElementById('quoteForm');
+    const quoteFormMessage = document.getElementById('quote-form-message');
+    const quoteSubmitBtn = document.getElementById('quoteSubmitBtn');
+
+    if (quoteForm && quoteFormMessage && quoteSubmitBtn) {
+        quoteForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Disable submit button
+            quoteSubmitBtn.disabled = true;
+            quoteSubmitBtn.textContent = 'Sending...';
+            quoteFormMessage.style.display = 'none';
+
+            // Get form data
+            const formData = new FormData(this);
+
+            // Send form data to PHP script using Fetch API
+            fetch('send_email.php', {
+                method: 'POST',
+                body: formData
+            })
+            .then(response => response.json())
+            .then(data => {
+                quoteFormMessage.style.display = 'block';
+                
+                if (data.success) {
+                    quoteFormMessage.className = 'success';
+                    quoteFormMessage.textContent = data.message;
+                    quoteForm.reset();
+                    
+                    // Close modal after 2 seconds
+                    setTimeout(function() {
+                        closeQuoteModal();
+                    }, 2000);
+                } else {
+                    quoteFormMessage.className = 'error';
+                    quoteFormMessage.textContent = data.message;
+                }
+                
+                quoteSubmitBtn.disabled = false;
+                quoteSubmitBtn.textContent = 'Submit';
+                
+                // Scroll to message
+                quoteFormMessage.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+            })
+            .catch(error => {
+                quoteFormMessage.style.display = 'block';
+                quoteFormMessage.className = 'error';
+                quoteFormMessage.textContent = 'Sorry, there was an error sending your quote request. Please try again or contact us directly at info@ariesxpress.com';
+                quoteSubmitBtn.disabled = false;
+                quoteSubmitBtn.textContent = 'Submit';
+                console.error('Error:', error);
+                
+                // Scroll to message
+                quoteFormMessage.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+            });
+        });
+    }
 });
 
 // Smooth scrolling for anchor links

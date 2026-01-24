@@ -12,7 +12,13 @@
         <div class="container">
             <div class="header-top">
                 <div class="logo">
-                    <a href="index.html"><img src="img/logo.jpg" alt="Logo"></a>
+                    <a href="index.html">
+                        <img src="img/logo.jpg" alt="Logo">
+                        <div class="company-info">
+                            <span class="company-name">Aries Xpress Logistics Pvt. Ltd</span>
+                            <span class="company-since">Since 2010</span>
+                        </div>
+                    </a>
                 </div>
                 <div class="header-right">
                     <div class="social-icons">
@@ -63,13 +69,14 @@
                         <div class="contact-item">
                             <h3>Head Office</h3>
                             <p>ARIES XPRESS LOGISTICS PVT. LTD</p>
-                            <p></p>
-                            <p>NEW DELHI, DELHI 110020</p>
+                            <p>Godown No. 3, Vyapari Building, Gyani Border, 
+                                <br>Opposite metro pillar No. 161, 
+                                <br>Sahibabad, Ghaziabad - 201005</p>
                         </div>
                         <div class="contact-item">
                             <h3>Contact Information</h3>
-                            <p><strong>Phone:</strong> <a href="tel:+91-11-22222222">+91-11-22222222</a></p>
-                            <p><strong>Email:</strong> <a href="mailto:"></a></p>
+                            <p><strong>Phone:</strong> <a href="tel:+917839313973">+91 7839313973</a></p>
+                            <p><strong>Email:</strong> <a href="mailto:info@ariesxpress.com">info@ariesxpress.com</a></p>
                         </div>
                         <div class="contact-item">
                             <h3>Business Hours</h3>
@@ -89,26 +96,27 @@
                 </div>
                 <div class="contact-form-wrapper">
                     <h2>Send us a Message</h2>
-                    <form class="contact-form">
+                    <form class="contact-form" id="contactForm" action="send_email.php" method="POST">
                         <div class="form-group">
-                            <input type="text" placeholder="Your Name" required>
+                            <input type="text" name="user_name" placeholder="Your Name" required>
                         </div>
                         <div class="form-group">
-                            <input type="tel" placeholder="Mobile No" required>
+                            <input type="tel" name="user_phone" placeholder="Mobile No" required>
                         </div>
                         <div class="form-group">
-                            <input type="email" placeholder="Email Id" required>
+                            <input type="email" name="user_email" placeholder="Email Id" required>
                         </div>
                         <div class="form-group">
-                            <input type="text" placeholder="City" required>
+                            <input type="text" name="user_city" placeholder="City" required>
                         </div>
                         <div class="form-group">
-                            <input type="text" placeholder="Subject" required>
+                            <input type="text" name="subject" placeholder="Subject" required>
                         </div>
                         <div class="form-group">
-                            <textarea placeholder="Your Message" rows="6" required></textarea>
+                            <textarea name="message" placeholder="Your Message" rows="6" required></textarea>
                         </div>
-                        <button type="submit" class="submit-btn">Send Message</button>
+                        <div id="form-message" style="display: none; margin-bottom: 15px; padding: 10px; border-radius: 4px;"></div>
+                        <button type="submit" class="submit-btn" id="submitBtn">Send Message</button>
                     </form>
                 </div>
             </div>
@@ -130,9 +138,11 @@
                 </div>
                 <div class="footer-column">
                     <h4>ARIES XPRESS LOGISTICS PVT. LTD</h4>
-                    <!-- <p></p>
-                    <p>Email: <a href="mailto:"></a></p>
-                    <p>Phone: <a href="tel:+91-11-22222222">+91-11-22222222</a></p> -->
+                    <p>Godown No. 3, Vyapari Building, Gyani Border, 
+                        <br>Opposite metro pillar No. 161, 
+                        <br>Sahibabad, Ghaziabad - 201005</p>
+                    <p>Email: <a href="mailto:info@ariesxpress.com">info@ariesxpress.com</a></p>
+                    <p>Phone: <a href="tel:+917839313973">+91 7839313973</a></p>
                     <div class="footer-social">
                         <a href="#" target="_blank"><img src="img/facebook.jpg" alt="Facebook"></a>
                         <a href="#" target="_blank"><img src="img/twitter.jpg" alt="Twitter"></a>
@@ -151,17 +161,77 @@
         <div class="modal-content">
             <span class="close" onclick="closeQuoteModal()">&times;</span>
             <h2>Request A Quote</h2>
-            <form class="quote-form">
-                <input type="text" placeholder="Name" required>
-                <input type="tel" placeholder="Mobile No" required>
-                <input type="email" placeholder="Email Id" required>
-                <input type="text" placeholder="City" required>
-                <textarea placeholder="Query" rows="5" required></textarea>
-                <button type="submit">Submit</button>
+            <form class="quote-form" id="quoteForm">
+                <input type="hidden" name="form_type" value="quote">
+                <input type="text" name="user_name" placeholder="Name" required>
+                <input type="tel" name="user_phone" placeholder="Mobile No" required>
+                <input type="email" name="user_email" placeholder="Email Id" required>
+                <input type="text" name="user_city" placeholder="City" required>
+                <textarea name="query" placeholder="Query" rows="5" required></textarea>
+                <div id="quote-form-message" style="display: none; margin-bottom: 15px; padding: 10px; border-radius: 4px;"></div>
+                <button type="submit" id="quoteSubmitBtn">Submit</button>
             </form>
         </div>
     </div>
 
     <script src="script.js"></script>
+    <script>
+        // Handle contact form submission with PHP
+        document.addEventListener('DOMContentLoaded', function() {
+            const contactForm = document.getElementById('contactForm');
+            const formMessage = document.getElementById('form-message');
+            const submitBtn = document.getElementById('submitBtn');
+
+            if (contactForm) {
+                contactForm.addEventListener('submit', function(e) {
+                    e.preventDefault();
+                    
+                    // Disable submit button
+                    submitBtn.disabled = true;
+                    submitBtn.textContent = 'Sending...';
+                    formMessage.style.display = 'none';
+
+                    // Get form data
+                    const formData = new FormData(this);
+
+                    // Send form data to PHP script using Fetch API
+                    fetch('send_email.php', {
+                        method: 'POST',
+                        body: formData
+                    })
+                    .then(response => response.json())
+                    .then(data => {
+                        formMessage.style.display = 'block';
+                        
+                        if (data.success) {
+                            formMessage.className = 'success';
+                            formMessage.textContent = data.message;
+                            contactForm.reset();
+                        } else {
+                            formMessage.className = 'error';
+                            formMessage.textContent = data.message;
+                        }
+                        
+                        submitBtn.disabled = false;
+                        submitBtn.textContent = 'Send Message';
+                        
+                        // Scroll to message
+                        formMessage.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+                    })
+                    .catch(error => {
+                        formMessage.style.display = 'block';
+                        formMessage.className = 'error';
+                        formMessage.textContent = 'Sorry, there was an error sending your message. Please try again or contact us directly at info@ariesxpress.com';
+                        submitBtn.disabled = false;
+                        submitBtn.textContent = 'Send Message';
+                        console.error('Error:', error);
+                        
+                        // Scroll to message
+                        formMessage.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+                    });
+                });
+            }
+        });
+    </script>
 </body>
 </html>

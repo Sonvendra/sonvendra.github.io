@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Cargo Logistics & Shipping Services</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="main-header">
+        <div class="container">
+            <div class="header-top">
+                <div class="logo">
+                    <a href="index.html"><img src="img/logo.jpg" alt="Logo"></a>
+                </div>
+                <div class="header-right">
+                    <div class="social-icons">
+                        <a href="#" target="_blank"><img src="img/facebook.jpg" alt="Facebook"></a>
+                        <a href="#" target="_blank"><img src="img/twitter.jpg" alt="Twitter"></a>
+                        <a href="#" target="_blank"><img src="img/in.jpg" alt="LinkedIn"></a>
+                    </div>
+                    <button class="quote-btn" onclick="openQuoteModal()">Request A Quote</button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Navigation -->
+    <nav class="main-nav">
+        <div class="container">
+            <button class="mobile-menu-toggle" onclick="toggleMobileMenu()" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="contact.html" class="active">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <h1>Contact Us</h1>
+            <nav class="breadcrumb">
+                <a href="index.html">Home</a> / <span>Contact</span>
+            </nav>
+        </div>
+    </section>
+
+    <!-- Contact Content -->
+    <section class="page-content">
+        <div class="container">
+            <div class="contact-wrapper">
+                <div class="contact-info">
+                    <h2>Get in Touch</h2>
+                    <div class="contact-details">
+                        <div class="contact-item">
+                            <h3>Head Office</h3>
+                            <p>ARIES XPRESS LOGISTICS PVT. LTD</p>
+                            <p></p>
+                            <p>NEW DELHI, DELHI 110020</p>
+                        </div>
+                        <div class="contact-item">
+                            <h3>Contact Information</h3>
+                            <p><strong>Phone:</strong> <a href="tel:+91-11-22222222">+91-11-22222222</a></p>
+                            <p><strong>Email:</strong> <a href="mailto:"></a></p>
+                        </div>
+                        <div class="contact-item">
+                            <h3>Business Hours</h3>
+                            <p>Monday - Friday: 9:00 AM - 6:00 PM</p>
+                            <p>Saturday: 9:00 AM - 2:00 PM</p>
+                            <p>Sunday: Closed</p>
+                        </div>
+                        <div class="contact-item">
+                            <h3>Follow Us</h3>
+                            <div class="contact-social">
+                                <a href="#" target="_blank"><img src="img/facebook.jpg" alt="Facebook"></a>
+                                <a href="#" target="_blank"><img src="img/twitter.jpg" alt="Twitter"></a>
+                                <a href="#" target="_blank"><img src="img/in.jpg" alt="LinkedIn"></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="contact-form-wrapper">
+                    <h2>Send us a Message</h2>
+                    <form class="contact-form">
+                        <div class="form-group">
+                            <input type="text" placeholder="Your Name" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="tel" placeholder="Mobile No" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" placeholder="Email Id" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" placeholder="City" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" placeholder="Subject" required>
+                        </div>
+                        <div class="form-group">
+                            <textarea placeholder="Your Message" rows="6" required></textarea>
+                        </div>
+                        <button type="submit" class="submit-btn">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="main-footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h4>Navigation</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>ARIES XPRESS LOGISTICS PVT. LTD</h4>
+                    <!-- <p></p>
+                    <p>Email: <a href="mailto:"></a></p>
+                    <p>Phone: <a href="tel:+91-11-22222222">+91-11-22222222</a></p> -->
+                    <div class="footer-social">
+                        <a href="#" target="_blank"><img src="img/facebook.jpg" alt="Facebook"></a>
+                        <a href="#" target="_blank"><img src="img/twitter.jpg" alt="Twitter"></a>
+                        <a href="#" target="_blank"><img src="img/in.jpg" alt="LinkedIn"></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>Copyright @ 2026 AXL. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Quote Modal -->
+    <div id="quoteModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeQuoteModal()">&times;</span>
+            <h2>Request A Quote</h2>
+            <form class="quote-form">
+                <input type="text" placeholder="Name" required>
+                <input type="tel" placeholder="Mobile No" required>
+                <input type="email" placeholder="Email Id" required>
+                <input type="text" placeholder="City" required>
+                <textarea placeholder="Query" rows="5" required></textarea>
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

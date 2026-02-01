@@ -1,0 +1,1779 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Primary Meta Tags -->
+    <title>JavaScript Interview Questions & Answers - Complete Guide 2026</title>
+    <meta name="title" content="JavaScript Interview Questions & Answers - Complete Guide 2026">
+    <meta name="description" content="Comprehensive collection of JavaScript interview questions and answers covering ES6+, Functions, Async Programming, Arrays, OOP, DOM Manipulation, Event Loop, Closures, Promises, Async/Await, and more. Perfect for JavaScript developers preparing for interviews.">
+    <meta name="keywords" content="JavaScript, JavaScript interview questions, JavaScript answers, ES6, JavaScript functions, async JavaScript, JavaScript arrays, JavaScript OOP, DOM manipulation, event loop, closures, promises, async await, JavaScript tutorial, JavaScript guide, JS interview">
+    <meta name="author" content="Sonvendra Chaurasia">
+    <meta name="robots" content="index, follow">
+    <meta name="language" content="English">
+    <meta name="revisit-after" content="7 days">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://sonvendra.github.io/questions/javascript-questions-answers.html">
+    <meta property="og:title" content="JavaScript Interview Questions & Answers - Complete Guide 2026">
+    <meta property="og:description" content="Comprehensive collection of JavaScript interview questions and answers covering ES6+, Functions, Async Programming, Arrays, OOP, and more.">
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary">
+    <meta property="twitter:url" content="https://sonvendra.github.io/questions/javascript-questions-answers.html">
+    <meta property="twitter:title" content="JavaScript Interview Questions & Answers - Complete Guide 2026">
+    <meta property="twitter:description" content="Comprehensive collection of JavaScript interview questions and answers covering ES6+, Functions, Async Programming, Arrays, OOP, and more.">
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://sonvendra.github.io/questions/javascript-questions-answers.html">
+    
+    <!-- Theme Color -->
+    <meta name="theme-color" content="#f5576c">
+    
+    <!-- Favicon (add your favicon) -->
+    <!-- <link rel="icon" type="image/x-icon" href="/favicon.ico"> -->
+    
+    <!-- Structured Data (JSON-LD) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What is JavaScript?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "JS is a dynamic language means data types of the variables can change during the runtime. JS is client-side scripting language. JS language primarily used to make web pages interactive."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is the difference between let, const and var?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "let and const is block scope while, var is functional scope. let and const can't be redeclared while (SyntaxError), var can be redeclared. let and var can be reassign while, const can't be reassign."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What are Promises and how do they help avoid callback hell?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "A Promise is an object that represents the eventual completion (or failure) of an asynchronous operation and its resulting value. It has three states: Pending (Initial state) -> resolve Or reject."
+          }
+        }
+      ]
+    }
+    </script>
+    
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Article",
+      "headline": "JavaScript Interview Questions & Answers - Complete Guide",
+      "description": "Comprehensive collection of JavaScript interview questions and answers",
+      "author": {
+        "@type": "Person",
+        "name": "Sonvendra Chaurasia",
+        "url": "https://sonvendra.github.io/"
+      },
+      "publisher": {
+        "@type": "Person",
+        "name": "Sonvendra Chaurasia",
+        "url": "https://sonvendra.github.io/"
+      },
+      "datePublished": "2026-02-01",
+      "dateModified": "2026-02-01",
+      "url": "https://sonvendra.github.io/questions/javascript-questions-answers.html"
+    }
+    </script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+            padding: 20px;
+        }
+
+        .main-wrapper {
+            display: flex;
+            gap: 20px;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .hamburger {
+            display: none;
+            position: fixed;
+            top: 20px;
+            left: 20px;
+            z-index: 1001;
+            background: #f5576c;
+            color: white;
+            border: none;
+            padding: 12px;
+            border-radius: 5px;
+            cursor: pointer;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.3);
+            font-size: 1.5em;
+        }
+
+        .hamburger:hover {
+            background: #f093fb;
+        }
+
+        .nav-sidebar {
+            position: sticky;
+            top: 20px;
+            height: fit-content;
+            max-height: calc(100vh - 40px);
+            width: 250px;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+            padding: 20px;
+            overflow-y: auto;
+            transition: transform 0.3s ease;
+        }
+
+        .nav-sidebar h2 {
+            color: #f5576c;
+            font-size: 1.2em;
+            margin-bottom: 15px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #f093fb;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .close-btn {
+            display: none;
+            background: none;
+            border: none;
+            font-size: 1.5em;
+            color: #f5576c;
+            cursor: pointer;
+            padding: 0;
+            width: 30px;
+            height: 30px;
+            line-height: 30px;
+            text-align: center;
+        }
+
+        .close-btn:hover {
+            color: #f093fb;
+        }
+
+        .nav-sidebar ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        .nav-sidebar li {
+            margin-bottom: 8px;
+        }
+
+        .nav-sidebar a {
+            display: block;
+            padding: 8px 12px;
+            color: #555;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: all 0.3s;
+            font-size: 0.9em;
+        }
+
+        .nav-sidebar a:hover {
+            background: #f5576c;
+            color: white;
+            transform: translateX(5px);
+        }
+
+        .nav-link-other {
+            margin-top: 20px;
+            padding-top: 20px;
+            border-top: 2px solid #eee;
+        }
+
+        .nav-link-other a {
+            color: #f093fb;
+            font-weight: bold;
+        }
+
+        .container {
+            flex: 1;
+            max-width: 1000px;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+            padding: 40px;
+        }
+
+        .back-to-top {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            background: #f5576c;
+            color: white;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: none;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+            transition: all 0.3s;
+            z-index: 1000;
+            font-size: 1.5em;
+        }
+
+        .back-to-top:hover {
+            background: #f093fb;
+            transform: translateY(-5px);
+        }
+
+        .back-to-top.show {
+            display: flex;
+        }
+
+        h1 {
+            color: #f5576c;
+            text-align: center;
+            margin-bottom: 30px;
+            font-size: 2.5em;
+            border-bottom: 3px solid #f093fb;
+            padding-bottom: 15px;
+        }
+
+        .qa-item {
+            margin-bottom: 40px;
+            padding: 25px;
+            background: #f8f9fa;
+            border-left: 5px solid #f5576c;
+            border-radius: 5px;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .qa-item:hover {
+            transform: translateX(5px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .question {
+            font-size: 1.3em;
+            font-weight: bold;
+            color: #f5576c;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+        }
+
+        .question::before {
+            content: "Q.";
+            background: #f5576c;
+            color: white;
+            padding: 5px 12px;
+            border-radius: 50%;
+            margin-right: 15px;
+            font-size: 0.9em;
+            min-width: 35px;
+            text-align: center;
+        }
+
+        .answer {
+            color: #555;
+            margin-left: 50px;
+            font-size: 1.05em;
+        }
+
+        .answer-label {
+            font-weight: bold;
+            color: #f093fb;
+            margin-bottom: 8px;
+            display: inline-block;
+        }
+
+        code {
+            background: #2d2d2d;
+            color: #f8f8f2;
+            padding: 2px 6px;
+            border-radius: 3px;
+            font-family: 'Courier New', monospace;
+            font-size: 0.9em;
+        }
+
+        pre {
+            background: #2d2d2d;
+            color: #f8f8f2;
+            padding: 15px;
+            border-radius: 5px;
+            overflow-x: auto;
+            margin: 10px 0;
+            border-left: 4px solid #f5576c;
+        }
+
+        pre code {
+            background: none;
+            padding: 0;
+            color: inherit;
+        }
+
+        .section-title {
+            font-size: 1.5em;
+            color: #f093fb;
+            margin-top: 30px;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #f5576c;
+        }
+
+        ul {
+            margin-left: 20px;
+            margin-top: 10px;
+        }
+
+        ol {
+            margin-left: 20px;
+            margin-top: 10px;
+        }
+
+        li {
+            margin-bottom: 8px;
+        }
+
+        a {
+            color: #f5576c;
+            text-decoration: none;
+            word-break: break-all;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 15px 0;
+            background: white;
+        }
+
+        table th {
+            background: #f5576c;
+            color: white;
+            padding: 12px;
+            text-align: left;
+            border: 1px solid #ddd;
+        }
+
+        table td {
+            padding: 10px;
+            border: 1px solid #ddd;
+        }
+
+        table tr:nth-child(even) {
+            background: #f8f9fa;
+        }
+
+        table tr:hover {
+            background: #e9ecef;
+        }
+
+        .highlight {
+            background: #fff3cd;
+            padding: 2px 4px;
+            border-radius: 3px;
+        }
+
+        @media (max-width: 1024px) {
+            .hamburger {
+                display: block;
+            }
+
+            .main-wrapper {
+                flex-direction: column;
+            }
+
+            .nav-sidebar {
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 280px;
+                max-height: 100vh;
+                z-index: 1000;
+                transform: translateX(-100%);
+                transition: transform 0.3s ease;
+                box-shadow: 2px 0 10px rgba(0, 0, 0, 0.3);
+            }
+
+            .nav-sidebar.active {
+                transform: translateX(0);
+            }
+
+            .close-btn {
+                display: block;
+            }
+
+            .nav-overlay {
+                display: none;
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background: rgba(0, 0, 0, 0.5);
+                z-index: 999;
+            }
+
+            .nav-overlay.active {
+                display: block;
+            }
+
+            .container {
+                margin-top: 0;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 20px;
+            }
+
+            h1 {
+                font-size: 2em;
+            }
+
+            .answer {
+                margin-left: 0;
+            }
+
+            .question {
+                font-size: 1.1em;
+            }
+
+            .back-to-top {
+                bottom: 20px;
+                right: 20px;
+                width: 45px;
+                height: 45px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <button class="hamburger" onclick="toggleNav()" aria-label="Toggle navigation" aria-expanded="false" id="hamburgerBtn">☰</button>
+    <div class="nav-overlay" onclick="toggleNav()"></div>
+    
+    <div class="main-wrapper">
+        <nav class="nav-sidebar" id="navSidebar" aria-label="Main navigation">
+            <h2>
+                Navigation
+                <button class="close-btn" onclick="toggleNav()" aria-label="Close navigation">×</button>
+            </h2>
+            <ul>
+                <li><a href="#top">Top</a></li>
+                <li><a href="#js-basics">JavaScript Basics</a></li>
+                <li><a href="#functions">Functions</a></li>
+                <li><a href="#async">Async Programming</a></li>
+                <li><a href="#arrays">Arrays</a></li>
+                <li><a href="#strings">Strings</a></li>
+                <li><a href="#oop">OOP</a></li>
+                <li><a href="#dom">DOM Manipulation</a></li>
+                <li><a href="#tricky">Tricky Questions</a></li>
+                <li><a href="#algorithms">Algorithms</a></li>
+                <li><a href="#memory">Memory Management</a></li>
+            </ul>
+            <div class="nav-link-other">
+                <a href="questions-answers.html" rel="alternate" title="Angular Interview Questions">→ Angular Questions</a>
+            </div>
+        </nav>
+
+        <div class="container" id="top">
+            <header>
+                <h1>JavaScript Interview Questions & Answers</h1>
+                <p style="text-align: center; color: #666; margin-top: 10px; font-size: 1.1em;">Complete Guide for JavaScript Developers - ES6+, Functions, Async Programming, Arrays, OOP, DOM & More</p>
+            </header>
+
+        <main>
+        <div class="qa-item" id="js-basics">
+            <div class="question">What is JavaScript?</div>
+            <div class="answer">
+                <span class="answer-label">Ans:</span> JS is a dynamic language means data types of the variables can change during the runtime.<br>
+                JS is client-side scripting language. JS language primarily used to make web pages interactive.
+            </div>
+        </div>
+
+        <div class="qa-item">
+            <div class="question">Pseudo-classes and pseudo-elements?</div>
+            <div class="answer">
+                <span class="answer-label">Ans:</span><br>
+                <strong>Pseudo-classes:</strong> A pseudo-class is used to style elements based on their state, position in the DOM, or user interaction. It doesn't affect the element's actual content but targets it in specific conditions.<br>
+                <code>:hover</code>, <code>:focus</code>, <code>:first-child</code>, <code>:last-child</code>, <code>:disabled</code>, <code>:checked</code> and others are pseudo-classes used to target elements based on their state or position.<br><br>
+                <strong>Pseudo-elements:</strong> A pseudo-element is used to style a part of an element, such as inserting content before or after the content of the element.<br>
+                <code>::before</code> and <code>::after</code> are pseudo-elements used to insert content before or after an element's actual content.
+            </div>
+        </div>
+
+        <div class="qa-item">
+            <div class="question">Undefined vs Null?</div>
+            <div class="answer">
+                <span class="answer-label">Ans:</span> <strong>Undefined</strong> means the variable has been declared but no value is assigned to it.<br>
+                <strong>Null</strong> indicates intentional absence of data. Null indicates it's not empty, it's just absence of data.
+            </div>
+        </div>
+
+        <div class="qa-item">
+            <div class="question">Template literals?</div>
+            <div class="answer">
+                <span class="answer-label">Ans:</span> Template literals (also called template strings) are a modern way to create strings, especially when including variables or expressions inside the string.<br>
+                Use backticks ( <code>` `</code> ) instead of quotes.<br>
+                Insert variables or expressions using <code>${ ... }</code>.<br><br>
+                <pre><code>const result = `Sum: ${a + b}`;</code></pre>
+            </div>
+        </div>
+
+        <div class="qa-item">
+            <div class="question">What is hoisting?</div>
+            <div class="answer">
+                <span class="answer-label">Ans:</span> Hoisting is a JavaScript mechanism that allows functions/variables to be used before they are declared in the code. In other words, JavaScript moves function declarations to the top of their respective scope, allowing them to be used even if they are declared later in the code.<br><br>
+                <strong>Ex:</strong>
+                <pre><code>this.Fun();
+
+Fun() {
+    console.log('Hello, world!');
+}</code></pre>
+            </div>
+        </div>
+
+        <div class="qa-item">
+            <div class="question">Data types in JS?</div>
+            <div class="answer">
+                <span class="answer-label">Ans:</span><br>
+                <strong>a) Primitive Data Types:</strong> These are immutable (unable to be changed) and stored by value.<br>
+                Ex: <code>string</code>, <code>number</code>, <code>boolean</code>, <code>BigInt</code>, <code>undefined</code>, <code>null</code>, <code>Symbol</code><br><br>
+                <strong>b) Non-Primitive (Reference) Data Types:</strong> These are stored by reference.<br>
+                Ex: <code>object</code>, <code>array</code>, <code>function</code>
+            </div>
+        </div>
+
+        <div class="qa-item">
+            <div class="question">Difference between let, const and var?</div>
+            <div class="answer">
+                <span class="answer-label">Ans:</span>
+                <table>
+                    <tr>
+                        <th>Feature</th>
+                        <th>var</th>
+                        <th>let</th>
+                        <th>const</th>
+                    </tr>
+                    <tr>
+                        <td><strong>Scope</strong></td>
+                        <td>Functional scope</td>
+                        <td>Block scope</td>
+                        <td>Block scope</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Redeclaration</strong></td>
+                        <td>Can be redeclared</td>
+                        <td>Cannot be redeclared (SyntaxError)</td>
+                        <td>Cannot be redeclared (SyntaxError)</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Reassignment</strong></td>
+                        <td>Can be reassigned</td>
+                        <td>Can be reassigned</td>
+                        <td>Cannot be reassigned</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Declaration without value</strong></td>
+                        <td>Can be declared without value</td>
+                        <td>Can be declared without value</td>
+                        <td>Cannot be declared without value (SyntaxError)</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Hoisting</strong></td>
+                        <td>Variable hoisting possible</td>
+                        <td>Cannot hoist (ReferenceError)</td>
+                        <td>Cannot hoist (ReferenceError)</td>
+                    </tr>
+                </table>
+                <br>
+                <strong>Note:</strong> <code>const a = {}</code><br>
+                <code>a['newkey'] = 5</code> // it will successfully added in json
+            </div>
+        </div>
+
+        <div class="qa-item">
+            <div class="question">What is the Temporal Dead Zone (TDZ)?</div>
+            <div class="answer">
+                <span class="answer-label">Ans:</span> The Temporal Dead Zone (TDZ) in JavaScript is the period between when a variable is declared with <code>let</code> or <code>const</code> and when it is initialized, during which accessing the variable throws a <code>ReferenceError</code>.<br>
+                Only <code>let</code> and <code>const</code> have a Temporal Dead Zone — <code>var</code> does not.<br><br>
+                <pre><code>console.log(a); // ❌ ReferenceError: Cannot access 'a' before initialization
+let a = 10;</code></pre>
+            </div>
+        </div>
+
+        <div class="qa-item">
+            <div class="question">What is the difference between == and ===?</div>
+            <div class="answer">
+                <span class="answer-label">Ans:</span><br>
+                <strong>== (Loose Equality):</strong> Compares values, after converting types if needed.<br>
+                <pre><code>'5' == 5     // true
+null == undefined // true</code></pre>
+                <strong>=== (Strict Equality):</strong> Compares both value and type without conversion.<br>
+                <pre><code>null === undefined // false
+5 === 5      // true</code></pre>
+            </div>
+        </div>
+
+        <div class="qa-item">
+            <div class="question">What is the spread operator (...) and how is it used?</div>
+            <div class="answer">
+                <span class="answer-label">Ans:</span> The spread operator (<code>...</code>) in JavaScript is used to expand elements of an iterable (like arrays or strings) or to copy/merge objects and arrays.<br>
+                Using for shallow copy.<br><br>
+                <pre><code>const obj1 = { a: 1 };
+const obj2 = { b: 2 };
+const combined = { ...obj1, ...obj2 };</code></pre>
+            </div>
+        </div>
+
+        <div class="qa-item">
+            <div class="question">Deep copy and shallow copy in JavaScript?</div>
+            <div class="answer">
+                <span class="answer-label">Ans:</span> A <strong>deep copy</strong> means that all of the values of the new variable are copied and disconnected from the original variable.<br>
+                <pre><code>const billiardGame = deepCopy(billiard);
+const billiardGame = JSON.parse(JSON.stringify(billiard))</code></pre>
+                A <strong>shallow copy</strong> means that certain (sub-)values are still connected to the original variable.<br>
+                <pre><code>const billiardGame = { ...billiard };
+const billiardGame = Object.assign({}, billiard);</code></pre>
+            </div>
+        </div>
+
+        <div class="qa-item">
+            <div class="question">What is argument & parameter?</div>
+            <div class="answer">
+                <span class="answer-label">Ans:</span>
+                <ul>
+                    <li><strong>Arguments</strong> are values passed to the function when it is invoked.</li>
+                    <li><strong>Parameters</strong> are variables listed as a part of the function definition.</li>
+                    <li>Function parameters are the names of variables present in the function definition. Function arguments are the real values that are passed to the function and received by them.</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="qa-item">
+            <div class="question">Binary operator in JS?</div>
+            <div class="answer">
+                <span class="answer-label">Ans:</span>
+                <ul>
+                    <li>Multiplicative Operators</li>
+                    <li>Additive Operators</li>
+                    <li>Bitwise Shift Operators</li>
+                    <li>Relational Operators</li>
+                    <li>Equality Operators</li>
+                    <li>Binary Bitwise Operators</li>
+                    <li>Binary Logical Operators</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="qa-item" id="functions">
+            <div class="question">Arrow function?</div>
+            <div class="answer">
+                <span class="answer-label">Ans:</span> An arrow function expression is a compact alternative to a traditional function expression.<br>
+                The arrow function syntax is a shorthand way to define a function, which makes code more short and easier to read.<br>
+                The <code>{ braces }</code> and <code>( parentheses )</code> and <code>"return"</code> are not required in Arrow function.<br>
+                Arrow function having lexical scope so it can use <code>this</code> keyword.<br>
+                Useful in functional programming patterns like <code>.map()</code>, <code>.filter()</code>, <code>.reduce()</code><br><br>
+                <pre><code>const add = (a, b) => a + b;</code></pre>
+            </div>
+        </div>
+
+        <div class="qa-item">
+            <div class="question">What is callback function?</div>
+            <div class="answer">
+                <span class="answer-label">Ans:</span> "I'll call you back when I'm done."<br><br>
+                A callback function in JavaScript is a function passed as an argument to another function — and it's usually called later.<br>
+                This technique allows a function to call another function.<br>
+                Callbacks are commonly used to handle asynchronous operations.
+            </div>
+        </div>
+
+        <div class="qa-item">
+            <div class="question">Higher order functions?</div>
+            <div class="answer">
+                <span class="answer-label">Ans:</span> A higher-order function (HOF) in JavaScript is a function that does either 'Takes one or more functions as arguments' or 'Returns a function'.<br><br>
+                <strong>* Takes one or more functions as arguments:</strong>
+                <pre><code>function greet(name) {
+    return `Hello, ${name}`;
+}
+function processUserInput(callback) {
+    const name = 'Alice';
+    return callback(name);
+}
+console.log(processUserInput(greet)); // "Hello, Alice"</code></pre>
+                <strong>* Returns a function:</strong>
+                <pre><code>function multiplier(factor) {
+    return function (number) {
+        return number * factor;
+    };   
+}
+const double = multiplier(2); // storing the returned function
+console.log(double(5)); // calls the returned function and result is 10</code></pre>
+            </div>
+        </div>
+
+        <div class="qa-item">
+            <div class="question">What is an IIFE (Immediately Invoked Function Expression)?</div>
+            <div class="answer">
+                <span class="answer-label">Ans:</span> It is a function that runs immediately after it's defined, without being called explicitly later in the code.<br>
+                Using to create local scope, Runs code immediately.<br><br>
+                <pre><code>(function() {
+    console.log('IIFE executed!');
+})();</code></pre>
+            </div>
+        </div>
+
+        <div class="qa-item">
+            <div class="question">Nested Callbacks = "Callback Hell"?</div>
+            <div class="answer">
+                <span class="answer-label">Ans:</span> When callbacks are deeply nested, it can become hard to read and maintain, to overcome this situation we can use Promises or async/await instead, or any other asynchronous operations.
+            </div>
+        </div>
+
+        <div class="qa-item" id="async">
+            <div class="question">What are Promises and how do they help avoid callback hell?</div>
+            <div class="answer">
+                <span class="answer-label">Ans:</span> A Promise is an object that represents the eventual completion (or failure) of an asynchronous operation and its resulting value.<br>
+                It has three states: <strong>Pending</strong> (Initial state) -> <strong>resolve</strong> Or <strong>reject</strong><br><br>
+                <pre><code>const myPromise = new Promise((resolve, reject) => {
+    // async operation
+    if (/* success */) {
+        resolve("Success!");
+    } else {
+        reject("Something went wrong.");
+    }
+});
+myPromise
+    .then(result => console.log(result))
+    .catch(error => console.error(error));</code></pre>
+            </div>
+        </div>
+
+        <div class="qa-item">
+            <div class="question">How async/await works for asynchronous programming in JavaScript?</div>
+            <div class="answer">
+                <span class="answer-label">Ans:</span> async/await is a syntactic feature in JavaScript that simplifies working with asynchronous code, making it more readable and maintainable. It's built on top of promises and provides a way to write asynchronous code that looks and behaves a bit more like synchronous code.<br><br>
+                <pre><code>async function myFunction() {
+    try {
+        const result = await someAsyncOperation();
+        console.log(result);
+    } catch (error) {
+        console.error("Error:", error);
+    }
+}</code></pre>
+            </div>
+        </div>
+
+        <div class="qa-item">
+            <div class="question">Sorting methods in JS?</div>
+            <div class="answer">
+                <span class="answer-label">Ans:</span>
+                <ul>
+                    <li><code>Array.sort()</code>: Sorting alphabetically works well for strings.</li>
+                    <li><code>Array.reverse()</code>: Reverse method reverses the elements in an array.</li>
+                    <li><code>Array.sort((a, b) => a - b)</code>: Sort numbers in ascending order.</li>
+                    <li><code>Array.sort((a, b) => b - a)</code>: Sort numbers in descending order.</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="qa-item" id="arrays">
+            <div class="section-title">Array iteration methods in JS?</div>
+            <div class="answer">
+                <span class="answer-label">Ans:</span>
+                <ul>
+                    <li><code>forEach()</code>: method calls a function (a callback function) once for each array element.</li>
+                    <li><code>map()</code>: method creates a new array by performing a function on each array element.</li>
+                    <li><code>filter()</code>: method creates a new array with array elements that pass a test.</li>
+                    <li><code>reduce()</code>: method runs a function on each array element to produce (reduce it to) a single value.</li>
+                    <li><code>reduceRight()</code>: method runs a function on each array element to produce (reduce it to) a single value works from right-to-left.</li>
+                    <li><code>every()</code>: method checks if all array values pass a test.</li>
+                    <li><code>some()</code>: method checks if some array values pass a test.</li>
+                    <li><code>indexOf()</code>: method searches an array for an element value and returns its position.</li>
+                    <li><code>lastIndexOf()</code>: is the same as indexOf(), but returns the position of the last occurrence of the specified element.</li>
+                    <li><code>find()</code>: method returns the value of the first array element that passes a test function.</li>
+                    <li><code>findIndex()</code>: method returns the index of the first array element that passes a test function.</li>
+                    <li><code>from()</code>: method returns an Array object from any object with a length property or any iterable object.</li>
+                    <li><code>keys()</code>: method returns an Array Iterator object with the keys of an array.</li>
+                    <li><code>entries()</code>: method returns an Array Iterator object with key/value pairs.</li>
+                    <li><code>includes()</code>: method allows us to check if an element is present in an array (including NaN, unlike indexOf).</li>
+                </ul>
+                <br>
+                <strong>Examples:</strong>
+                <pre><code>[1, 2, 3].length; // 3
+[1, 2, 3].push(4); // [1, 2, 3, 4] *
+[1, 2, 3].unshift(0); // [0, 1, 2, 3] *
+[1, 2, 3].pop(); // [1, 2]
+[1, 2, 3].shift(); // [2, 3] *
+[1, 2, 3].at(2); // 3
+[1, 2, 3].indexOf(3); // 2
+[1, 2, 3].includes(3); // true
+[1, 2, 3].map((num) => num * 2); // [2, 4, 6]
+[1, 2, 3].filter((num) => num > 1); // [2, 3]
+[1, 2, 3].every((num) => num > 0); // true
+[1, 2, 3].some((num) => num > 2); // true
+[1, 2, 3].fill(0); // [0, 0, 0]
+[1, 2, 3].reduce((acc, num) => acc + num, 0); // 6
+[1, 2, 3].concat([4, 5]); // [1, 2, 3, 4, 5]
+[1, 2, 3].reverse(); // [3, 2, 1]
+[1, 2, 3].sort(); // [1, 2, 3]
+[1, 2, 3].join("-"); // "1-2-3"
+[1, 2, 3].flat(); // [1, 2, 3]
+[1, 2, 3].find((num) => num === 1); // 1
+[1, 2, 3].findIndex((num) => num === 2); // 1
+[1, 2, 3].toString(); // "1,2,3"
+[1, 2, 3].toLocaleString(); // "1,2,3"
+[1, 2, 3].slice(1, 2); // [2]
+[1, 2, 3].splice(1, 1, "a"); // [1, 'a', 3]
+Array.isArray([1, 2, 3]); // true
+Array.from("123"); // ['1', '2', '3']</code></pre>
+            </div>
+        </div>
+
+        <div class="qa-item">
+            <div class="question">Difference between for & foreach loop?</div>
+            <div class="answer">
+                <span class="answer-label">Ans:</span>
+                <table>
+                    <tr>
+                        <th>Feature</th>
+                        <th>for</th>
+                        <th>forEach</th>
+                    </tr>
+                    <tr>
+                        <td><strong>Type</strong></td>
+                        <td>Original way of iterating over an array</td>
+                        <td>Newer way with lesser code to iterate over an array</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Performance</strong></td>
+                        <td>Faster in performance</td>
+                        <td>Slower than the traditional loop in performance</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Break statement</strong></td>
+                        <td>Can use break statement to come out from the loop</td>
+                        <td>Cannot be used because of the callback function</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Parameters</strong></td>
+                        <td><code>for(let i = 1; i<=5; i++)</code> or <code>for(iterator, counter, increment)</code></td>
+                        <td><code>forEach(a, i, array)</code> or <code>forEach(iterator, index, and array to iterate)</code></td>
+                    </tr>
+                    <tr>
+                        <td><strong>await keyword</strong></td>
+                        <td>Works with await keyword</td>
+                        <td>Cannot be used due to the callback function</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+
+        <div class="qa-item">
+            <div class="question">Difference between filter & map?</div>
+            <div class="answer">
+                <span class="answer-label">Ans:</span>
+                <ul>
+                    <li><strong>filter</strong> method is used to filter the elements from an array based on a given condition.<br>
+                        <strong>map</strong> does not discard any element instead it manipulates the value of elements.</li>
+                    <li><strong>filter</strong> changes the new array length.<br>
+                        <strong>map</strong> doesn't change the length of new Array</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="qa-item">
+            <div class="question">Difference between slice and splice?</div>
+            <div class="answer">
+                <span class="answer-label">Ans:</span> slice and splice are methods used in JavaScript arrays to retrieve certain elements or remove elements from the array.<br><br>
+                <strong>slice():</strong> It is used to cut out elements from an array. It does not affect the original array.<br>
+                <code>array.slice(start, end)</code><br><br>
+                <strong>splice():</strong> It is used to remove elements from an array or replace them.<br>
+                <code>array.splice(start, deleteCount, newElem1, newElem2, ..., newElemN);</code>
+            </div>
+        </div>
+
+        <div class="qa-item" id="strings">
+            <div class="section-title">JavaScript String Methods?</div>
+            <div class="answer">
+                <span class="answer-label">Ans:</span>
+                <ul>
+                    <li><code>String.length</code> property returns the length of a string.</li>
+                    <li><code>slice(start, end)</code> extracts a part of a string and returns the extracted part in a new string.</li>
+                    <li><code>substring(start, end)</code> extracts a part of a string and returns the extracted part in a new string.</li>
+                    <li><code>substr(start, length)</code> extracts a part of a string and returns the extracted part in a new string.</li>
+                    <li><code>replace(preval, newval)</code> method replaces only the first match. If you want to replace all matches, use a regular expression with the /g flag set.</li>
+                    <li><code>String.toLowerCase()</code> A string is converted to lower case.</li>
+                    <li><code>String.toUpperCase()</code> A string is converted to upper case.</li>
+                    <li><code>String1.concat(String2)</code> joins two or more strings.</li>
+                    <li><code>String.trim()</code> method removes whitespace from both sides of a string.</li>
+                    <li><code>String.trimStart()</code> method removes whitespace from start side of a string.</li>
+                    <li><code>String.trimEnd()</code> method removes whitespace from end side of a string.</li>
+                    <li><code>String.charAt(2)</code> method returns the character at a specified index (position) in a string.</li>
+                    <li><code>String.charCodeAt(2)</code> method returns the unicode of the character at a specified index in a string.</li>
+                    <li><code>text[0]</code> text string property access method.</li>
+                    <li><code>split("")</code> method convert string in array.</li>
+                </ul>
+                <br>
+                <strong>Examples:</strong>
+                <pre><code>"JavaScript".length; // 10
+"JavaScript"[2]; // 'v'
+"JavaScript".charAt(2); // 'v'
+"JavaScript".charCodeAt(2); // 118
+"JavaScript".indexOf("S"); // 4
+"JavaScript".toLowerCase(); // 'javascript'
+"JavaScript".toUpperCase(); // 'JAVASCRIPT'
+"JavaScript".slice(2, 5); // 'vas'
+"JavaScript".substring(2, 5); // 'vas'
+"JavaScript".substr(2, 2); // 'va'
+"JavaScript".concat(" Dev"); // 'JavaScript Dev'
+"JavaScript Dev".split(" "); // ['JavaScript', 'Dev']
+"JavaScript Dev".includes("Dev"); // true
+"Java Dev".replace("Dev", "JS"); // 'Java JS'
+"Java Dev".replaceAll("Dev", "JS"); // 'Java JS'
+"JavaScript Dev".trim(); // 'JavaScript Dev'
+" JavaScript Dev ".trimStart(); // 'JavaScript Dev '
+" JavaScript Dev ".trimEnd(); // ' JavaScript Dev'
+"Dev".padStart(10, "*"); // '*******Dev'
+"Dev".padEnd(10, "*"); // 'Dev*******'
+"JavaScript Dev".startsWith("Java"); // true
+"JavaScript Dev".endsWith("Dev"); // true
+"JavaScript Dev".repeat(3); // 'JavaScript DevJavaScript DevJavaScript Dev'
+"JavaScript Dev".indexOf("JavaScript"); // 0
+"JavaScript Dev".lastIndexOf("Dev"); // 11
+"JavaScript Dev".search("Dev"); // 11
+"JavaScript Dev".includes("Dev"); // true</code></pre>
+            </div>
+        </div>
+
+        <div class="qa-item" id="memory">
+            <div class="question">Do you know about memory leaks?</div>
+            <div class="answer">
+                <span class="answer-label">Ans:</span> Memory leak occurs when programmers create a memory in heap and forget to delete it. The consequences of memory leak is that it reduces the performance of the computer by reducing the amount of available memory.<br><br>
+                <ul>
+                    <li><strong>Unsubscribed Observables:</strong> <code>this.subscription.unsubscribe();</code></li>
+                    <li><strong>Remove Event Listeners:</strong> <code>window.removeEventListener('resize', this.handleResize);</code></li>
+                    <li><strong>Clear SetInterval / SetTimeout:</strong> <code>clearInterval(this.intervalFn);</code></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="qa-item">
+            <div class="question">What is the difference between setTimeout, setInterval, and debounce time and What if we put 0 millisecond in setInterval?</div>
+            <div class="answer">
+                <span class="answer-label">Ans:</span> <code>setTimeout()</code> method executes a function, after waiting a specified number of milliseconds.<br>
+                Ex. <code>window.setTimeout(function, milliseconds);</code><br><br>
+                The <code>setInterval()</code> method repeats a given function at every given time-interval.<br>
+                Ex. <code>window.setInterval(function, milliseconds);</code>
+            </div>
+        </div>
+
+        <div class="qa-item">
+            <div class="question">What is Cookie and what's the max length of cookie?</div>
+            <div class="answer">
+                <span class="answer-label">Ans:</span> Cookies let you store user information in web pages.<br>
+                Cookies are data, stored in small text files, on your computer.<br>
+                JavaScript can create, read, and delete cookies with the <code>document.cookie</code> property.<br>
+                A cookie is an amount of information that persists between a server-side and a client-side.<br>
+                <strong>Maximum length of Cookie is 4KB.</strong>
+            </div>
+        </div>
+
+        <div class="qa-item">
+            <div class="question">What is lexical Scope in JS?</div>
+            <div class="answer">
+                <span class="answer-label">Ans:</span> A lexical scope in JavaScript means that a variable defined outside a function can be accessible inside another function defined after the variable declaration. But the opposite is not true; the variables defined inside a function will not be accessible outside that function.
+            </div>
+        </div>
+
+        <div class="qa-item">
+            <div class="question">Closure in JS?</div>
+            <div class="answer">
+                <span class="answer-label">Ans:</span> A closure gives you access to an outer function's scope from an inner function. In JavaScript, closures are created every time a function is created, at function creation time.<br>
+                A closure in JavaScript is when a function "remembers" the variables from its lexical scope, even after the outer function has finished executing.<br><br>
+                <pre><code>function outerFn(){
+    let outerData = 'Lexical Data';
+    function innerFn(){
+        console.log(outerData);
+    }
+    return innerFn;
+}
+let closureCall = outerFn()
+closureCall()</code></pre>
+            </div>
+        </div>
+
+        <div class="qa-item">
+            <div class="question">Function currying in JS?</div>
+            <div class="answer">
+                <span class="answer-label">Ans:</span> We simply wrap function inside a function, which means we are going to return a function from another function to obtain this kind of translation. The parent function takes the first provided argument and returns the function that takes the next argument and this keeps on repeating till the number of arguments ends.<br>
+                Hopefully, the function that receives the last argument returns the expected result.<br><br>
+                <pre><code>function sendEmail(to) {
+    return function (sub) {
+        return function (body) {
+            return `Sending Email to ${to} with subject ${sub} : ${body}`;
+        }
+    }
+}
+
+console.log(sendEmail('abc@gmail.com')('Subject here')('Body text'))</code></pre>
+                Reference: <a href="https://www.youtube.com/watch?v=VK36OsyPeUw" target="_blank" rel="noopener noreferrer">Function Currying Video</a>
+            </div>
+        </div>
+
+        <div class="qa-item">
+            <div class="question">What Are call, apply, and bind?</div>
+            <div class="answer">
+                <span class="answer-label">Ans:</span><br>
+                <strong>* Call:</strong> Calls a function with a given <code>this</code> value and individual arguments. It invokes the function immediately.<br>
+                <pre><code>function greet(greeting) {
+    console.log(`${greeting}, I'm ${this.name}`);
+}
+const person = { name: 'Alice' };
+greet.call(person, 'Hello'); // Output: Hello, I'm Alice</code></pre>
+                <strong>* Apply:</strong> Same as call(), but arguments are passed as an array. It invokes the function immediately.<br>
+                <pre><code>greet.apply(person, ['Hi']); // Output: Hi, I'm Alice</code></pre>
+                <strong>* Bind:</strong> Returns a new function with <code>this</code> bound to the given object. It does not call the function immediately.<br>
+                <pre><code>const greetPerson = greet.bind(person);
+greetPerson('Hey'); // Output: Hey, I'm Alice</code></pre>
+            </div>
+        </div>
+
+        <div class="qa-item">
+            <div class="question">Event loop in JS?</div>
+            <div class="answer">
+                <span class="answer-label">Ans:</span> Event Loop is the mechanism in JavaScript that Handles asynchronous operations.<br><br>
+                <strong>Priority Order:</strong>
+                <ol>
+                    <li><strong>Synchronous code</strong> runs first</li>
+                    <li><strong>Microtasks</strong> (from queueMicrotask, Promise.then, etc.) run next, before any macrotasks.</li>
+                    <li><strong>Macrotasks</strong> (like Timers, I/O, setTimeout etc.) are run after all current microtasks are done</li>
+                </ol>
+                <br>
+                <strong>The Event Loop Process:</strong>
+                <ul>
+                    <li><strong>Call Stack:</strong> The call stack is a data structure that keeps track of function calls. Executes your code line by line.</li>
+                    <li><strong>Microtask Queue:</strong> Stores promise callbacks (.then, catch) — has higher priority than the callback queue.</li>
+                    <li><strong>Web APIs:</strong> These APIs handle async operations and send callbacks to appropriate queues.</li>
+                    <li><strong>Macrotask Queue/Callback Queue:</strong> Stores callback functions (like from Timers, I/O, setTimeout) that are ready to run.</li>
+                    <li><strong>Event Loop:</strong> Checks if the call stack is empty, then moves tasks from the queues.</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="qa-item">
+            <div class="question">What is the difference between microtasks and macrotasks?</div>
+            <div class="answer">
+                <span class="answer-label">Ans:</span> The event loop always gives higher priority to the microtask queue, and will process all the callbacks in the microtask queue before moving on to the macrotask queue.<br><br>
+                The <strong>microtask queue</strong> contains the callbacks of operations that are considered more urgent or important, such as promises and mutation observers APIs.<br><br>
+                The <strong>macrotask queue</strong> contains the callbacks of operations that are less urgent such as timers, I/O events, and user interface events.
+            </div>
+        </div>
+
+        <div class="qa-item">
+            <div class="question">Event Bubbling vs. Event Capturing?</div>
+            <div class="answer">
+                <span class="answer-label">Ans:</span> Event bubbling and capturing are two phases in how events propagate through the Document Object Model (DOM).<br><br>
+                <strong>a) Event Bubbling:</strong> An event propagates from the target element upwards to its parent elements.<br>
+                <pre><code>document.getElementById("outer").addEventListener("click", () => {
+    console.log("Outer DIV (bubbling)");
+});</code></pre>
+                <strong>b) Event Capturing:</strong> An event propagates from the root element (document) downwards to the target element.<br>
+                <pre><code>document.getElementById("outer").addEventListener("click", () => {
+    console.log("Outer DIV (capturing)");
+}, true);</code></pre>
+                <strong>* Stopping Propagation:</strong> <code>stopPropagation()</code> method of the Event interface prevents further propagation of the current event in the capturing and bubbling phases.<br>
+                <pre><code>document.getElementById("middle").addEventListener("click", (event) => {
+    console.log("Middle DIV clicked");
+    event.stopPropagation(); // 🛑 stops bubbling/capturing
+});</code></pre>
+            </div>
+        </div>
+
+        <div class="qa-item">
+            <div class="question">How can you make an interface readonly?</div>
+            <div class="answer">
+                <span class="answer-label">Ans:</span><br>
+                <strong>1. Mark specific properties as readonly:</strong><br>
+                <pre><code>interface User {
+    readonly id: number;
+}</code></pre>
+                <strong>2. Make all properties readonly using Readonly&lt;T&gt; utility type:</strong><br>
+                <pre><code>interface User {
+    id: number;
+}
+const userData: Readonly&lt;User&gt; = { id: 1};</code></pre>
+                <strong>3. Make entire array or object deeply readonly (for nested objects):</strong><br>
+                <pre><code>const names: ReadonlyArray&lt;string&gt; = ['Alice', 'Bob'];</code></pre>
+            </div>
+        </div>
+
+        <div class="qa-item">
+            <div class="question">How can we make a property read-only via a method?</div>
+            <div class="answer">
+                <span class="answer-label">Ans:</span>
+                <pre><code>interface User {
+    id: number;
+}
+
+// Dynamic method which we can apply on any key
+type MakeReadonly&lt;T, K extends keyof T&gt; = Omit&lt;T, K&gt; &amp; Readonly&lt;Pick&lt;T, K&gt;&gt;; 
+
+// Calling to make readonly
+type ReadonlyId = MakeReadonly&lt;User, 'id'&gt;;
+
+const userData: ReadonlyId = {id: 1}; // Use case
+emp.id = 2; // ❌ Error</code></pre>
+            </div>
+        </div>
+
+        <div class="qa-item" id="oop">
+            <div class="question">OOP in JS?</div>
+            <div class="answer">
+                <span class="answer-label">Ans:</span> Object-oriented programming is about modeling a system as a collection of objects, where each object represents some particular aspect of the system. Objects contain both functions (or methods) and data. OOP was made available with ES6 in 2015.
+            </div>
+        </div>
+
+        <div class="qa-item">
+            <div class="question">Objects and classes in JS?</div>
+            <div class="answer">
+                <span class="answer-label">Ans:</span><br>
+                <strong>Object:</strong> An object is a collection of key–value pairs (properties and methods) used to represent real-world entities like a person, product, or car.<br><br>
+                <strong>Class:</strong> A class is a blueprint for creating multiple similar objects with shared structure and behavior.<br><br>
+                <pre><code>class Person {
+    constructor() {...}
+    myMethod() {...}
+}
+const obj = new Person();
+
+// Here obj is object and Person is class.</code></pre>
+            </div>
+        </div>
+
+        <div class="qa-item">
+            <div class="question">What is a Prototype in JavaScript?</div>
+            <div class="answer">
+                <span class="answer-label">Ans:</span> In JavaScript, every object has a hidden internal link to another object called its prototype.<br>
+                This prototype object can contain shared properties and methods that all instances can access.<br>
+                We can set the prototype using <code>__proto__</code>
+            </div>
+        </div>
+
+        <div class="qa-item">
+            <div class="question">Special keywords of OOP in JS?</div>
+            <div class="answer">
+                <span class="answer-label">Ans:</span>
+                <ul>
+                    <li><strong>new</strong> keyword create a new object using class.</li>
+                    <li><strong>constructor</strong> is a special method inside a JavaScript class that gets called automatically when a new object is created from that class.</li>
+                    <li><strong>this</strong> keyword refers to the object that is executing the current function.</li>
+                    <li><strong>extends</strong> keyword using to inherit another class data.</li>
+                    <li><strong>super</strong> keyword using to call the constructor of it's parent class to access parent's properties and method</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="qa-item">
+            <div class="question">What are the concepts of 4 pillars in OOP?</div>
+            <div class="answer">
+                <span class="answer-label">Ans:</span>
+                <ol>
+                    <li><strong>Abstraction:</strong> Hide complex logic, presenting essential information.</li>
+                    <li><strong>Encapsulation:</strong> Group related data(properties) and methods typically an object or a class. It promotes data hiding, where the internal state of an object is not directly accessible from outside, and access is controlled through methods.</li>
+                    <li><strong>Inheritance:</strong> Inheritance allows one class to inherit the properties and methods of another class, promoting code reusability.<br>
+                        <pre><code>class Parent {
+    parentMethod() {...}
+}
+class Child extends Parent{
+    childMethod() {
+        super.parentMethod();
+    }
+}</code></pre>
+                    </li>
+                    <li><strong>Polymorphism:</strong> Polymorphism means "many forms" — the ability for different classes to define methods with the same name but different behaviors.</li>
+                </ol>
+            </div>
+        </div>
+
+        <div class="qa-item">
+            <div class="question">What is Method Overriding and Method Overloading?</div>
+            <div class="answer">
+                <span class="answer-label">Ans:</span><br>
+                <strong>Method Overriding:</strong> Method overriding is when a subclass provides a new implementation of a method that is already defined in its parent class.<br><br>
+                <strong>Method Overloading:</strong> Method overloading means defining multiple methods with the same name but different parameters.<br><br>
+                <strong>Note:</strong> Method overloading not supported by JS
+            </div>
+        </div>
+
+        <div class="qa-item">
+            <div class="question">Getter and Setter in JS?</div>
+            <div class="answer">
+                <span class="answer-label">Ans:</span> <em>Answer pending...</em>
+            </div>
+        </div>
+
+        <div class="qa-item" id="dom">
+            <div class="section-title">DOM Manipulation Methods</div>
+            <div class="answer">
+                <span class="answer-label">Ans:</span><br>
+                <strong>* Accessing Elements:</strong><br>
+                <pre><code>document.getElementById("id");         // Find element by ID
+document.getElementsByClassName("class"); // Find elements by class
+document.getElementsByTagName("tag");  // Find elements by tag name
+document.querySelector("selector");    // Find first element matching selector
+document.querySelectorAll("selector"); // Find all elements matching selector</code></pre>
+                <strong>* Creating / Appending Elements:</strong><br>
+                <pre><code>document.createElement("name");         // Create element node
+document.createTextNode("text");        // Create text node
+elem.appendChild(child);                // Append child to element
+elem.removeChild(child);                // Remove child from element
+elem.replaceChild(newChild, oldChild);  // Replace child with new child</code></pre>
+                <strong>* Modifying Elements:</strong><br>
+                <pre><code>elem.innerHTML = "&lt;h2&gt;outerHTML&lt;/h2&gt;";      // Set inner HTML
+elem.innerText = "inner text";              // Set plain text
+elem.textContent = "text content";          // Set text content
+elem.style.color = "blue";                  // Set inline style
+elem.outerHTML = "&lt;p&gt;Learn with &lt;strong&gt;Athreos&lt;/strong&gt;&lt;/p&gt;"; // Replace entire element</code></pre>
+            </div>
+        </div>
+
+        <div class="qa-item" id="tricky">
+            <div class="section-title">JavaScript Tricky Questions & Outputs</div>
+            <div class="answer">
+                <span class="answer-label">Q1:</span> <code>console.log(1 + '2' + 3);</code><br>
+                <strong>Result:</strong> <code>"123"</code><br>
+                <strong>Reason:</strong> number + string = string<br><br>
+                
+                <span class="answer-label">Q2:</span> <code>{1:1} == {1:1}</code> // False<br>
+                <code>[1,2,3] == '1,2,3'</code> // True<br><br>
+                
+                <span class="answer-label">Q3:</span>
+                <pre><code>console.log("a");
+queueMicrotask(() => {
+  console.log("b");
+  queueMicrotask(() => {
+    console.log("c");
+  });
+});
+setTimeout(() => console.log("d"), 0);
+Promise.resolve().then(() => console.log("e"));
+console.log("f");</code></pre>
+                <strong>Result:</strong> <code>a f b e c d</code><br><br>
+                
+                <span class="answer-label">Q4:</span>
+                <pre><code>console.log(+true); // 1
+console.log(+false);  // 0
+console.log(true+'1'); // "true1"
+console.log(true+1); // 2
+console.log(false-'2'); // -2
+console.log(false-2); // -2</code></pre>
+                <br>
+                
+                <span class="answer-label">Q5:</span>
+                <pre><code>let x = 10;
+x(); // trying to call a number</code></pre>
+                <strong>Result:</strong> <code>TypeError: x is not a function</code><br><br>
+                
+                <span class="answer-label">Q6:</span> <code>console.log(typeof NaN)</code><br>
+                <strong>Result:</strong> <code>"number"</code> // NaN means "Not a Number" but is actually of type 'number'<br><br>
+                
+                <span class="answer-label">Q7:</span>
+                <pre><code>const person = {
+  name: "Alex"
+};
+person = {}; // trying to reassign</code></pre>
+                <strong>Result:</strong> <code>TypeError</code><br><br>
+                
+                <span class="answer-label">Q8:</span> <code>console.log(typeof null);</code><br>
+                <strong>Result:</strong> <code>"object"</code> // JS bug<br><br>
+                
+                <span class="answer-label">Q9:</span>
+                <pre><code>let a = [1, 2, 3];
+a[10] = 99;
+console.log(a.length);</code></pre>
+                <strong>Result:</strong> <code>11</code> // setting a value at index 10 makes the length 11, rest will be undefined<br><br>
+                
+                <span class="answer-label">Q10:</span>
+                <pre><code>const obj = {};
+obj.name = "Mahesh";
+console.log(obj.name);</code></pre>
+                <strong>Result:</strong> <code>"Mahesh"</code><br><br>
+                
+                <span class="answer-label">Q11:</span>
+                <pre><code>function foo() { 
+    let b = 1; 
+    function inner() { 
+        return b; 
+    } 
+    return inner; 
+}
+console.log(foo());</code></pre>
+                <strong>Result:</strong> <code>[Function: inner]</code> // Returns the inner function, not the value
+            </div>
+        </div>
+
+        <div class="qa-item" id="algorithms">
+            <div class="question">Create Flat Array?</div>
+            <div class="answer">
+                <span class="answer-label">Ans:</span>
+                <strong>Method 1: Using flat() method:</strong>
+                <pre><code>const nestedArray = [1, [2, [3, [4, 5]]]];
+const fullyFlatArray = nestedArray.flat(Infinity);</code></pre>
+                <strong>Method 2: Using recursive function:</strong>
+                <pre><code>function flattenArray(arr) {
+  let result = [];
+
+  for (let i = 0; i < arr.length; i++) {
+    if (Array.isArray(arr[i])) {
+      const flat = flattenArray(arr[i]);
+      for (let j = 0; j < flat.length; j++) {
+        result.push(flat[j]);
+      }
+    } else {
+      result.push(arr[i]);
+    }
+  }
+
+  return result;
+}
+
+const nestedArray = [1, [2, [3, [4, 5]]]];
+const flatArray = flattenArray(nestedArray);
+console.log(flatArray);</code></pre>
+            </div>
+        </div>
+
+        <div class="qa-item">
+            <div class="question">Find 2nd largest number?</div>
+            <div class="answer">
+                <span class="answer-label">Ans:</span>
+                <strong>Method 1: Using sort:</strong>
+                <pre><code>let arrayData = [1,8,5,3,4,9,2,7,6]
+let array = arrayData.sort((a, b) => {return a-b;})
+console.log(array[array.length-2]);</code></pre>
+                <strong>Method 2: Using filter:</strong>
+                <pre><code>let arrayData = [1,8,5,3,4,9,2,7,6]
+let maxNum = Math.max(...arrayData)
+let newArray = arrayData.filter((x) => x != maxNum)
+let newlargest = Math.max(...newArray)
+console.log(newlargest)</code></pre>
+            </div>
+        </div>
+
+        <div class="qa-item">
+            <div class="question">Sorting the array?</div>
+            <div class="answer">
+                <span class="answer-label">Ans:</span>
+                <strong>Method 1: Using sort() method:</strong>
+                <pre><code>let arrayData = [1,8,5,3,4,9,2,7,6]
+let array = arrayData.sort((a, b) => {return a-b;})</code></pre>
+                <strong>Method 2: Bubble Sort:</strong>
+                <pre><code>for (let i = 0; i < arrayData.length - 1; i++) {
+    for (let j = 0; j < arrayData.length - 1 - i; j++) {
+      if (arrayData[j] > arrayData[j + 1]) {
+        const temp = arrayData[j];
+        arrayData[j] = arrayData[j + 1];
+        arrayData[j + 1] = temp;
+      }
+    }
+}</code></pre>
+                <strong>Method 3: Selection Sort:</strong>
+                <pre><code>for(let i = 0; i < arrData.length-1; i++){
+    for(let j = i+1; j < arrData.length; j++){
+        if(arrData[i] > arrData[j]){
+            let temp = arrData[i];
+            arrData[i] = arrData[j];    
+            arrData[j] = temp   
+        }
+    }
+}</code></pre>
+            </div>
+        </div>
+
+        <div class="qa-item">
+            <div class="question">Get Unique number from array?</div>
+            <div class="answer">
+                <span class="answer-label">Ans:</span>
+                <strong>Method 1: Using Set:</strong>
+                <pre><code>let arrayData = [1,2,5,3,4,2,1,5,3,4,1,2]
+let array = [...new Set(arrayData)]
+console.log(array)</code></pre>
+                <strong>Method 2: Using includes():</strong>
+                <pre><code>let arrayData = [1, 2, 5, 3, 4, 2, 1, 5, 3, 4, 1, 2];
+let uniqueArray = []; 
+for (let i = 0; i < arrayData.length; i++) {
+    if (!uniqueArray.includes(arrayData[i])) {
+      uniqueArray.push(arrayData[i]);
+    }
+}
+console.log(uniqueArray);</code></pre>
+                <strong>Method 3: Using nested loops:</strong>
+                <pre><code>let arrayData = [1, 2, 5, 3, 4, 2, 1, 5, 3, 4, 1, 2];
+let uniqueArray = []; 
+for (let i = 0; i < array.length; i++) {
+    let isUnique = true;
+    for (let j = 0; j < uniqueArray.length; j++) {
+      if (array[i] === uniqueArray[j]) {
+        isUnique = false;
+        break;
+      }
+    }
+    if (isUnique) {
+      uniqueArray.push(array[i]);
+    }
+}
+console.log(uniqueArray);</code></pre>
+            </div>
+        </div>
+
+        <div class="qa-item">
+            <div class="question">How to create plain array (Flat Array) of nested loop?</div>
+            <div class="answer">
+                <span class="answer-label">Ans:</span>
+                <strong>Method 1: Using spread operator:</strong>
+                <pre><code>const nestedArray = [1, 2, [3, 4, [5,6]], 7, 8, 9];
+let newdata = [1,2, ...[3,4, ...[5,6],7,8,9]]
+console.log(newdata)</code></pre>
+                <strong>Method 2: Using flat():</strong>
+                <pre><code>const nestedArray = [1, 2, [3, 4, [5,6]], 7, 8, 9];
+let newdata = nestedArray.flat(Infinity)
+console.log(newdata)</code></pre>
+                <strong>Method 3: Using recursive function:</strong>
+                <pre><code>const nestedArray = [1, 2, [3, 4, [5,6]], 7, 8, 9];
+console.log(flatArray(nestedArray))
+
+function flatArray(arr){
+    const flattened = [];
+    arr.forEach(item => {
+        if (Array.isArray(item)) {
+            flattened.push(...flatArray(item));
+        } else {
+            flattened.push(item);
+        }
+    });
+    return flattened;
+}</code></pre>
+            </div>
+        </div>
+
+        <div class="qa-item">
+            <div class="question">Reverse array?</div>
+            <div class="answer">
+                <span class="answer-label">Ans:</span>
+                <pre><code>let arrayData = [1, 2, 5, 3];
+let reverseArray = [];
+for (let i = arrayData.length-1; i >= 0; i--) {
+    reverseArray.push(arrayData[i])
+}
+console.log(reverseArray);</code></pre>
+            </div>
+        </div>
+
+        <div class="qa-item">
+            <div class="question">Find the matching records?</div>
+            <div class="answer">
+                <span class="answer-label">Ans:</span> Given: <code>words = ["bella","label","roller"]</code><br>
+                Expected Output: <code>["e","l","l"]</code><br><br>
+                <pre><code>words = ["bella","label","roller"]
+temp2=[]
+matchResult = words[0].split('')
+
+for(let i = 0; i < words.length; i++){
+    temp2 = words[i].split('')
+    var tempData = []
+    for(let j = 0; j < temp2.length; j++){
+        var tempmem = matchResult.filter(x => x == temp2[j])[0];
+        if(tempmem){
+            tempData.push(tempmem)
+        }
+    }
+    matchResult = tempData
+    console.log(tempData)
+}</code></pre>
+            </div>
+        </div>
+
+        <div class="qa-item">
+            <div class="question">Resolve following data operations?</div>
+            <div class="answer">
+                <span class="answer-label">Given Data:</span>
+                <pre><code>const data = [
+  { name: 'Alice', country: 'USA', mobile: '123', salary: 5000 },
+  { name: 'Bob', country: 'India', mobile: '456', salary: 3000 },
+]</code></pre>
+                <strong>a) Sort by Salary (Ascending):</strong>
+                <pre><code>function output(data){
+    const newData = [...data].sort((a,b) => a.salary - b.salary)
+    return newData;
+}</code></pre>
+                <strong>b) Group by Unique Country:</strong>
+                <pre><code>// Method 1: Using reduce
+function output(data){
+    let newData = {}
+    newData = data.reduce((acc, item) => {
+        acc[item.country] = acc[item.country] || [];
+        acc[item.country].push(item);
+        return acc
+    }, {})
+    return newData;
+}
+
+// Method 2: Using for loop
+function output(data){
+    let newData = {}
+    for(let i = 0; i < data.length; i++){
+        let country = data[i].country;
+        if(!newData[country]){
+            newData[country] = [];
+        }
+        newData[data[i].country].push(data[i])
+    }
+    return newData;
+}</code></pre>
+                <strong>c) Get First Character of Names and Their Occurrence:</strong>
+                <pre><code>// Method 1: Using reduce
+function output(data){
+    let newData = {}
+    newData = data.reduce((acc, item) => {
+        acc[item.name[0].toLowerCase()] = (acc[item.name[0].toLowerCase()] || 0) + 1;
+        return acc
+    }, {})
+    return newData;
+}
+
+// Method 2: Using for loop
+function output(data){
+    var result = {};
+    for (var i = 0; i < data.length; i++) {
+        var firstChar = data[i].name.charAt(0).toLowerCase();
+        if (!result[firstChar]) {
+            result[firstChar] = 0;
+        }
+        result[firstChar]++;
+    }
+    return result;
+}</code></pre>
+            </div>
+        </div>
+
+        <div class="qa-item">
+            <div class="question">Get factorial of a number?</div>
+            <div class="answer">
+                <span class="answer-label">Ans:</span> A factorial is a function that multiplies a number by every number below it till 1.<br><br>
+                <strong>Method 1: Recursive:</strong>
+                <pre><code>function factorialRecursive(n) {
+  if (n < 0) return undefined;
+  if (n === 0 || n === 1) return 1;
+  return n * factorialRecursive(n - 1);
+}</code></pre>
+                <strong>Method 2: Iterative:</strong>
+                <pre><code>function factorialIterative(n) {
+  if (n < 0) return undefined;
+  let result = 1;
+  for (let i = 2; i <= n; i++) {
+    result *= i;
+  }
+  return result;
+}</code></pre>
+            </div>
+        </div>
+
+        <div class="qa-item">
+            <div class="question">Prime Number Check?</div>
+            <div class="answer">
+                <span class="answer-label">Ans:</span> A prime number is a whole number greater than 1 that is only divisible by 1 and itself.<br><br>
+                <pre><code>function runTasks(n) {
+    let isPrime = true;
+    if (n <= 1) {
+        isPrime = false;
+    } else {
+        for (let i = 2; i < n; i++) {
+            if (n % i === 0) {
+                isPrime = false;
+                break;
+            }
+        }
+    }
+    return isPrime;
+}
+console.log(runTasks(7))</code></pre>
+            </div>
+        </div>
+
+        <div class="qa-item">
+            <div class="question">Check if a number is a palindrome?</div>
+            <div class="answer">
+                <span class="answer-label">Ans:</span> A palindrome number is a number that remains the same when its digits are reversed.<br><br>
+                <pre><code>function isPalindrome(num) {
+  const str = num.toString();
+  return str === str.split('').reverse().join('');
+}</code></pre>
+            </div>
+        </div>
+
+        <div class="qa-item">
+            <div class="question">String character count?</div>
+            <div class="answer">
+                <span class="answer-label">Ans:</span> Given: <code>stringData="aabbbccddea"</code> and Expected: <code>"3a3b2c2d1e"</code><br><br>
+                <pre><code>let str = "aabbbccddea";
+let obj = {};
+let output = "";
+for(let i=0; i < str.length; i++) {
+    if(obj.hasOwnProperty(str[i])){
+        obj[str[i]] = obj[str[i]] + 1;
+    } else{
+        obj[str[i]] = 1;
+    }
+}
+for(let key in obj) {
+    output = output + obj[key] + key;
+}
+console.log("output => ", output);</code></pre>
+            </div>
+        </div>
+
+        <div class="qa-item">
+            <div class="question">Function context and 'this' keyword?</div>
+            <div class="answer">
+                <span class="answer-label">Q1:</span>
+                <pre><code>function abc(){ 
+    var a1='def'; 
+    this.name = 'abc' 
+} 
+a = new abc(); 
+console.log(a.a1);  // undefined (a1 is not a property of the instance)
+console.log(a.name); // "abc"</code></pre>
+                <br>
+                <span class="answer-label">Q2:</span>
+                <pre><code>function something() {
+    this.hello = "hello";
+    console.log(this.hello, this.who);
+}
+var who = "global", 
+foobar, 
+bazbam,  
+obj1 = { who: "obj1", something },
+obj2 = { who: "obj2", something };
+
+something();              // "hello undefined" (this refers to global, this.who is undefined)
+console.log(hello);      // "hello" (created on global object)
+obj1.something();        // "hello obj1"
+console.log(obj1.hello)  // "hello"
+obj2.something();        // "hello obj2"
+console.log(obj2.hello); // "hello"</code></pre>
+            </div>
+        </div>
+        </main>
+        
+        <footer style="margin-top: 50px; padding-top: 30px; border-top: 2px solid #eee; text-align: center; color: #666;">
+            <p>Last Updated: February 2026</p>
+            <p>JavaScript Interview Questions & Answers - Comprehensive Guide for Developers</p>
+            <p style="margin-top: 10px;">
+                <a href="questions-answers.html" rel="alternate" style="color: #f5576c;" title="Angular Interview Questions">Angular Questions</a> | 
+                <a href="all-questions-answers.json" rel="alternate" style="color: #f5576c;" title="Download JSON Data">JSON Data</a> |
+                <a href="https://sonvendra.github.io/" rel="author" style="color: #f5576c;" title="Portfolio">Portfolio</a>
+            </p>
+        </footer>
+        </div>
+    </div>
+
+    <button class="back-to-top" onclick="window.scrollTo({top: 0, behavior: 'smooth'})" title="Back to Top" aria-label="Back to top">↑</button>
+
+    <script>
+        // Show/hide back to top button
+        window.addEventListener('scroll', function() {
+            const backToTop = document.querySelector('.back-to-top');
+            if (window.pageYOffset > 300) {
+                backToTop.classList.add('show');
+            } else {
+                backToTop.classList.remove('show');
+            }
+        });
+
+        // Toggle navigation menu
+        function toggleNav() {
+            const navSidebar = document.getElementById('navSidebar');
+            const overlay = document.querySelector('.nav-overlay');
+            const hamburgerBtn = document.getElementById('hamburgerBtn');
+            const isActive = navSidebar.classList.toggle('active');
+            overlay.classList.toggle('active');
+            
+            // Update aria-expanded for accessibility
+            if (hamburgerBtn) {
+                hamburgerBtn.setAttribute('aria-expanded', isActive);
+            }
+            
+            // Prevent body scroll when menu is open on mobile
+            if (window.innerWidth <= 1024) {
+                if (isActive) {
+                    document.body.style.overflow = 'hidden';
+                } else {
+                    document.body.style.overflow = '';
+                }
+            }
+        }
+
+        // Close nav when clicking on a link (mobile)
+        const navLinks = document.querySelectorAll('.nav-sidebar a[href^="#"]');
+        navLinks.forEach(link => {
+            link.addEventListener('click', function() {
+                if (window.innerWidth <= 1024) {
+                    toggleNav();
+                }
+            });
+        });
+
+        // Highlight active nav link
+        const sections = document.querySelectorAll('.qa-item[id]');
+
+        window.addEventListener('scroll', function() {
+            let current = '';
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                const sectionHeight = section.clientHeight;
+                if (pageYOffset >= sectionTop - 200) {
+                    current = section.getAttribute('id');
+                }
+            });
+
+            navLinks.forEach(link => {
+                link.style.background = '';
+                link.style.color = '';
+                if (link.getAttribute('href') === '#' + current) {
+                    link.style.background = '#f5576c';
+                    link.style.color = 'white';
+                }
+            });
+        });
+    </script>
+</body>
+</html>

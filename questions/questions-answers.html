@@ -1,0 +1,1937 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Primary Meta Tags -->
+    <title>Angular Interview Questions & Answers - Complete Guide 2026</title>
+    <meta name="title" content="Angular Interview Questions & Answers - Complete Guide 2026">
+    <meta name="description" content="Comprehensive collection of Angular interview questions and answers covering RxJS, NgRx, Components, Routing, Forms, Directives, Pipes, Services, Performance optimization, Micro Frontend, SOLID principles, and more. Perfect for Angular developers preparing for interviews.">
+    <meta name="keywords" content="Angular, Angular interview questions, Angular answers, RxJS, NgRx, Angular components, Angular routing, Angular forms, Angular directives, Angular pipes, Angular services, Angular performance, micro frontend, SOLID principles, Angular tutorial, Angular guide">
+    <meta name="author" content="Sonvendra Chaurasia">
+    <meta name="robots" content="index, follow">
+    <meta name="language" content="English">
+    <meta name="revisit-after" content="7 days">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://sonvendra.github.io/questions/questions-answers.html">
+    <meta property="og:title" content="Angular Interview Questions & Answers - Complete Guide 2026">
+    <meta property="og:description" content="Comprehensive collection of Angular interview questions and answers covering RxJS, NgRx, Components, Routing, Forms, and more.">
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary">
+    <meta property="twitter:url" content="https://sonvendra.github.io/questions/questions-answers.html">
+    <meta property="twitter:title" content="Angular Interview Questions & Answers - Complete Guide 2026">
+    <meta property="twitter:description" content="Comprehensive collection of Angular interview questions and answers covering RxJS, NgRx, Components, Routing, Forms, and more.">
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://sonvendra.github.io/questions/questions-answers.html">
+    
+    <!-- Theme Color -->
+    <meta name="theme-color" content="#667eea">
+    
+    <!-- Favicon (add your favicon) -->
+    <!-- <link rel="icon" type="image/x-icon" href="/favicon.ico"> -->
+    
+    <!-- Structured Data (JSON-LD) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What is Angular?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Open-source web application framework, written in TypeScript. Single-page web applications (SPAs) with a structured and modular approach. Angular offers two-way data binding, Dependency Injection, Templates and Directives, Routing, HTTP, tools for unit testing etc."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is RxJS?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "RxJS is a library for composing asynchronous and event-based programs by using observable sequences. It provides one core type, the Observable, satellite types (Observer, Schedulers, Subjects) and operators inspired by Array methods."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is NgRx?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "NgRx stands for Angular Reactive Extensions, NgRx Store provides reactive state management for Angular apps inspired by Redux. NgRx has libraries for managing both global and local state."
+          }
+        }
+      ]
+    }
+    </script>
+    
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Article",
+      "headline": "Angular Interview Questions & Answers - Complete Guide",
+      "description": "Comprehensive collection of Angular interview questions and answers",
+      "author": {
+        "@type": "Person",
+        "name": "Sonvendra Chaurasia",
+        "url": "https://sonvendra.github.io/"
+      },
+      "publisher": {
+        "@type": "Person",
+        "name": "Sonvendra Chaurasia",
+        "url": "https://sonvendra.github.io/"
+      },
+      "datePublished": "2026-02-01",
+      "dateModified": "2026-02-01",
+      "url": "https://sonvendra.github.io/questions/questions-answers.html"
+    }
+    </script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            padding: 20px;
+        }
+
+        .main-wrapper {
+            display: flex;
+            gap: 20px;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .hamburger {
+            display: none;
+            position: fixed;
+            top: 20px;
+            left: 20px;
+            z-index: 1001;
+            background: #667eea;
+            color: white;
+            border: none;
+            padding: 12px;
+            border-radius: 5px;
+            cursor: pointer;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.3);
+            font-size: 1.5em;
+        }
+
+        .hamburger:hover {
+            background: #764ba2;
+        }
+
+        .nav-sidebar {
+            position: sticky;
+            top: 20px;
+            height: fit-content;
+            max-height: calc(100vh - 40px);
+            width: 250px;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+            padding: 20px;
+            overflow-y: auto;
+            transition: transform 0.3s ease;
+        }
+
+        .nav-sidebar h2 {
+            color: #667eea;
+            font-size: 1.2em;
+            margin-bottom: 15px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #764ba2;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .close-btn {
+            display: none;
+            background: none;
+            border: none;
+            font-size: 1.5em;
+            color: #667eea;
+            cursor: pointer;
+            padding: 0;
+            width: 30px;
+            height: 30px;
+            line-height: 30px;
+            text-align: center;
+        }
+
+        .close-btn:hover {
+            color: #764ba2;
+        }
+
+        .nav-sidebar ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        .nav-sidebar li {
+            margin-bottom: 8px;
+        }
+
+        .nav-sidebar a {
+            display: block;
+            padding: 8px 12px;
+            color: #555;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: all 0.3s;
+            font-size: 0.9em;
+        }
+
+        .nav-sidebar a:hover {
+            background: #667eea;
+            color: white;
+            transform: translateX(5px);
+        }
+
+        .nav-link-other {
+            margin-top: 20px;
+            padding-top: 20px;
+            border-top: 2px solid #eee;
+        }
+
+        .nav-link-other a {
+            color: #764ba2;
+            font-weight: bold;
+        }
+
+        .container {
+            flex: 1;
+            max-width: 1000px;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+            padding: 40px;
+        }
+
+        .back-to-top {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            background: #667eea;
+            color: white;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: none;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+            transition: all 0.3s;
+            z-index: 1000;
+            font-size: 1.5em;
+        }
+
+        .back-to-top:hover {
+            background: #764ba2;
+            transform: translateY(-5px);
+        }
+
+        .back-to-top.show {
+            display: flex;
+        }
+
+        h1 {
+            color: #667eea;
+            text-align: center;
+            margin-bottom: 30px;
+            font-size: 2.5em;
+            border-bottom: 3px solid #764ba2;
+            padding-bottom: 15px;
+        }
+
+        .qa-item {
+            margin-bottom: 40px;
+            padding: 25px;
+            background: #f8f9fa;
+            border-left: 5px solid #667eea;
+            border-radius: 5px;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .qa-item:hover {
+            transform: translateX(5px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .question {
+            font-size: 1.3em;
+            font-weight: bold;
+            color: #667eea;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+        }
+
+        .question::before {
+            content: "Q.";
+            background: #667eea;
+            color: white;
+            padding: 5px 12px;
+            border-radius: 50%;
+            margin-right: 15px;
+            font-size: 0.9em;
+            min-width: 35px;
+            text-align: center;
+        }
+
+        .answer {
+            color: #555;
+            margin-left: 50px;
+            font-size: 1.05em;
+        }
+
+        .answer-label {
+            font-weight: bold;
+            color: #764ba2;
+            margin-bottom: 8px;
+            display: inline-block;
+        }
+
+        code {
+            background: #2d2d2d;
+            color: #f8f8f2;
+            padding: 2px 6px;
+            border-radius: 3px;
+            font-family: 'Courier New', monospace;
+            font-size: 0.9em;
+        }
+
+        pre {
+            background: #2d2d2d;
+            color: #f8f8f2;
+            padding: 15px;
+            border-radius: 5px;
+            overflow-x: auto;
+            margin: 10px 0;
+            border-left: 4px solid #667eea;
+        }
+
+        pre code {
+            background: none;
+            padding: 0;
+            color: inherit;
+        }
+
+        .section-title {
+            font-size: 1.5em;
+            color: #764ba2;
+            margin-top: 30px;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #667eea;
+        }
+
+        ul {
+            margin-left: 20px;
+            margin-top: 10px;
+        }
+
+        li {
+            margin-bottom: 8px;
+        }
+
+        a {
+            color: #667eea;
+            text-decoration: none;
+            word-break: break-all;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        .highlight {
+            background: #fff3cd;
+            padding: 2px 4px;
+            border-radius: 3px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 15px 0;
+            background: white;
+        }
+
+        table th {
+            background: #667eea;
+            color: white;
+            padding: 12px;
+            text-align: left;
+            border: 1px solid #ddd;
+        }
+
+        table td {
+            padding: 10px;
+            border: 1px solid #ddd;
+        }
+
+        table tr:nth-child(even) {
+            background: #f8f9fa;
+        }
+
+        table tr:hover {
+            background: #e9ecef;
+        }
+
+        @media (max-width: 1024px) {
+            .hamburger {
+                display: block;
+            }
+
+            .main-wrapper {
+                flex-direction: column;
+            }
+
+            .nav-sidebar {
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 280px;
+                max-height: 100vh;
+                z-index: 1000;
+                transform: translateX(-100%);
+                transition: transform 0.3s ease;
+                box-shadow: 2px 0 10px rgba(0, 0, 0, 0.3);
+            }
+
+            .nav-sidebar.active {
+                transform: translateX(0);
+            }
+
+            .nav-overlay {
+                display: none;
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background: rgba(0, 0, 0, 0.5);
+                z-index: 999;
+            }
+
+            .nav-overlay.active {
+                display: block;
+            }
+
+            .container {
+                margin-top: 0;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 20px;
+            }
+
+            h1 {
+                font-size: 2em;
+            }
+
+            .answer {
+                margin-left: 0;
+            }
+
+            .question {
+                font-size: 1.1em;
+            }
+
+            .back-to-top {
+                bottom: 20px;
+                right: 20px;
+                width: 45px;
+                height: 45px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <button class="hamburger" onclick="toggleNav()" aria-label="Toggle navigation" aria-expanded="false" id="hamburgerBtn">☰</button>
+    <div class="nav-overlay" onclick="toggleNav()"></div>
+    
+    <div class="main-wrapper">
+        <nav class="nav-sidebar" id="navSidebar" aria-label="Main navigation">
+            <h2>
+                Navigation
+                <button class="close-btn" onclick="toggleNav()" aria-label="Close navigation">×</button>
+            </h2>
+            <ul>
+                <li><a href="#top">Top</a></li>
+                <li><a href="#rxjs">RxJS</a></li>
+                <li><a href="#ngrx">NgRx</a></li>
+                <li><a href="#angular-basics">Angular Basics</a></li>
+                <li><a href="#components">Components</a></li>
+                <li><a href="#routing">Routing</a></li>
+                <li><a href="#forms">Forms</a></li>
+                <li><a href="#directives">Directives</a></li>
+                <li><a href="#pipes">Pipes</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#performance">Performance</a></li>
+                <li><a href="#micro-frontend">Micro Frontend</a></li>
+                <li><a href="#solid">SOLID Principles</a></li>
+                <li><a href="#git">Git</a></li>
+                <li><a href="#interview">Interview Questions</a></li>
+            </ul>
+            <div class="nav-link-other">
+                <a href="javascript-questions-answers.html" rel="alternate" title="JavaScript Interview Questions">→ JavaScript Questions</a>
+            </div>
+        </nav>
+
+        <div class="container" id="top">
+            <header>
+                <h1>Angular Interview Questions & Answers</h1>
+                <p style="text-align: center; color: #666; margin-top: 10px; font-size: 1.1em;">Complete Guide for Angular Developers - RxJS, NgRx, Components, Routing, Forms, Directives & More</p>
+            </header>
+
+        <main>
+        <div class="qa-item" id="rxjs">
+            <div class="question">What's the full form of RxJs?</div>
+            <div class="answer">
+                <span class="answer-label">Ans:</span> Reactive Extension for javascript.<br>
+                zone.js
+            </div>
+        </div>
+
+        <div class="qa-item">
+            <div class="question">What is RxJs?</div>
+            <div class="answer">
+                <span class="answer-label">Ans:</span> RxJS is a library for composing asynchronous and event-based programs by using observable sequences. It provides one core type, the Observable, satellite types (Observer, Schedulers, Subjects) and operators inspired by Array methods (map, filter, reduce, every, etc) to allow handling asynchronous events as collections.
+            </div>
+        </div>
+
+        <div class="qa-item">
+            <div class="question">What is Purpose of RxJS?</div>
+            <div class="answer">
+                <span class="answer-label">Ans:</span> RxJs is an library to manage asynchronous streams or data.<br>
+                JavaScript library that uses observables to work with reactive programming that deals with asynchronous data calls, callbacks and event-based programs.<br>
+                There are Extensive list of operators so we can manage our data.
+            </div>
+        </div>
+
+        <div class="qa-item">
+            <div class="question">Observables in RxJS?</div>
+            <div class="answer">
+                <span class="answer-label">Ans:</span> Observables as an interface to handle a variety of common asynchronous operations and handle asynchronous data.
+            </div>
+        </div>
+
+        <div class="qa-item">
+            <div class="section-title">What is ForkJoin?</div>
+            <div class="answer">
+                <span class="answer-label">Ans:</span> forkJoin is a RxJS operator in Angular (and general RxJS) that lets you run multiple observables in parallel, and then wait for all of them to complete before emitting a combined result.<br><br>
+                <pre><code>let final_val = forkJoin([json1, json2, json3]);</code></pre>
+                forkJoin takes a number of input observables and waits for all passed observables to complete. Once they are complete, it will then emit a group of the last values from corresponding observables.<br>
+                The resulting stream emits only one time when all of the inner streams complete. It will never complete if any of the inner streams doesn't complete and will throw an error if any of the inner streams errors out.
+            </div>
+        </div>
+
+        <div class="qa-item">
+            <div class="question">RegExP?</div>
+            <div class="answer">
+                <span class="answer-label">Ans:</span> The RegExp object is used for matching text with a pattern.<br>
+                Regular expressions are patterns used to match character combinations in strings. In JavaScript, regular expressions are also objects. These patterns are used with the exec() and test() methods of RegExp, and with the match(), matchAll(), replace(), replaceAll(), search(), and split() methods of String.<br>
+                This chapter describes JavaScript regular expressions.<br><br>
+                <strong>Ex:</strong>
+                <pre><code>const a = 'anil goes to school';
+const regex = /[aeiou]/gi;
+const vowelsCount = a.match(regex);</code></pre>
+            </div>
+        </div>
+
+        <div class="qa-item" id="ngrx">
+            <div class="question">NgRx?</div>
+            <div class="answer">
+                <span class="answer-label">Ans:</span> Ngrx is for optimally storing data in the client and recalling them from all over the application, usually. If you want to take advantage of single direction data flow using Store in Angular NgRx is the solution.<br>
+                NgRx stands for Angular Reactive Extensions, NgRx Store provides reactive state management for Angular apps inspired by Redux. NgRx has libraries for managing both global and local state. Isolation of side effects in order to achieve a more streamlined component architecture. Developer tooling that makes it easier for developers to construct a variety of applications.<br><br>
+                <strong>app.module.ts:</strong>
+                <pre><code>imports: [StoreModule.forRoot({ hero: heroReducer })]</code></pre>
+                <strong>hero.actions.ts:</strong>
+                <pre><code>export const setData = createAction('[Hero] Set Data',
+  props<{ data: string }>()
+);
+export const resetData = createAction('[Hero] Reset Data');</code></pre>
+                <strong>hero.reducer.ts:</strong>
+                <pre><code>export const initialState = '';
+export const counterReducer = createReducer(
+    initialState,
+    on(setData, (state, { data }) => data),
+    on(resetData, _ => '')
+);</code></pre>
+                <strong>hero.component.ts:</strong>
+                <pre><code>addData() {
+    this.store.dispatch(setData({ data: 'Test' }));
+}
+resetData() {
+    this.store.dispatch(resetData());
+}</code></pre>
+                <strong>hero.selectors.ts:</strong>
+                <pre><code>export const selectHeroState = createFeatureSelector<string>('hero');
+export const selectHeroData = createSelector(
+    selectHeroState,
+    (state: string) => state
+);</code></pre>
+                <strong>Read Data:</strong>
+                <pre><code>hero$: Observable<string>;
+constructor(private store: Store) {
+    this.hero$ = this.store.select(selectHeroData);
+}</code></pre>
+            </div>
+        </div>
+
+        <div class="qa-item">
+            <div class="question">Access modifiers?</div>
+            <div class="answer">
+                <span class="answer-label">Ans:</span> Concept of 'Encapsulation' is used to make class members public or private i.e. a class can control the visibility of its data members.<br>
+                There are three types of access modifiers in TypeScript: <code>public</code>, <code>private</code> and <code>protected</code>.
+            </div>
+        </div>
+
+        <div class="qa-item">
+            <div class="question">CI/CD tools?</div>
+            <div class="answer">
+                <span class="answer-label">Ans:</span> CI and CD stand for continuous integration and continuous delivery/continuous deployment.<br>
+                A continuous integration and continuous deployment (CI/CD) pipeline is a series of steps that must be performed in order to deliver a new version of software. CI/CD pipelines are a practice focused on improving software delivery throughout the software development life cycle via automation.<br>
+                <strong>Ex:</strong> GitLab, Asana, Jira, Trello, Google Drive
+            </div>
+        </div>
+
+        <div class="qa-item">
+            <div class="question">What is mock API?</div>
+            <div class="answer">
+                <span class="answer-label">Ans:</span> MockAPI is a simple tool that lets you easily mock up APIs, generate custom data, and perform operations on it using RESTful interface.<br>
+                MockAPI is meant to be used as a prototyping/testing/learning tool.
+            </div>
+        </div>
+
+        <div class="qa-item" id="git">
+            <div class="question">GIT Basic Commands.</div>
+            <div class="answer">
+                <span class="answer-label">Ans:</span> Version control is a system that records changes to a file or set of files over time so that you can recall specific versions later.<br>
+                Git is a version-control system for tracking changes in computer files and coordinating work on those files among multiple people.<br><br>
+                <ul>
+                    <li><code>git clone [url]</code></li>
+                    <li><code>git pull origin master</code>: fetches and merges changes</li>
+                    <li><code>git status</code>: Check the status of changes in your repository.</li>
+                    <li><code>git add [file]</code>: adds one or more to the staging area</li>
+                    <li><code>git commit -a -m "[message]"</code>: snapshots the file permanently in the version history</li>
+                    <li><code>git push origin master</code>: sends the committed changes</li>
+                    <li><code>git branch</code>: lists all the local branches</li>
+                    <li><code>git branch [branch name]</code>: creates a new branch</li>
+                    <li><code>git branch -d [branch name]</code>: deletes the feature branch</li>
+                    <li><code>git branch -b [branch name]</code>: creates a new branch and also switches to it</li>
+                    <li><code>git checkout [branch name]</code>: switch from one branch to another</li>
+                    <li><code>git log</code>: View commit history</li>
+                    <li><code>git reset --hard [commit]</code>: Reset to a specific commit, discarding all changes.</li>
+                    <li><code>git revert [commit]</code>: Create a new commit that undoes changes from a previous commit.</li>
+                    <li><code>git stash</code>: Save uncommitted changes for later use.</li>
+                    <li><code>git stash apply</code>: Apply stashed changes and remove them from the stash.</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="qa-item">
+            <div class="question">Define cherry-picking and patch strategy?</div>
+            <div class="answer">
+                <span class="answer-label">Ans:</span> Cherry-picking in Git refers to the process of selecting specific commits from one branch and applying them to another branch.<br>
+                This is useful when you want to incorporate specific changes or fixes from a different branch without merging the entire branch.<br>
+                You can also cherry-pick multiple commits<br>
+                <pre><code>git cherry-pick [log-Id]...</code></pre>
+            </div>
+        </div>
+
+        <div class="qa-item" id="micro-frontend">
+            <div class="section-title">Micro frontend</div>
+            <div class="answer">
+                <span class="answer-label">Ans:</span><br>
+                Reference: <a href="https://medium.com/@hardikpatel043/how-to-start-with-micro-frontend-architecture-in-angular-using-module-federation-70a2cd5d7834" target="_blank" rel="noopener noreferrer">Micro Frontend Architecture Guide</a><br><br>
+                A Micro Frontend is a design pattern where a single frontend application is broken into smaller, independently built and deployed pieces — just like microservices on the backend.<br>
+                Micro-frontend architecture is an architectural style where a front-end application is decomposed into smaller, more manageable pieces (micro-frontends), each developed and deployed independently by different teams.<br><br>
+                <pre><code>npm install --save-dev @angular-architects/module-federation</code></pre>
+                <strong>angular.json:</strong>
+                <pre><code>"architect": {
+  "serve": {
+    "builder": "@angular-architects/module-federation:webpack-dev-server",
+    "options": {
+      "publicPath": "http://localhost:4200/",
+      "filename": "remoteEntry.js",
+      "exposes": {
+        "MicroFrontend": "./src/app/micro-frontend/micro-frontend.module.ts"
+      }
+    }
+  }
+}</code></pre>
+                <strong>micro-frontend.module.ts:</strong>
+                <pre><code>import('http://localhost:4200/remoteEntry.js').then(() => {
+  import('MicroFrontend').then(m => {
+    // Use the module and components from the Micro Frontend
+  });
+});</code></pre>
+                <strong>routes in the host application's routing module:</strong>
+                <pre><code>const routes: Routes = [
+  { path: 'micro-frontend', loadChildren: () => import('MicroFrontend').then(m => m.MicroFrontendModule) },
+];</code></pre>
+            </div>
+        </div>
+
+        <div class="qa-item">
+            <div class="section-title">Module federation</div>
+            <div class="answer">
+                <span class="answer-label">Ans:</span><br>
+                Reference: <a href="https://medium.com/@mguanuradha/micro-frontend-architecture-with-module-federation-65224b8fa61c" target="_blank" rel="noopener noreferrer">Module Federation Architecture Guide</a><br><br>
+                Module Federation is a Webpack 5 feature that allows JavaScript modules (including entire front-end applications) to be shared and consumed across different builds at runtime, enabling seamless integration of micro-frontends.<br><br>
+                <strong>Host Application:</strong> This is the main application that consumes remote modules.<br>
+                <strong>Remote Application:</strong> These are micro-frontends that expose their components or modules.<br><br>
+                <strong>webpack.config.js for a host app:</strong>
+                <pre><code>module.exports = {
+  plugins: [
+    new ModuleFederationPlugin({
+      name: 'hostApp',
+      remotes: {
+        remoteApp: 'remoteApp@http://localhost:3001/remoteEntry.js',
+      },
+      shared: ['react', 'react-dom'],
+    }),
+  ],
+};</code></pre>
+                <strong>webpack.config.js for a remote app:</strong>
+                <pre><code>module.exports = {
+  plugins: [
+    new ModuleFederationPlugin({
+      name: 'remoteApp',
+      filename: 'remoteEntry.js',
+      exposes: {
+        './Button': './src/Button', // Exposing a Button component
+      },
+      shared: ['react', 'react-dom'],
+    }),
+  ],
+};</code></pre>
+            </div>
+        </div>
+
+        <div class="qa-item">
+            <div class="question">What is micro frontend?</div>
+            <div class="answer">
+                <span class="answer-label">Ans:</span> The goal behind the Micro Frontend Architecture Angular is to enhance scalability, flexibility, and maintainability by reducing the complexity of the web application and promoting modularity.
+            </div>
+        </div>
+
+        <div class="qa-item">
+            <div class="question">Need of micro frontend?</div>
+            <div class="answer">
+                <span class="answer-label">Ans:</span> To avoid the difficulty as when multiple teams or developers start working on the same page they may overwrite each other's changes or may face conflicts while committing code and delay the release process also multiple instances of re-testing are needed to ensure no faulty code is there within the application at the time of release.<br>
+                Each team or developer can create their repo for their module/sub-domain and work independently without worrying about other developers' changes.
+            </div>
+        </div>
+
+        <div class="qa-item">
+            <div class="question">How the Angular Micro frontend Architecture is different from Traditional architecture?</div>
+            <div class="answer">
+                <span class="answer-label">Ans:</span>
+                <strong>A) Repository Structure:</strong><br>
+                In Traditional Architecture code kept in a single Repository.<br>
+                While in Micro Frontend Architecture it is not needed to keep all Code in same Repository.<br><br>
+                <strong>B) Technology Stack:</strong><br>
+                In a Traditional Architecture code will be in same technologies<br>
+                While in Micro frontend same tech is not required
+            </div>
+        </div>
+
+        <div class="qa-item">
+            <div class="question">Ways to Implement the Micro Frontend Angular Architecture?</div>
+            <div class="answer">
+                <span class="answer-label">Ans:</span>
+                <strong>A) Iframe:</strong> We can use Iframe to load data but it will becomes difficult when we need to use data communicate.<br><br>
+                <strong>B) NGINX:</strong> It makes easy to maintain the routing of different applications if all applications are on the Same server.<br><br>
+                <strong>C) Third-party Libraries:</strong>
+                <ul>
+                    <li><strong>Single-SPA</strong></li>
+                    <li><strong>Module-federation</strong></li>
+                    <li><strong>FrintJS</strong></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="qa-item">
+            <div class="question">Module-federation?</div>
+            <div class="answer">
+                <span class="answer-label">Ans:</span> Module Federation enables you to build scalable, flexible, and modular applications by splitting your codebase into smaller, independently deployable modules.<br>
+                Module Federation can be used to create microfrontends, where different parts of your application are developed and deployed independently while sharing common code and dependencies.
+            </div>
+        </div>
+
+        <div class="qa-item">
+            <div class="question">Story Book?</div>
+            <div class="answer">
+                <span class="answer-label">Ans:</span> Storybook runs alongside your app in development mode. It helps you build UI components isolated from the business logic and context of your app.<br>
+                By providing a dedicated environment for testing and debugging, Storybook makes it easier to identify and fix UI components bugs.<br>
+                It also allows developers to easily test each component in different scenarios, making it easier to catch issues early on in development.
+            </div>
+        </div>
+
+        <div class="qa-item">
+            <div class="question">NX?</div>
+            <div class="answer">
+                <span class="answer-label">Ans:</span> Nx is a powerful open-source build system that provides tools and techniques for enhancing developer productivity, optimizing CI performance, and maintaining code quality.
+            </div>
+        </div>
+<!-- Amantya Tech -->
+        <div class="qa-item" id="solid">
+            <div class="section-title">What is SOLID Principles?</div>
+            <div class="answer">
+                <span class="answer-label">Ans:</span> The SOLID principles are a set of design principles for writing flexible, scalable, maintainable, and reusable code.<br><br>
+                <strong>1. S — Single Responsibility Principle:</strong> A class should have one and only one reason to change, meaning that a class should only have one job.<br>
+                A class, a module, or a function should be only responsible for one actor. So, it should have one and only one reason to change.<br>
+                If a Class has many responsibilities, it increases the possibility of bugs because making changes to one of its responsibilities, could affect the other ones without you knowing.<br><br>
+                <strong>2. O — Open Closed Principle:</strong> Objects or entities should be open for extension, but closed for modification.<br>
+                Changing the current behaviour of a Class will affect all the systems using that Class.<br>
+                If you want the Class to perform more functions, the ideal approach is to add to the functions that already exist NOT change them.<br><br>
+                <strong>3. L — Liskov Substitution Principle:</strong> All this is stating is that every subclass/derived class should be substitutable for their base/parent class.<br>
+                The child Class should be able to process the same requests and deliver the same result as the parent Class or it could deliver a result that is of the same type.<br><br>
+                <strong>4. I — Interface Segregation Principle:</strong> A client should never be forced to implement an interface that it doesn't use or clients shouldn't be forced to depend on methods they do not use.<br>
+                When a Class is required to perform actions that are not useful, it is wasteful and may produce unexpected bugs if the Class does not have the ability to perform those actions.<br><br>
+                <strong>5. D — Dependency Inversion Principle:</strong> Entities must depend on abstractions not on concretions. It states that the high level module must not depend on the low level module, but they should depend on abstractions.
+            </div>
+        </div>
+
+        <div class="qa-item" id="services">
+            <div class="section-title">Services in Angular</div>
+            <div class="answer">
+                <span class="answer-label">Ans:</span> Services are typically used to encapsulate business logic, share data, or perform other tasks that can be shared across multiple components. They are a way to organize and centralize common functionality that multiple parts of an application might need.
+            </div>
+        </div>
+
+        <div class="qa-item">
+            <div class="question">How to handle dependency injection in Angular?</div>
+            <div class="answer">
+                <span class="answer-label">Ans:</span> Dependency injection is a fundamental concept that allows you to inject dependencies (services or other objects) into components, directives, pipes, and other Angular constructs.
+            </div>
+        </div>
+
+        <div class="qa-item">
+            <div class="question">Why unit testing is important?</div>
+            <div class="answer">
+                <span class="answer-label">Ans:</span> Angular provides a robust testing framework that makes it easy to write and execute unit tests for components, services, and other parts of your application.<br><br>
+                <pre><code>ng test</code></pre>
+                This will run the tests and open a browser window with the Karma test runner.
+            </div>
+        </div>
+
+        <div class="qa-item">
+            <div class="question">What is mock in unit testing?</div>
+            <div class="answer">
+                <span class="answer-label">Ans:</span> <em>Answer pending...</em>
+            </div>
+        </div>
+
+        <div class="qa-item">
+            <div class="section-title">What are the main building blocks of Angular?</div>
+            <div class="answer">
+                <span class="answer-label">Ans:</span><br>
+                <strong>Modules:</strong> They group related components, directives, pipes, and services into cohesive units.<br><br>
+                <strong>Components:</strong> Each component consists of a template, class, and metadata.<br><br>
+                <strong>Templates:</strong> They use HTML syntax enhanced with Angular directives and binding expressions.<br><br>
+                <strong>Directives:</strong> Directives are markers on a DOM element that tell Angular to do something to a DOM element.<br><br>
+                <strong>Services:</strong> Services are singleton objects that encapsulate business logic, data manipulation, or communication with external services.<br><br>
+                <strong>Dependency Injection (DI):</strong> Angular has a built-in dependency injection system that allows you to inject dependencies (such as services) into components, directives, or other services.<br><br>
+                <strong>Router:</strong> Angular Router provides navigation and URL manipulation features for single-page applications.<br><br>
+                <strong>Forms:</strong> Forms allow you to capture and validate user input in a structured way.<br><br>
+                <strong>HTTP Client:</strong> Angular includes a powerful HTTP client for making requests to remote servers.<br><br>
+                <strong>Pipes:</strong> Pipes are used to transform data in templates.
+            </div>
+        </div>
+
+        <div class="qa-item" id="components">
+            <div class="question">What is component and directive in Angular?</div>
+            <div class="answer">
+                <span class="answer-label">Ans:</span> Component defined using a TypeScript class with a <code>@Component</code> decorator. Consist of HTML, SCSS, ts Files.<br>
+                Components handle the presentation logic and user interactions for a specific part of the application.<br><br>
+                Directive allow you to extend the behavior of HTML elements or create reusable behavior.
+            </div>
+        </div>
+
+        <div class="qa-item">
+            <div class="question">Main class in RxJS Angular?</div>
+            <div class="answer">
+                <span class="answer-label">Ans:</span> RxJS (Reactive Extensions for JavaScript) is a library that provides support for reactive programming using Observables. The main class in RxJS is the <code>Observable</code> class, which is the foundation for working with asynchronous data streams.
+            </div>
+        </div>
+
+        <div class="qa-item">
+            <div class="question">What is observable?</div>
+            <div class="answer">
+                <span class="answer-label">Ans:</span> Handling asynchronous operations and event-based programming in Angular applications.<br>
+                Observables are lazy, meaning they don't start emitting data until someone subscribes to them.<br>
+                Subscriptions can be canceled or unsubscribed from to stop receiving further data.<br>
+                Observables can emit error notifications, and subscribers can handle errors using error callback functions.<br>
+                RxJS provides set of operators that allow you to transform, filter, combine, and manipulate the data.
+            </div>
+        </div>
+
+        <div class="qa-item">
+            <div class="question">Understanding, creating and subscribing to observables in Angular?</div>
+            <div class="answer">
+                <span class="answer-label">Ans:</span><br>
+                <strong>Creating an Observable with new Observable():</strong>
+                <pre><code>fetchData(): Observable&lt;any&gt; {
+  return this.http.get('https://api.example.com/data');
+}</code></pre>
+                <strong>Subscribing to Observables:</strong>
+                <pre><code>this.myService.fetchData().subscribe(
+  (response) => {
+    this.data = response;
+  },
+  (error) => {
+    console.error('Error fetching data:', error);
+  }
+);</code></pre>
+                <strong>Unsubscribing:</strong>
+                <pre><code>this.myService.fetchData().unsubscribe();</code></pre>
+            </div>
+        </div>
+
+        <div class="qa-item">
+            <div class="question">What is promise?</div>
+            <div class="answer">
+                <span class="answer-label">Ans:</span> Promises are a JavaScript feature that provides a way to handle asynchronous operations in a more structured and readable manner. A promise represents the eventual completion or failure of an asynchronous operation and allows you to attach callbacks to handle the results.
+            </div>
+        </div>
+
+        <div class="qa-item">
+            <div class="question">What is the use of ngOnDestroy?</div>
+            <div class="answer">
+                <span class="answer-label">Ans:</span> <em>Answer pending...</em>
+            </div>
+        </div>
+
+        <div class="qa-item">
+            <div class="question">What source control tool have you used?</div>
+            <div class="answer">
+                <span class="answer-label">Ans:</span><br>
+                <strong>Git:</strong> It allows multiple developers to collaborate on a project, track changes, and manage different versions of the codebase.<br><br>
+                <strong>GitHub:</strong> GitHub is a web-based platform built on top of Git. It provides additional collaboration features, such as issue tracking, pull requests, and project management.<br><br>
+                <strong>Bitbucket:</strong> Bitbucket is a Git repository hosting service by Atlassian. It supports both Git and Mercurial, and it provides features like pull requests, branching strategies, and integrations with other Atlassian products.
+            </div>
+        </div>
+
+        <div class="qa-item">
+            <div class="question">What is pull request in git?</div>
+            <div class="answer">
+                <span class="answer-label">Ans:</span> <em>Answer pending...</em>
+            </div>
+        </div>
+
+        <div class="qa-item">
+            <div class="question">Parent to child communication in Angular?</div>
+            <div class="answer">
+                <span class="answer-label">Ans:</span> <em>Answer pending...</em>
+            </div>
+        </div>
+
+        <div class="qa-item">
+            <div class="question">How to setup routing in Angular?</div>
+            <div class="answer">
+                <span class="answer-label">Ans:</span> <em>Answer pending...</em>
+            </div>
+        </div>
+
+        <div class="qa-item">
+            <div class="question">Imperative vs declarative in JavaScript?</div>
+            <div class="answer">
+                <span class="answer-label">Ans:</span> <em>Answer pending...</em>
+            </div>
+        </div>
+
+        <div class="qa-item">
+            <div class="question">What is filter function in array?</div>
+            <div class="answer">
+                <span class="answer-label">Ans:</span> <em>Answer pending...</em>
+            </div>
+        </div>
+
+        <div class="qa-item">
+            <div class="question">What is reduce method in JavaScript?</div>
+            <div class="answer">
+                <span class="answer-label">Ans:</span> <em>Answer pending...</em>
+            </div>
+        </div>
+
+        <div class="qa-item">
+            <div class="question">How to Validate Angular Reactive Forms?</div>
+            <div class="answer">
+                <span class="answer-label">Ans:</span> <em>Answer pending...</em>
+            </div>
+        </div>
+
+        <div class="qa-item">
+            <div class="question">How to handle security in Angular when calling API?</div>
+            <div class="answer">
+                <span class="answer-label">Ans:</span>
+                <ul>
+                    <li>Use HTTPS API request</li>
+                    <li>Use token for Authentication</li>
+                    <li>Use role management so authorized users can perform specific actions</li>
+                    <li>Use Cookies, localStorage for Secure Storage for Tokens</li>
+                    <li>API server to include proper CORS headers</li>
+                    <li>Proper Error Handling</li>
+                </ul>
+            </div>
+        </div>
+        <!-- AngularQuestions -->
+
+        <div class="qa-item" id="angular-basics">
+            <div class="question">What is Angular?</div>
+            <div class="answer">
+                <span class="answer-label">Ans:</span> Open-source web application framework, written in TypeScript.<br>
+                Single-page web applications (SPAs) with a structured and modular approach.<br>
+                Angular offers two-way data binding, Dependency Injection, Templates and Directives, Routing, HTTP, tools for unit testing etc.
+            </div>
+        </div>
+
+        <div class="qa-item">
+            <div class="question">Difference between AngularJS and Angular?</div>
+            <div class="answer">
+                <span class="answer-label">Ans:</span>
+                <table>
+                    <tr>
+                        <th>Feature</th>
+                        <th>AngularJS</th>
+                        <th>Angular</th>
+                    </tr>
+                    <tr>
+                        <td><strong>Language</strong></td>
+                        <td>JavaScript</td>
+                        <td>TypeScript</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Architecture</strong></td>
+                        <td>Controller</td>
+                        <td>Component</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Mobile</strong></td>
+                        <td>Not compliant</td>
+                        <td>Mobile compliant</td>
+                    </tr>
+                    <tr>
+                        <td><strong>CLI</strong></td>
+                        <td>No CLI</td>
+                        <td>CLI Works</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Lazy Loading</strong></td>
+                        <td>No Lazy Loading</td>
+                        <td>Lazy Loading Works</td>
+                    </tr>
+                    <tr>
+                        <td><strong>SEO</strong></td>
+                        <td>Not SEO Friendly</td>
+                        <td>SEO Friendly</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Server Side</strong></td>
+                        <td>No Server Side</td>
+                        <td>Server Side Works</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+
+        <div class="qa-item">
+            <div class="question">AOT and JIT compiler in Angular?</div>
+            <div class="answer">
+                <span class="answer-label">Ans:</span> An angular application mainly consists of HTML templates, TypeScript files, unit testing and configuration file. Whenever we run over an application, the browser cannot understand the code directly hence we have to compile our code.<br><br>
+                <strong>Ahead of Time (AOT):</strong>
+                <ul>
+                    <li>Process of compiling higher-level language or intermediate language into a native machine code, which is system dependent</li>
+                    <li>Compilation only happens once, while you build your project</li>
+                    <li>Minimize the size of your application</li>
+                    <li>During creating build compiler detects template error earlier</li>
+                    <li>Precompiled templates during build time (used in <code>ng build --prod</code>)</li>
+                </ul>
+                <strong>Just in Time (JIT):</strong>
+                <ul>
+                    <li>Compilation during the execution of the program at a run time before execution</li>
+                    <li>Best compiler when your application is in local development or in development mode</li>
+                    <li>Compiled templates in the browser at runtime (used in <code>ng serve</code>)</li>
+                </ul>
+                <strong>Note:</strong> View Engine Compiler using from Angular2-8; Angular Ivy compiler using Angular9+
+            </div>
+        </div>
+
+        <div class="qa-item">
+            <div class="question">NPM and node_modules?</div>
+            <div class="answer">
+                <span class="answer-label">Ans:</span> NPM is a package manager which helps in installation of packages.<br>
+                node_modules is a folder where all the packages are installed.
+            </div>
+        </div>
+
+        <div class="qa-item">
+            <div class="question">Importance of package.json and package-lock.json file?</div>
+            <div class="answer">
+                <span class="answer-label">Ans:</span> <code>package.json</code> is a JSON (JavaScript Object Notation) file that holds important information about the Angular project, including its metadata, dependencies, scripts, and other configuration settings.<br><br>
+                <code>package-lock.json</code> contains the exact versions of all dependencies and their sub-dependencies that were installed. Also have the metadata of packages.
+            </div>
+        </div>
+
+        <div class="qa-item">
+            <div class="question">Dependencies and devDependencies?</div>
+            <div class="answer">
+                <span class="answer-label">Ans:</span> <strong>dependencies:</strong> Required to run the app in production<br>
+                <strong>devDependencies:</strong> Required only during development/build
+            </div>
+        </div>
+
+        <div class="qa-item">
+            <div class="question">What is the difference between JavaScript (JS), ES6, and TypeScript (TS)?</div>
+            <div class="answer">
+                <span class="answer-label">Ans:</span><br>
+                <strong>JS:</strong> A dynamic, interpreted, high-level programming language. Runs natively in browsers and Node.js.<br><br>
+                <strong>ES6:</strong> ES6 is a version of JavaScript — the 6th edition of the ECMAScript standard. It's a modern version of JavaScript.<br>
+                Features: <code>let</code>, <code>const</code>, Arrow functions, Template literals, Promises, Classes and modules, Spread operators<br><br>
+                <strong>TS:</strong> TS is a superset of JS or we can say TS is improved version of JS. It offers static typing (<code>x: number = 10</code>), which makes it reliable.<br>
+                It shows error annotation while typing. It offers early bug detection, static reading, stable code, defined types.<br>
+                Features: Static type checking, Interfaces, Enums, Generics, Access modifiers
+            </div>
+        </div>
+
+        <div class="qa-item">
+            <div class="question">Importance of Angular CLI?</div>
+            <div class="answer">
+                <span class="answer-label">Ans:</span> CLI (Command Line Interface) is a powerful tool that helps developers create, build, test, and deploy Angular applications more efficiently.<br>
+                CLI provides a set of commands that simplify various development tasks.
+            </div>
+        </div>
+
+        <div class="qa-item">
+            <div class="question">Importance of Component and module?</div>
+            <div class="answer">
+                <span class="answer-label">Ans:</span> Component is where you write your binding code.<br>
+                Components are the building blocks of an Angular application, which encapsulate CSS, TS, HTML files.<br>
+                Components break down our application in smaller parts, we can reuse these components.<br>
+                Hierarchical Structure of components make it easy to understand and manage the file system of our project.<br><br>
+                Module logically group of components.<br>
+                Modules encapsulates components, services, pipe and other related items.<br>
+                Angular supports lazy Loading, so only required module is loaded when required.
+            </div>
+        </div>
+
+        <div class="qa-item">
+            <div class="question">What is Angular decorator?</div>
+            <div class="answer">
+                <span class="answer-label">Ans:</span> Decorators are design patterns used to isolate the modification or decoration of a class without modifying the source code.<br>
+                Decorators are used to store metadata about a class, property, method.<br>
+                Decorators are functions that modify the behavior of classes, methods, properties, or parameters by attaching metadata to them.<br>
+                Decorators are functions that allow a service, directive, or filter to be modified before it is used.<br>
+                It's TypeScript feature used for passing metadata. Represented with <code>@</code> symbol<br><br>
+                <strong>Types of Angular decorators:</strong>
+                <ul>
+                    <li><strong>Class decorators:</strong> Particular class is a component or a module || like <code>@Component</code>, <code>@NgModule</code>, <code>@Injectable</code>, <code>@Directive</code> and <code>@Pipe</code></li>
+                    <li><strong>Property decorators:</strong> Properties inside classes || like <code>@Input</code>, <code>@Output</code>, <code>@ContentChild</code>, <code>@ContentChildren</code>, <code>@ViewChild</code> and <code>@ViewChildren</code></li>
+                    <li><strong>Method decorators:</strong> Methods inside classes || like <code>@HostListener</code></li>
+                    <li><strong>Parameter decorators:</strong> Parameters inside class constructors || like <code>@Inject</code>, <code>@Host</code></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="qa-item">
+            <div class="question">What is template?</div>
+            <div class="answer">
+                <span class="answer-label">Ans:</span> Template is defined as user interface.<br>
+                Template describes the structure, content, and layout of the view that the component will render.
+            </div>
+        </div>
+
+        <div class="qa-item">
+            <div class="question">How many types of data binding in Angular?</div>
+            <div class="answer">
+                <span class="answer-label">Ans:</span> Data Binding defines the interaction between the components and the DOM.<br>
+                Angular allows both One-way and Two-way Data Binding<br><br>
+                <strong>One-way data binding:</strong> Is a simple type of data binding where you are allowed to manipulate the views through the models.
+                <ul>
+                    <li><strong>Interpolation or String Interpolation:</strong> <code>{{data}}</code></li>
+                    <li><strong>Property binding:</strong> <code>&lt;img [src]="image"&gt;</code></li>
+                    <li><strong>Event binding:</strong> <code>(click)="goBack()"</code></li>
+                </ul>
+                <strong>Note:</strong> When you need to set element properties to non-string data values, you must use Property binding and not Interpolation.<br><br>
+                <strong>Two-way data binding:</strong> On the other hand, allows synchronization of data in such a way that the views can be updated using the models and the models can be updated using views.<br>
+                <code>[(ngModel)]="data"</code>
+            </div>
+        </div>
+
+        <div class="qa-item">
+            <div class="question">Angular architecture?</div>
+            <div class="answer">
+                <span class="answer-label">Ans:</span>
+                <ul>
+                    <li><strong>Templates:</strong> HTML view of Angular</li>
+                    <li><strong>Components:</strong> Binds the DOM and modal</li>
+                    <li><strong>Modules:</strong> Group of components</li>
+                    <li><strong>Data Binding:</strong> Defines how DOM and component communicate</li>
+                    <li><strong>Services, Pipes, Directives:</strong> Common logics</li>
+                    <li><strong>Dependency Injection:</strong> Helps to inject an instance across project using constructor</li>
+                    <li><strong>Lifecycle Hooks:</strong> Define life of component flow</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="qa-item">
+            <div class="question">SPA (Single Page Application)?</div>
+            <div class="answer">
+                <span class="answer-label">Ans:</span> Application where the main UI loaded once and then needed UI is loaded on user request, rather than loading entire new pages from the server.
+            </div>
+        </div>
+
+        <div class="qa-item" id="routing">
+            <div class="question">Routing in Angular?</div>
+            <div class="answer">
+                <span class="answer-label">Ans:</span> Routing in Angular allows the users to create a single-page application with multiple views and allows navigation between them. Users can switch between these views without losing the application state and properties.<br>
+                In Angular routing has two part URL and ComponentName: <code>{path: 'home', Component: HomeComponent}</code>
+            </div>
+        </div>
+
+        <div class="qa-item">
+            <div class="question">What is lazy loading?</div>
+            <div class="answer">
+                <span class="answer-label">Ans:</span> Lazy loading is on demand loading. Load only necessary part so that you have better performance. Lazy loading is the process of loading components, modules, or other assets of a website as they're required. It improves the speed of the application load time by splitting the application in several bundles.<br><br>
+                <code>RouterModule.forRoot()</code> => It's used once in App's main routing module<br>
+                <code>RouterModule.forChild()</code> => Multiple times in lazy-loaded/feature modules
+            </div>
+        </div>
+
+        <div class="qa-item">
+            <div class="question">What is Template reference variables?</div>
+            <div class="answer">
+                <span class="answer-label">Ans:</span> Template Reference Variable in Angular is used to access all the properties of any element inside the DOM. It can also be a reference to an Angular component or directive or a web component.<br>
+                <pre><code>&lt;input #refer&gt;</code></pre>
+            </div>
+        </div>
+
+        <div class="qa-item">
+            <div class="question">Explain Content projection / ng-content?</div>
+            <div class="answer">
+                <span class="answer-label">Ans:</span> It builds reusable UI components and layouts.<br>
+                Content projection in Angular is often used to create reusable and customizable components that can accept varying content while maintaining a consistent structure and layout. <code>&lt;ng-content&gt;&lt;/ng-content&gt;</code> tag as a placeholder for that dynamic content, then when the template is parsed Angular will replace that placeholder tag with your content.<br><br>
+                <strong>Parent:</strong>
+                <pre><code>&lt;app-child&gt;
+  &lt;p class="header"&gt;This is header.&lt;/p&gt;
+  &lt;a class="link"&gt;See more...&lt;/a&gt;
+&lt;/app-child&gt;</code></pre>
+                <strong>Child:</strong>
+                <pre><code>&lt;div&gt;
+  &lt;ng-content select=".header"&gt;&lt;/ng-content&gt;
+  &lt;p&gt;Rest data&lt;/p&gt;
+  &lt;ng-content select=".link"&gt;&lt;/ng-content&gt;
+&lt;/div&gt;</code></pre>
+            </div>
+        </div>
+
+        <div class="qa-item">
+            <div class="question">ViewChild vs ViewChildren?</div>
+            <div class="answer">
+                <span class="answer-label">Ans:</span> <code>@ViewChild</code>/<code>@ViewChildren</code> decorator provides template information in our component. It provides us with an easy and simple way to access and manipulate the properties and methods of a Child Component from a container or root component.<br><br>
+                By using <code>@ViewChild</code>/<code>@ViewChildren</code> we can achieve the following things:
+                <ul>
+                    <li>Accessing template of same component</li>
+                    <li>Accessing the template of child component</li>
+                </ul>
+                The <code>@ViewChild</code> query returns the first matching element from the DOM. We must supply the query selector, which can be a string or a type as the first argument to the ViewChild<br><br>
+                <strong>Same component:</strong>
+                <pre><code>HTML: &lt;p #colorchange&gt;test&lt;/p&gt;
+TS: @ViewChild("colorchange") changeTag: ElementRef;
+    this.changeTag.nativeElement.style.color = "red";</code></pre>
+                <strong>Different component:</strong>
+                <pre><code>HTML-parent: &lt;button (click)="inc()"&gt;Click&lt;/button&gt;
+           &lt;app-child #ChildView&gt;&lt;/app-child&gt;
+TS-parent: @ViewChild('ChildView') child: ChildComponent;
+           inc() { this.child.increment(); }
+Child-TS: public counter: number = 0;
+          increment() { this.counter++; }</code></pre>
+                The <code>@ViewChildren</code> query returns the List of matching element from the DOM.
+                <pre><code>HTML: &lt;p #colorchange&gt;test&lt;/p&gt;&lt;span #colorchange&gt;test&lt;/span&gt;
+TS: @ViewChildren("colorchange") changeTag: QueryList&lt;any&gt;;
+    this.changeTag.first.nativeElement.style.color = "red";
+    this.changeTag.last.nativeElement.style.color = "green";</code></pre>
+            </div>
+        </div>
+
+        <div class="qa-item">
+            <div class="question">ContentChild vs ContentChildren?</div>
+            <div class="answer">
+                <span class="answer-label">Ans:</span> <code>@ContentChild</code>/<code>@ContentChildren</code> decorator provides instance of a projected element in our component.<br>
+                <pre><code>@ContentChild(SomeDirective) someDirective: SomeDirective;
+@ContentChildren(SomeDirective) someDirectives: QueryList&lt;SomeDirective&gt;;</code></pre>
+            </div>
+        </div>
+
+        <div class="qa-item">
+            <div class="question">What is Component life cycle?</div>
+            <div class="answer">
+                <span class="answer-label">Ans:</span> A component in Angular has a life-cycle, a number of different phases it goes through from birth to death. There are 8 life cycle hooks.<br><br>
+                <ul>
+                    <li><strong>constructor:</strong> The constructor is a TypeScript feature used to instantiate the TypeScript class. In most Angular projects about the only thing that should ever be done in the constructor is to inject services.</li>
+                    <li><strong>ngOnChanges:</strong> Invoked every time there is a change in one of the input properties of the component.</li>
+                    <li><strong>ngOnInit:</strong> This hook is only called once after the first ngOnChanges.</li>
+                    <li><strong>ngDoCheck:</strong> Invoked when the change detector of the given component is invoked.</li>
+                    <li><strong>ngAfterContentInit:</strong> Invoked after Angular performs any content projection into the component's view.</li>
+                    <li><strong>ngAfterContentChecked:</strong> Invoked each time the content of the given component has been checked by the change detection mechanism of Angular.</li>
+                    <li><strong>ngAfterViewInit:</strong> Invoked when the component's view has been fully initialized.</li>
+                    <li><strong>ngAfterViewChecked:</strong> Invoked each time the view of the given component has been checked by the change detection mechanism of Angular.</li>
+                    <li><strong>ngOnDestroy:</strong> This method will be invoked just before Angular destroys the component. Use this hook to unsubscribe observables and detach event handlers to avoid memory leaks.</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="qa-item">
+            <div class="question">Constructor and ngOnInit difference?</div>
+            <div class="answer">
+                <span class="answer-label">Ans:</span> Constructor is a default method of the class that is executed when the class is instantiated.<br>
+                <code>constructor()</code> to set up Dependency Injection, Initialization of class fields, etc.<br>
+                We use <code>constructor()</code> for all the initialization/declaration.<br><br>
+                <code>ngOnInit</code> is a life cycle hook called by Angular to indicate that the Angular is done creating the component.<br>
+                <code>ngOnInit()</code> is a better place to write "actual work code" that we need to execute as soon as the class is instantiated.
+            </div>
+        </div>
+
+        <div class="qa-item">
+            <div class="question">What is SSR (Server Side Rendering)?</div>
+            <div class="answer">
+                <span class="answer-label">Ans:</span> Server-side rendering (SSR) is an application's ability to convert HTML files on the server into a fully rendered HTML page for the client.<br>
+                Angular Universal, a technology that renders Angular applications on the server.<br>
+                A normal Angular application executes in the browser, rendering pages in the DOM in response to user actions. Angular Universal executes on the server, generating static application pages that later get bootstrapped on the client. This means that the application generally renders more quickly, giving users a chance to view the application layout before it becomes fully interactive.
+            </div>
+        </div>
+
+        <div class="qa-item">
+            <div class="question">How many types of guard in Angular?</div>
+            <div class="answer">
+                <span class="answer-label">Ans:</span> AuthGuard is an Angular route guard used to protect the routes from unauthenticated/unauthorized people. It is implemented using the <code>canActivate</code> interface which implements a <code>canActivate</code> function that checks whether the current user has permission to activate the requested route.<br>
+                Angular Route Guard is an interface which can be implemented to decide if a route can be activated.<br><br>
+                <strong>1. CanActivate:</strong> Controls if a route can be activated.
+                <pre><code>{path: '', component: HomeComponent, canActivate: [AuthenticationGuard]}</code></pre>
+                <strong>2. CanActivateChild:</strong> Controls if children of a route can be activated.
+                <pre><code>{path: '', component: HomeComponent, 
+  canActivateChild: [AuthenticationGuard], 
+  children: [
+    {path: '', component: WelcomeComponent}
+  ]
+}</code></pre>
+                <strong>3. CanDeactivate:</strong> Controls if the user can leave a route.
+                <pre><code>{path: '', component: EditDataComponent, canDeactivate: [CanDeactivateGuard]}</code></pre>
+                <strong>4. Resolve:</strong> Ensure whether there is data available or not before navigating to any route.<br>
+                <strong>5. CanLoad:</strong> Controls if a route can even be loaded.
+            </div>
+        </div>
+
+        <div class="qa-item">
+            <div class="question">Change detection in Angular?</div>
+            <div class="answer">
+                <span class="answer-label">Ans:</span> Angular runs its change detection mechanism periodically so that changes to the data model are reflected in an application's view.<br>
+                Change detection strategies: 1. Default strategy 2. OnPush strategy<br><br>
+                In the <strong>Default strategy</strong>, whenever any data to <code>@Input()</code> decorated properties are changed, Angular runs the change detector to update the view.<br>
+                In the <strong>OnPush strategy</strong>, Angular runs change detector only when a new reference is passed to the <code>@Input()</code> decorated properties.
+            </div>
+        </div>
+
+        <div class="qa-item">
+            <div class="question">How many types of View Encapsulation in Angular?</div>
+            <div class="answer">
+                <span class="answer-label">Ans:</span> The View Encapsulation in Angular is a strategy that determines how Angular hides (encapsulates) the styles defined in the component from bleeding over to the other parts of the application.<br><br>
+                <strong>ViewEncapsulation.None:</strong> Used, when we do not want any encapsulation.<br>
+                <strong>ViewEncapsulation.Emulated:</strong> Style does not spill out to other components when you use emulated mode<br>
+                <strong>ViewEncapsulation.ShadowDOM:</strong> The browser keeps the shadow DOM separate from the main DOM. The rendering of the Shadow DOM and the main DOM happens separately.
+            </div>
+        </div>
+
+        <div class="qa-item">
+            <div class="question">What is different ng-template & ng-container & ng-content?</div>
+            <div class="answer">
+                <span class="answer-label">Ans:</span> <code>&lt;ng-template&gt;</code> is a template element that Angular uses with structural directives (<code>*ngIf</code>, <code>*ngFor</code>, <code>[ngSwitch]</code> and custom directives).<br><br>
+                <code>&lt;ng-container&gt;</code> is an extremely simple directive that allows you to group elements in a template that doesn't interfere with styles or layout because Angular doesn't put it in the DOM<br><br>
+                <code>&lt;ng-content&gt;</code> is used to project content into Angular components. You use the <code>&lt;ng-content&gt;&lt;/ng-content&gt;</code> tag as a placeholder for that dynamic content, then when the template is parsed Angular will replace that placeholder tag with your content.
+            </div>
+        </div>
+
+        <div class="qa-item">
+            <div class="question">What is *ngTemplateOutlet directive?</div>
+            <div class="answer">
+                <span class="answer-label">Ans:</span> <code>ngTemplateOutlet</code> is a structural directive. We use it to insert a template (created by ngTemplate) in various sections of our DOM.
+            </div>
+        </div>
+
+        <div class="qa-item" id="pipes">
+            <div class="question">What are pipes and how many types of pipe in Angular?</div>
+            <div class="answer">
+                <span class="answer-label">Ans:</span> In Angular, pipes are used to transform the output in templates before they are displayed to the user. They are simple functions that take an input value, transform it, and return the transformed value, all without modifying the original data.<br><br>
+                <strong>Built-in pipes:</strong> <code>date</code>, <code>uppercase</code>, <code>lowercase</code>, <code>currency:'IND'</code>, <code>percent</code>, <code>json</code>, <code>async</code><br><br>
+                <strong>Custom pipes:</strong>
+                <pre><code>ng generate pipe customPipe
+
+@Pipe({
+  name: 'reverseString'
+})
+export class ReverseStringPipe implements PipeTransform {
+  transform(value: string): string {
+    return value.split('').reverse().join('');
+  }
+}</code></pre>
+                In Angular pipes are <strong>Pure</strong> and <strong>Impure</strong> Pipes:<br><br>
+                <strong>Pure pipe:</strong> A pure pipe is a pipe that only gets executed when the input data changes. Angular calls a pure pipe only when a change is detected in the input to the pipe. It's stateless and doesn't depend on anything other than the input it receives. By default, all Angular pipes are pure pipes.<br><br>
+                <strong>Impure Pipes:</strong> An impure pipe is a pipe that gets executed every time Angular runs change detection, regardless of whether the input data has changed or not. This means an impure pipe will be called on every change detection cycle, which can have a performance cost if used improperly.
+            </div>
+        </div>
+
+        <div class="qa-item">
+            <div class="question">Async pipe?</div>
+            <div class="answer">
+                <span class="answer-label">Ans:</span> The async pipe is a built-in pipe in Angular that automatically subscribes to an observable or promise and returns the latest value that is emitted. Once the observable or promise emits a value, the async pipe updates the template with the new value.<br>
+                This pipe also takes care of unsubscribing from the observable or promise when the component is destroyed, which helps prevent memory leaks.<br><br>
+                <pre><code>data$: Observable&lt;any&gt;;
+constructor(private dataService: DataService) {
+  this.data$ = this.dataService.fetchData();
+}
+
+&lt;div *ngIf="data$ | async as data"&gt;
+  &lt;pre&gt;{{ data | json }}&lt;/pre&gt;
+&lt;/div&gt;</code></pre>
+            </div>
+        </div>
+
+        <div class="qa-item" id="directives">
+            <div class="question">What are directives and how many types of directive in Angular?</div>
+            <div class="answer">
+                <span class="answer-label">Ans:</span> For DOM manipulation, By using Angular directives, you can change the appearance, behavior or a layout of a DOM element.<br><br>
+                <strong>Component Directives:</strong> Component directives are used in main class. They contain the detail of how the component should be processed, instantiated and used at runtime. Basically, every Angular component is a directive define by <code>@Component()</code> decorator.<br><br>
+                <strong>Attribute Directives:</strong> Directives change the appearance or behavior of any element in Angular. For instance, attribute directives can highlight specific words in the text of the application. NgSwitch, NgStyle and NgClass.<br>
+                Custom attribute example:
+                <pre><code>&lt;p [appHighlight]="color"&gt;Hover over me with dynamic color!&lt;/p&gt;
+
+@Directive({
+  selector: '[appHighlight]'
+})
+export class HighlightDirective {
+  @Input() highlightColor: string;
+  constructor(private el: ElementRef, private renderer: Renderer2) {}
+  @HostListener('mouseenter') onMouseEnter() {
+    this.renderer.setStyle(this.el.nativeElement, 'background-color', color);
+  }
+}</code></pre>
+                <strong>Structural Directives:</strong> Directives change the DOM layout during the runtime by adding or removing elements. <code>*ngIf</code>, <code>*ngSwitch</code>, and <code>*ngFor</code>.
+            </div>
+        </div>
+
+        <div class="qa-item">
+            <div class="question">Subject or BehaviorSubject?</div>
+            <div class="answer">
+                <span class="answer-label">Ans:</span> If you subscribe to a <strong>Subject</strong>, you won't get the current value or initial value.<br>
+                Don't have to define a default value whenever you declare the subject.<br>
+                <pre><code>subject.next(1);
+const subject = new Rx.Subject();
+subject.subscribe(x => console.log(x));</code></pre>
+                When you subscribe to a <strong>BehaviorSubject</strong>, you will be able to get the current value or the initial value.<br>
+                Have to define a default value whenever you declare Behavior Subject based upon the data type.<br>
+                <pre><code>subject.next(1);
+const subject = new Rx.BehaviorSubject(0);
+subject.subscribe(x => console.log(x));</code></pre>
+            </div>
+        </div>
+
+        <div class="qa-item">
+            <div class="question">Difference between Observable and Promise: and how does it work?</div>
+            <div class="answer">
+                <span class="answer-label">Ans:</span>
+                <table>
+                    <tr>
+                        <th>Feature</th>
+                        <th>Promise</th>
+                        <th>Observable</th>
+                    </tr>
+                    <tr>
+                        <td><strong>Execution</strong></td>
+                        <td>Eager - executes immediately on creation</td>
+                        <td>Lazy - doesn't start until subscription</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Values</strong></td>
+                        <td>Emit single value over a period of time</td>
+                        <td>Emit multiple values over a period of time</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Operators</strong></td>
+                        <td>Don't have operators</td>
+                        <td>Have multiple operators like map, filter, reduce, retry for transform data</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Cancellation</strong></td>
+                        <td>Cannot be cancelled</td>
+                        <td>Can be cancelled using unsubscribe method</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+
+        <div class="qa-item" id="forms">
+            <div class="question">Angular forms and their types?</div>
+            <div class="answer">
+                <span class="answer-label">Ans:</span> Forms are used to handle user input data. Angular supports two types of forms. They are Template driven forms and Reactive forms.<br><br>
+                <strong>1. Template-Driven Forms:</strong>
+                <ul>
+                    <li>Defined most of the things in the HTML template. Automatically tracks form state and validation</li>
+                    <li>Uses Angular directives like <code>[(ngModel)]</code>, <code>#form="ngForm"</code></li>
+                    <li>Import <code>FormsModule</code> in module file</li>
+                </ul>
+                <pre><code>&lt;form #userForm="ngForm" (ngSubmit)="onSubmit(userForm)"&gt;
+  &lt;input type="text" name="name" [(ngModel)]="user.name" required /&gt;
+  &lt;button type="submit" [disabled]="userForm.invalid"&gt;Submit&lt;/button&gt;
+&lt;/form&gt;</code></pre>
+                <strong>2. Reactive Forms:</strong>
+                <ul>
+                    <li>Reactive Forms in Angular are a powerful and scalable approach to building forms, especially useful for complex forms, dynamic validation, and programmatic control. It's Fully controlled in the TypeScript code.</li>
+                    <li>Uses <code>FormGroup</code>, <code>FormControl</code>, <code>FormArray</code> and <code>FormBuilder</code></li>
+                    <li>Import <code>ReactiveFormsModule</code> in module file</li>
+                </ul>
+                <pre><code>userForm = new FormGroup();
+constructor(private fb: FormBuilder) {}
+loginForm = this.fb.group({
+  name: ['', Validators.required]
+});
+
+&lt;form [formGroup]="userForm" (ngSubmit)="onSubmit()"&gt;
+  &lt;input formControlName="name" /&gt;
+  &lt;button type="submit" [disabled]="userForm.invalid"&gt;Submit&lt;/button&gt;
+&lt;/form&gt;</code></pre>
+            </div>
+        </div>
+
+        <div class="qa-item">
+            <div class="question">How many ways to communicate in between components?</div>
+            <div class="answer">
+                <span class="answer-label">Ans:</span> There are several ways to share data between components:
+                <ul>
+                    <li><strong>Binding</strong> (<code>@Input</code> & <code>@Output</code>)</li>
+                    <li><strong>Reference</strong> (<code>@ViewChild</code> & <code>@ContentChild</code>)</li>
+                    <li><strong>Provider</strong> (Service)</li>
+                    <li><strong>Template Outlet</strong></li>
+                    <li><strong>State management</strong> (ngrx)</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="qa-item">
+            <div class="question">How does Input/Output works?</div>
+            <div class="answer">
+                <span class="answer-label">Ans:</span>
+                <pre><code>&lt;app-child [name]="'Angular Developer'"&gt;&lt;/app-child&gt;
+
+@Input() name!: string;
+
+@Output() greet = new EventEmitter&lt;string&gt;();
+this.greet.emit('Hello from child!');
+
+&lt;app-child (greet)="onChildGreet($event)"&gt;&lt;/app-child&gt;</code></pre>
+            </div>
+        </div>
+
+        <div class="qa-item">
+            <div class="question">What is interface?</div>
+            <div class="answer">
+                <span class="answer-label">Ans:</span> Interface is a specification that identifies a related set of properties and methods to be implemented by a class. So basically using interface you can set some basic rules for your properties and methods using class.<br>
+                It defines the syntax for classes to follow, means a class which implements an interface is bound to implement all its members.<br><br>
+                <pre><code>export interface Student {
+  id: number;
+  name: string;
+}
+
+students: Student[] = [
+  {id: 1, name: "Hardik"},
+  {id: 2, name: "Paresh"},
+  {id: 3, name: "Rakesh"},
+]</code></pre>
+            </div>
+        </div>
+
+        <div class="qa-item">
+            <div class="question">Angular animation?</div>
+            <div class="answer">
+                <span class="answer-label">Ans:</span> Angular Animations (<code>@angular/animations</code>) is a module that is part of Angular itself, and it is built based on CSS functionality.<br>
+                Angular Animations provides users with a better way of controlling or arranging animations. With this module, we can define animation sequences for elements as multiple transformations that occurred over some time.
+            </div>
+        </div>
+
+        <div class="qa-item">
+            <div class="question">What is NgModules?</div>
+            <div class="answer">
+                <span class="answer-label">Ans:</span> An Angular module is a deployment sub-set of your whole Angular application. It's useful for splitting up an application into smaller parts and lazy load each separately, and to create libraries of components that can be easily imported into other applications.<br><br>
+                <code>@NgModule</code>: annotation is what actually defines the module.<br>
+                <strong>declarations:</strong> list the components, directives, and pipes that are part of the module in the declarations array.<br>
+                <strong>imports:</strong> import other modules by listing them in the imports array.<br>
+                <strong>providers:</strong> list the services that are part of the module in the providers array.
+            </div>
+        </div>
+
+        <div class="qa-item">
+            <div class="question">How Angular knows which component to load and how the app starts?</div>
+            <div class="answer">
+                <span class="answer-label">Ans:</span>
+                <ol>
+                    <li><strong>index.html</strong> – has root tag (<code>&lt;app-root&gt;</code>)</li>
+                    <li><strong>Main Entry Point: main.ts</strong>
+                        <pre><code>platformBrowserDynamic().bootstrapModule(AppModule)
+  .catch(err => console.error(err));</code></pre>
+                        It bootstraps the root module
+                    </li>
+                    <li><strong>App.module.ts</strong>
+                        <pre><code>bootstrap: [AppComponent],</code></pre>
+                    </li>
+                    <li><strong>Angular Compiler</strong> (JIT or AOT)</li>
+                    <li><strong>DOM Rendering Starts</strong><br>
+                        Angular looks in your index.html for <code>&lt;app-root&gt;&lt;/app-root&gt;</code>
+                    </li>
+                    <li><strong>Child Component Tree Loads</strong><br>
+                        <code>&lt;app-header&gt;&lt;/app-header&gt;</code><br>
+                        <code>&lt;router-outlet&gt;&lt;/router-outlet&gt;</code>
+                    </li>
+                </ol>
+            </div>
+        </div>
+
+        <div class="qa-item">
+            <div class="question">Dependencies vs devDependencies?</div>
+            <div class="answer">
+                <span class="answer-label">Ans:</span> These are two different types of packages listed in <code>package.json</code> and <code>package-lock.json</code><br>
+                <strong>dependencies:</strong> Required for your app to function in production, It's depends on dependencies after deployment.<br>
+                <strong>devDependencies:</strong> Used only during development and build time.
+            </div>
+        </div>
+
+        <div class="qa-item">
+            <div class="question">Standalone Components?</div>
+            <div class="answer">
+                <span class="answer-label">Ans:</span> Standalone components in Angular are a way to create components, directives, and pipes that do not need to be declared in an NgModule. They are self-contained and manage their own dependencies.<br><br>
+                <pre><code>@Component({
+  standalone: true,
+  signals: true,
+  selector: 'app-hero',
+  templateUrl: './hero.component.html',
+  styleUrls: ['./hero.component.css'],
+  imports: [CommonModule],
+  providers: [HeroService],
+  changeDetection: ChangeDetectionStrategy.OnPush,
+  encapsulation: ViewEncapsulation.Emulated
+})
+export class HeroComponent {}</code></pre>
+            </div>
+        </div>
+
+        <div class="qa-item">
+            <div class="question">Functional resolvers?</div>
+            <div class="answer">
+                <span class="answer-label">Ans:</span> <em>Answer pending...</em>
+            </div>
+        </div>
+        <!-- Architecture Q 1 -->
+
+        <div class="qa-item">
+            <div class="question">How do you approach designing complex Angular applications?</div>
+            <div class="answer">
+                <span class="answer-label">Ans:</span>
+                <ul>
+                    <li><strong>Understand the Business Requirements</strong></li>
+                    <li><strong>Module and Component Design</strong> for specific feature</li>
+                    <li><strong>Use State Management</strong></li>
+                    <li><strong>Performance Optimization</strong></li>
+                    <li><strong>Unit Testing</strong></li>
+                    <li><strong>API Integration and Error Handling</strong></li>
+                    <li><strong>Documentation and Code Quality</strong></li>
+                    <li><strong>CI/CD</strong> (CI pipelines/Continuous Deployment)</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="qa-item" id="performance">
+            <div class="question">How do you ensure high performance and responsiveness in large Angular applications?</div>
+            <div class="answer">
+                <span class="answer-label">Ans:</span>
+                <ul>
+                    <li><strong>Use Lazy Loading</strong></li>
+                    <li><strong>OnPush Change Detection</strong></li>
+                    <li><strong>TrackBy with ngFor</strong></li>
+                    <li><strong>debounceTime()</strong> for Inputs</li>
+                    <li><strong>Route Resolvers</strong></li>
+                    <li><strong>Route Guards</strong> to protect</li>
+                    <li><strong>Reactive Forms</strong> for Complex validation</li>
+                    <li><strong>Optimizing Change Detection</strong> with Observables</li>
+                    <li><strong>Optimizing Bundle Size</strong></li>
+                    <li><strong>Avoid Memory Leaks</strong></li>
+                    <li><strong>Use Renderer2 or directives</strong> for safe DOM manipulations</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="qa-item">
+            <div class="question">What coding standards and best practices do you follow for Angular projects?</div>
+            <div class="answer">
+                <span class="answer-label">Ans:</span>
+                <ul>
+                    <li><strong>Folder Structure and Organization</strong></li>
+                    <li><strong>Naming Conventions</strong></li>
+                    <li><strong>State management</strong> (NgRx)</li>
+                    <li><strong>Use of RxJS and Observables</strong></li>
+                    <li><strong>Routing and Navigation</strong></li>
+                    <li><strong>Error Handling</strong></li>
+                    <li><strong>Testing</strong></li>
+                    <li><strong>Security and Performance Optimization</strong></li>
+                    <li><strong>Code Reviews and Collaboration</strong></li>
+                    <li><strong>Version Control and Branching</strong></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="qa-item">
+            <div class="question">How do you ensure code quality and consistency across your team?</div>
+            <div class="answer">
+                <span class="answer-label">Ans:</span>
+                <ul>
+                    <li><strong>Automate Code Formatting</strong></li>
+                    <li><strong>Code Reviews</strong></li>
+                    <li><strong>Unit & End-to-End Tests</strong> passed</li>
+                    <li><strong>CI/CD Pipeline</strong> with Automated Quality Checks</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="qa-item" id="interview">
+            <div class="question">Can you describe a challenging project you worked on and how you successfully delivered it?</div>
+            <div class="answer">
+                <span class="answer-label">Ans:</span> <strong>STAR Method:</strong><br><br>
+                <ol>
+                    <li><strong>Situation:</strong> Briefly describe the project and why it was challenging.</li>
+                    <li><strong>Task:</strong> What was your role?</li>
+                    <li><strong>Action:</strong> What actions did you take to solve it?</li>
+                    <li><strong>Result:</strong> What was the outcome?</li>
+                </ol>
+                <br>
+                <strong>Example:</strong> Recently, we had a challenging project where we had to deliver a complete proposal within just one week, which was a very tight deadline.<br>
+                It was tough because of the limited time and the complexity involved, but we managed it through strong team collaboration, clear task distribution, and actively seeking help from others whenever needed.<br>
+                We stayed focused, prioritized critical tasks, and kept communication open throughout the week.<br>
+                Thanks to good teamwork and proper time management, we successfully delivered the project on time and the client was very happy with the result.
+            </div>
+        </div>
+
+        <div class="qa-item">
+            <div class="question">How do you handle situations where a critical feature breaks just before a release?</div>
+            <div class="answer">
+                <span class="answer-label">Ans:</span>
+                <ol>
+                    <li><strong>Stay calm</strong> and assess the situation</li>
+                    <li><strong>Prioritize the issue</strong> (based on impact)</li>
+                    <li><strong>Communicate immediately</strong> with the team/stakeholders</li>
+                    <li><strong>Decide:</strong> fix immediately or rollback the feature</li>
+                    <li><strong>Test the fix carefully</strong> before deploying</li>
+                </ol>
+            </div>
+        </div>
+
+        <div class="qa-item">
+            <div class="question">Describe a situation where you made a mistake in your Angular code. How did you identify and fix it?</div>
+            <div class="answer">
+                <span class="answer-label">Ans:</span>
+                <ol>
+                    <li><strong>Own the mistake</strong> (briefly explain the situation)</li>
+                    <li><strong>Show how you found the issue</strong> (debugging skills)</li>
+                    <li><strong>Explain how you fixed it</strong> (problem-solving)</li>
+                    <li><strong>Mention what you learned</strong> (continuous improvement)</li>
+                </ol>
+                <br>
+                <strong>Example:</strong> In my Angular experience, I've faced and learned from a few common mistakes.<br>
+                Early on, I missed unsubscribing from observables, which caused memory leaks. I also faced issues with change detection when mutating objects directly, so I now follow immutability practices.<br>
+                With forms, I make sure to manually call <code>updateValueAndValidity()</code> when changing validations dynamically.<br>
+                I handle API errors carefully to avoid breaking the user flow, keep components clean and focused, avoid direct DOM manipulation by using <code>@ViewChild</code>, and manage routing properly with Angular's router methods.
+            </div>
+        </div>
+
+        <div class="qa-item">
+            <div class="section-title">OOPs (Object-Oriented Programming) concepts</div>
+            <div class="answer">
+                <span class="answer-label">Ans:</span>
+                <table>
+                    <tr>
+                        <th>Concept</th>
+                        <th>Angular Implementation</th>
+                    </tr>
+                    <tr>
+                        <td><strong>Class</strong></td>
+                        <td>Components, Services, Models are all classes.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Object</strong></td>
+                        <td>Instances of components/services/models.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Inheritance</strong></td>
+                        <td>Base component classes / Abstract classes that are extended.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Encapsulation</strong></td>
+                        <td>Keeping logic inside services/components (private/public properties).</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Abstraction</strong></td>
+                        <td>Using abstract classes or interfaces to hide details and expose only necessary parts.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Polymorphism</strong></td>
+                        <td>Methods with the same name behaving differently in different components or services (especially with interfaces/abstract classes).</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Interface</strong></td>
+                        <td>Defining data shapes — especially used with TypeScript for type safety (e.g., interface User, Product, etc.).</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+
+        <div class="qa-item">
+            <div class="section-title">SOLID Principles</div>
+            <div class="answer">
+                <span class="answer-label">Ans:</span> The SOLID principles are a set of five design principles intended to make object-oriented designs more understandable, flexible, and maintainable.<br><br>
+                <strong>1. S - Single Responsibility Principle (SRP):</strong><br>
+                A class should have only one reason to change. In other words, it should only have one job or responsibility.<br><br>
+                <strong>2. O - Open/Closed Principle (OCP):</strong><br>
+                Software entities (classes, modules, functions, etc.) should be open for extension but closed for modification. You should be able to add new functionality without changing existing code.<br><br>
+                <strong>3. L - Liskov Substitution Principle (LSP):</strong><br>
+                Subtypes must be substitutable for their base types. That means objects of a superclass should be replaceable with objects of its subclasses without breaking the application.<br><br>
+                <strong>4. I - Interface Segregation Principle (ISP):</strong><br>
+                No client should be forced to depend on methods it does not use. Split large interfaces into smaller, more specific ones so that clients only need to know about the methods that are of interest to them.<br><br>
+                <strong>5. D - Dependency Inversion Principle (DIP):</strong><br>
+                High-level modules should not depend on low-level modules. Both should depend on abstractions. Also, abstractions should not depend on details—details should depend on abstractions.
+            </div>
+        </div>
+
+        <div class="qa-item">
+            <div class="question">Key things you can cover in Agile?</div>
+            <div class="answer">
+                <span class="answer-label">Ans:</span> In Agile, almost every aspect of software development and project management can be covered.<br><br>
+                <ol>
+                    <li><strong>Requirements Gathering:</strong> Business needs</li>
+                    <li><strong>Planning:</strong> Product Roadmaps, Release Planning, Sprint Planning, Capacity Planning</li>
+                    <li><strong>Design & Architecture:</strong> Focus on simplicity and scalability</li>
+                    <li><strong>Development:</strong> Ensure code meets the Definition, code reviews</li>
+                    <li><strong>Testing:</strong> Unit, integration, e2e</li>
+                    <li><strong>Deployment:</strong> CI/CD</li>
+                    <li><strong>Iteration & Feedback:</strong> Daily Stand-ups, Sprint Reviews, Sprint Retrospectives, Gather customer/stakeholder feedback</li>
+                    <li><strong>Monitoring & Metrics:</strong> Tracking tools like Jira, Trello, Azure DevOps</li>
+                    <li><strong>Team Collaboration & Roles:</strong> Cross-functional teams. Conduct backlog grooming/refinement sessions</li>
+                    <li><strong>Risk Management:</strong></li>
+                </ol>
+            </div>
+        </div>
+        </main>
+        
+        <footer style="margin-top: 50px; padding-top: 30px; border-top: 2px solid #eee; text-align: center; color: #666;">
+            <p>Last Updated: February 2026</p>
+            <p>Angular Interview Questions & Answers - Comprehensive Guide for Developers</p>
+            <p style="margin-top: 10px;">
+                <a href="javascript-questions-answers.html" rel="alternate" style="color: #667eea;" title="JavaScript Interview Questions">JavaScript Questions</a> | 
+                <a href="all-questions-answers.json" rel="alternate" style="color: #667eea;" title="Download JSON Data">JSON Data</a> |
+                <a href="https://sonvendra.github.io/" rel="author" style="color: #667eea;" title="Portfolio">Portfolio</a>
+            </p>
+        </footer>
+        </div>
+    </div>
+
+    <button class="back-to-top" onclick="window.scrollTo({top: 0, behavior: 'smooth'})" title="Back to Top" aria-label="Back to top">↑</button>
+
+    <script>
+        // Show/hide back to top button
+        window.addEventListener('scroll', function() {
+            const backToTop = document.querySelector('.back-to-top');
+            if (window.pageYOffset > 300) {
+                backToTop.classList.add('show');
+            } else {
+                backToTop.classList.remove('show');
+            }
+        });
+
+        // Toggle navigation menu
+        function toggleNav() {
+            const navSidebar = document.getElementById('navSidebar');
+            const overlay = document.querySelector('.nav-overlay');
+            const hamburgerBtn = document.getElementById('hamburgerBtn');
+            const isActive = navSidebar.classList.toggle('active');
+            overlay.classList.toggle('active');
+            
+            // Update aria-expanded for accessibility
+            if (hamburgerBtn) {
+                hamburgerBtn.setAttribute('aria-expanded', isActive);
+            }
+            
+            // Prevent body scroll when menu is open on mobile
+            if (window.innerWidth <= 1024) {
+                if (isActive) {
+                    document.body.style.overflow = 'hidden';
+                } else {
+                    document.body.style.overflow = '';
+                }
+            }
+        }
+
+        // Close nav when clicking on a link (mobile)
+        const navLinks = document.querySelectorAll('.nav-sidebar a[href^="#"]');
+        navLinks.forEach(link => {
+            link.addEventListener('click', function() {
+                if (window.innerWidth <= 1024) {
+                    toggleNav();
+                }
+            });
+        });
+
+        // Highlight active nav link
+        const sections = document.querySelectorAll('.qa-item[id]');
+
+        window.addEventListener('scroll', function() {
+            let current = '';
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                const sectionHeight = section.clientHeight;
+                if (pageYOffset >= sectionTop - 200) {
+                    current = section.getAttribute('id');
+                }
+            });
+
+            navLinks.forEach(link => {
+                link.style.background = '';
+                link.style.color = '';
+                if (link.getAttribute('href') === '#' + current) {
+                    link.style.background = '#667eea';
+                    link.style.color = 'white';
+                }
+            });
+        });
+    </script>
+</body>
+</html>

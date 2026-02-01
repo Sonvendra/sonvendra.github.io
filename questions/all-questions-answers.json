@@ -1,0 +1,781 @@
+{
+  "metadata": {
+    "title": "Technical Interview Questions & Answers",
+    "version": "1.0",
+    "lastUpdated": "2026-02-01",
+    "categories": ["Angular", "JavaScript", "General Programming"]
+  },
+  "angular": {
+    "basics": [
+      {
+        "id": "ang-001",
+        "question": "What is Angular?",
+        "answer": "Open-source web application framework, written in TypeScript. Single-page web applications (SPAs) with a structured and modular approach. Angular offers two-way data binding, Dependency Injection, Templates and Directives, Routing, HTTP, tools for unit testing etc."
+      },
+      {
+        "id": "ang-002",
+        "question": "Difference between AngularJS and Angular?",
+        "answer": "AngularJS: Working on JS language || Controller architecture || not mobile compliant || No CLI || No Lazy loading || No SEO Friendly || No Server Side. Angular: Working on TS language || Component architecture || Mobile compliant || CLI Works || Lazy loading Works || SEO Friendly || Server Side Work"
+      },
+      {
+        "id": "ang-003",
+        "question": "AOT and JIT compiler in Angular?",
+        "answer": "Ahead of Time (AOT): Process of compiling higher-level language or intermediate language into a native machine code, which is system dependent. Compilation only happens once, while you build your project. Minimize the size of your application. During creating build compiler detects template error earlier. Precompiled templates during build time (used in ng build --prod). Just in Time (JIT): Compilation during the execution of the program at a run time before execution. Best compiler when your application is in local development or in development mode. Compiled templates in the browser at runtime (used in ng serve). Note: View Engine Compiler using from Angular2-8; Angular Ivy compiler using Angular9+"
+      },
+      {
+        "id": "ang-004",
+        "question": "NPM and node_modules?",
+        "answer": "NPM is a package manager which helps in installation of packages. node_modules is a folder where all the packages are installed"
+      },
+      {
+        "id": "ang-005",
+        "question": "Importance of package.json and package-lock.json file?",
+        "answer": "package.json is a JSON (JavaScript Object Notation) file that holds important information about the Angular project, including its metadata, dependencies, scripts, and other configuration settings. package-lock.json contains the exact versions of all dependencies and their sub-dependencies that were installed. Also have the metadata of packages."
+      },
+      {
+        "id": "ang-006",
+        "question": "Dependencies and devDependencies?",
+        "answer": "dependencies: Required to run the app in production. devDependencies: Required only during development/build"
+      },
+      {
+        "id": "ang-007",
+        "question": "What is the difference between JavaScript (JS), ES6, and TypeScript (TS)?",
+        "answer": "JS: A dynamic, interpreted, high-level programming language. Runs natively in browsers and Node.js. ES6: ES6 is a version of JavaScript — the 6th edition of the ECMAScript standard. It's a modern version of JavaScript. Features: let, const, Arrow functions, Template literals, Promises, Classes and modules, Spread operators. TS: TS is a superset of JS or we can say TS is improved version of JS. It offers static typing(x: number = 10), which makes it reliable. It shows error annotation while Typing. It offers early bug detection, static reading, stable code, defined types. Features: Static type checking, Interfaces, Enums, Generics, Access modifiers"
+      },
+      {
+        "id": "ang-008",
+        "question": "Importance of Angular CLI?",
+        "answer": "CLI (Command Line Interface) is a powerful tool that helps developers create, build, test, and deploy Angular applications more efficiently. CLI provides a set of commands that simplify various development tasks."
+      },
+      {
+        "id": "ang-009",
+        "question": "Importance of Component and module?",
+        "answer": "Component is where you write your binding code. Components are the building blocks of an Angular application, which encapsulate CSS, TS, HTML files. Components break down our application in smaller parts, we can reuse these components. Hierarchical Structure of components make it easy to understand and manage the file system of our project. Module logically group of components. Modules encapsulates components, services, pipe and other related items. Angular supports lazy Loading, so only required module is loaded when required."
+      },
+      {
+        "id": "ang-010",
+        "question": "What is Angular decorator?",
+        "answer": "Decorators are design patterns used to isolate the modification or decoration of a class without modifying the source code. Decorators are used to store metadata about a class, property, method. Decorators are functions that modify the behavior of classes, methods, properties, or parameters by attaching metadata to them. It's TypeScript feature used for passing metadata. Represented with @ symbol. Types: Class decorators (@Component, @NgModule, @Injectable, @Directive, @Pipe), Property decorators (@Input, @Output, @ContentChild, @ContentChildren, @ViewChild, @ViewChildren), Method decorators (@HostListener), Parameter decorators (@Inject, @Host)"
+      }
+    ],
+    "rxjs": [
+      {
+        "id": "ang-rxjs-001",
+        "question": "What's the full form of RxJs?",
+        "answer": "Reactive Extension for javascript. zone.js"
+      },
+      {
+        "id": "ang-rxjs-002",
+        "question": "What is RxJs?",
+        "answer": "RxJS is a library for composing asynchronous and event-based programs by using observable sequences. It provides one core type, the Observable, satellite types (Observer, Schedulers, Subjects) and operators inspired by Array methods (map, filter, reduce, every, etc) to allow handling asynchronous events as collections."
+      },
+      {
+        "id": "ang-rxjs-003",
+        "question": "What is Purpose of RxJS?",
+        "answer": "RxJs is a library to manage asynchronous streams or data. JavaScript library that uses observables to work with reactive programming that deals with asynchronous data calls, callbacks and event-based programs. There are Extensive list of operators so we can manage our data."
+      },
+      {
+        "id": "ang-rxjs-004",
+        "question": "Observables in RxJS?",
+        "answer": "Observables as an interface to handle a variety of common asynchronous operations and handle asynchronous data."
+      },
+      {
+        "id": "ang-rxjs-005",
+        "question": "What is ForkJoin?",
+        "answer": "forkJoin is a RxJS operator in Angular (and general RxJS) that lets you run multiple observables in parallel, and then wait for all of them to complete before emitting a combined result. forkJoin takes a number of input observables and waits for all passed observables to complete. Once they are complete, it will then emit a group of the last values from corresponding observables. The resulting stream emits only one time when all of the inner streams complete. It will never complete if any of the inner streams doesn't complete and will throw an error if any of the inner streams errors out."
+      },
+      {
+        "id": "ang-rxjs-006",
+        "question": "Main class in RxJS Angular?",
+        "answer": "RxJS (Reactive Extensions for JavaScript) is a library that provides support for reactive programming using Observables. The main class in RxJS is the Observable class, which is the foundation for working with asynchronous data streams."
+      },
+      {
+        "id": "ang-rxjs-007",
+        "question": "What is observable?",
+        "answer": "Handling asynchronous operations and event-based programming in Angular applications. Observables are lazy, meaning they don't start emitting data until someone subscribes to them. Subscriptions can be canceled or unsubscribed from to stop receiving further data. Observables can emit error notifications, and subscribers can handle errors using error callback functions. RxJS provides set of operators that allow you to transform, filter, combine, and manipulate the data."
+      },
+      {
+        "id": "ang-rxjs-008",
+        "question": "Understanding, creating and subscribing to observables in Angular?",
+        "answer": "Creating an Observable: fetchData(): Observable<any> { return this.http.get('https://api.example.com/data'); }. Subscribing: this.myService.fetchData().subscribe((response) => { this.data = response; }, (error) => { console.error('Error fetching data:', error); });. Unsubscribing: this.myService.fetchData().unsubscribe();"
+      },
+      {
+        "id": "ang-rxjs-009",
+        "question": "Subject or BehaviorSubject?",
+        "answer": "If you subscribe to a Subject, you won't get the current value or initial value. Don't have to define a default value whenever you declare the subject. When you subscribe to a BehaviorSubject, you will be able to get the current value or the initial value. Have to define a default value whenever you declare BehaviorSubject based upon the data type."
+      },
+      {
+        "id": "ang-rxjs-010",
+        "question": "Difference between Observable and Promise: and how does it work?",
+        "answer": "Promise: Eager - executes immediately on creation. Emit single value over a period of time. Don't have operators. Cannot be cancelled. Observable: Lazy - doesn't start until subscription. Emit Multiple values over a period of time. Have multiple operators like map, filter, reduce, retry for transform data. Can be cancelled using unsubscribe method."
+      }
+    ],
+    "ngrx": [
+      {
+        "id": "ang-ngrx-001",
+        "question": "NgRx?",
+        "answer": "Ngrx is for optimally storing data in the client and recalling them from all over the application, usually. If you want to take advantage of single direction data flow using Store in Angular NgRx is the solution. NgRx stands for Angular Reactive Extensions, NgRx Store provides reactive state management for Angular apps inspired by Redux. NgRx has libraries for managing both global and local state. Isolation of side effects in order to achieve a more streamlined component architecture. Developer tooling that makes it easier for developers to construct a variety of applications."
+      }
+    ],
+    "components": [
+      {
+        "id": "ang-comp-001",
+        "question": "What is component and directive in Angular?",
+        "answer": "Component defined using a TypeScript class with a @Component decorator. Consist of HTML, SCSS, ts Files. Components handle the presentation logic and user interactions for a specific part of the application. Directive allow you to extend the behavior of HTML elements or create reusable behavior."
+      },
+      {
+        "id": "ang-comp-002",
+        "question": "What is template?",
+        "answer": "Template is defined as user interface. Template describes the structure, content, and layout of the view that the component will render."
+      },
+      {
+        "id": "ang-comp-003",
+        "question": "How many types of data binding in Angular?",
+        "answer": "Data Binding defines the interaction between the components and the DOM. Angular allows both One-way and Two-way Data Binding. One-way data binding: Interpolation ({{data}}), Property binding ([src]=\"image\"), Event binding ((click)=\"goBack()\"). Two-way data binding: [(ngModel)]=\"data\""
+      },
+      {
+        "id": "ang-comp-004",
+        "question": "What is Component life cycle?",
+        "answer": "A component in Angular has a life-cycle, a number of different phases it goes through from birth to death. There are 8 life cycle hooks: constructor, ngOnChanges, ngOnInit, ngDoCheck, ngAfterContentInit, ngAfterContentChecked, ngAfterViewInit, ngAfterViewChecked, ngOnDestroy"
+      },
+      {
+        "id": "ang-comp-005",
+        "question": "Constructor and ngOnInit difference?",
+        "answer": "Constructor is a default method of the class that is executed when the class is instantiated. constructor() to set up Dependency Injection, Initialization of class fields, etc. We use constructor() for all the initialization/declaration. ngOnInit is a life cycle hook called by Angular to indicate that the Angular is done creating the component. ngOnInit() is a better place to write \"actual work code\" that we need to execute as soon as the class is instantiated."
+      },
+      {
+        "id": "ang-comp-006",
+        "question": "ViewChild vs ViewChildren?",
+        "answer": "@ViewChild/@ViewChildren decorator provides template information in our component. It provides us with an easy and simple way to access and manipulate the properties and methods of a Child Component from a container or root component. The @ViewChild query returns the first matching element from the DOM. The @ViewChildren query returns the List of matching element from the DOM."
+      },
+      {
+        "id": "ang-comp-007",
+        "question": "ContentChild vs ContentChildren?",
+        "answer": "@ContentChild/@ContentChildren decorator provides instance of a projected element in our component."
+      },
+      {
+        "id": "ang-comp-008",
+        "question": "What is Template reference variables?",
+        "answer": "Template Reference Variable in Angular is used to access all the properties of any element inside the DOM. It can also be a reference to an Angular component or directive or a web component. <input #refer>"
+      },
+      {
+        "id": "ang-comp-009",
+        "question": "Explain Content projection / ng-content?",
+        "answer": "It builds reusable UI components and layouts. Content projection in Angular is often used to create reusable and customizable components that can accept varying content while maintaining a consistent structure and layout. <ng-content></ng-content> tag as a placeholder for that dynamic content, then when the template is parsed Angular will replace that placeholder tag with your content."
+      },
+      {
+        "id": "ang-comp-010",
+        "question": "What is different ng-template & ng-container & ng-content?",
+        "answer": "<ng-template> is a template element that Angular uses with structural directives (*ngIf, *ngFor, [ngSwitch] and custom directives). <ng-container> is an extremely simple directive that allows you to group elements in a template that doesn't interfere with styles or layout because Angular doesn't put it in the DOM. <ng-content> is used to project content into Angular components."
+      },
+      {
+        "id": "ang-comp-011",
+        "question": "What is *ngTemplateOutlet directive?",
+        "answer": "ngTemplateOutlet is a structural directive. We use it to insert a template (created by ngTemplate) in various sections of our DOM."
+      },
+      {
+        "id": "ang-comp-012",
+        "question": "Standalone Components?",
+        "answer": "Standalone components in Angular are a way to create components, directives, and pipes that do not need to be declared in an NgModule. They are self-contained and manage their own dependencies."
+      }
+    ],
+    "services": [
+      {
+        "id": "ang-svc-001",
+        "question": "Services in Angular?",
+        "answer": "Services are typically used to encapsulate business logic, share data, or perform other tasks that can be shared across multiple components. They are a way to organize and centralize common functionality that multiple parts of an application might need."
+      },
+      {
+        "id": "ang-svc-002",
+        "question": "What is dependency injection?",
+        "answer": "Dependency Injection, or DI, is a design pattern and mechanism for creating and delivering some parts of an application to other parts of an application that require them. Angular supports this design pattern and you can use it in your applications to increase flexibility and modularity. When you develop a smaller part of your system, like a module or a class, you may need to use features from other classes. For example, you may need an HTTP service to make backend calls."
+      },
+      {
+        "id": "ang-svc-003",
+        "question": "How to handle dependency injection in Angular?",
+        "answer": "Dependency injection is a fundamental concept that allows you to inject dependencies (services or other objects) into components, directives, pipes, and other Angular constructs."
+      }
+    ],
+    "routing": [
+      {
+        "id": "ang-route-001",
+        "question": "Routing in Angular?",
+        "answer": "Routing in Angular allows the users to create a single-page application with multiple views and allows navigation between them. Users can switch between these views without losing the application state and properties. In Angular routing has two part URL and ComponentName ({path: 'home', Component: HomeComponent})"
+      },
+      {
+        "id": "ang-route-002",
+        "question": "What is lazy loading?",
+        "answer": "Lazy loading is on demand loading. Load only necessary part so that you have better performance. Lazy loading is the process of loading components, modules, or other assets of a website as they're required. It improves the speed of the application load time by splitting the application in several bundles. RouterModule.forRoot() => It's used once in App's main routing module. RouterModule.forChild() => Multiple times in lazy-loaded/feature modules"
+      },
+      {
+        "id": "ang-route-003",
+        "question": "How many types of guard in Angular?",
+        "answer": "AuthGuard is an Angular route guard used to protect the routes from unauthenticated/unauthorized people. Types: CanActivate (Controls if a route can be activated), CanActivateChild (Controls if children of a route can be activated), CanDeactivate (Controls if the user can leave a route), Resolve (Ensure whether there is data available or not before navigating to any route), CanLoad (Controls if a route can even be loaded)"
+      },
+      {
+        "id": "ang-route-004",
+        "question": "How to setup routing in Angular?",
+        "answer": "Answer pending..."
+      }
+    ],
+    "forms": [
+      {
+        "id": "ang-form-001",
+        "question": "Angular forms and their types?",
+        "answer": "Forms are used to handle user input data. Angular supports two types of forms: Template-Driven Forms (Defined most of the things in the HTML template. Automatically tracks form state and validation. Uses Angular directives like [(ngModel)], #form=\"ngForm\") and Reactive Forms (Fully controlled in the TypeScript code. Uses FormGroup, FormControl, FormArray and FormBuilder)"
+      },
+      {
+        "id": "ang-form-002",
+        "question": "How to Validate Angular Reactive Forms?",
+        "answer": "Answer pending..."
+      }
+    ],
+    "directives": [
+      {
+        "id": "ang-dir-001",
+        "question": "What are directives and how many types of directive in Angular?",
+        "answer": "For DOM manipulation, By using Angular directives, you can change the appearance, behavior or a layout of a DOM element. Types: Component Directives (Component directives are used in main class. Every Angular component is a directive define by @Component() decorator), Attribute Directives (change the appearance or behavior of any element. NgSwitch, NgStyle and NgClass), Structural Directives (change the DOM layout during the runtime by adding or removing elements. *ngIf, *ngSwitch, and *ngFor)"
+      }
+    ],
+    "pipes": [
+      {
+        "id": "ang-pipe-001",
+        "question": "What are pipes and how many types of pipe in Angular?",
+        "answer": "In Angular, pipes are used to transform the output in templates before they are displayed to the user. They are simple functions that take an input value, transform it, and return the transformed value, all without modifying the original data. Built-in pipes: date, uppercase, lowercase, currency:'IND', percent, json, async. Custom pipes can be created. In Angular pipes are Pure and Impure Pipes. Pure pipe: A pure pipe is a pipe that only gets executed when the input data changes. Impure Pipes: An impure pipe is a pipe that gets executed every time Angular runs change detection, regardless of whether the input data has changed or not."
+      },
+      {
+        "id": "ang-pipe-002",
+        "question": "Async pipe?",
+        "answer": "The async pipe is a built-in pipe in Angular that automatically subscribes to an observable or promise and returns the latest value that is emitted. Once the observable or promise emits a value, the async pipe updates the template with the new value. This pipe also takes care of unsubscribing from the observable or promise when the component is destroyed, which helps prevent memory leaks."
+      }
+    ],
+    "architecture": [
+      {
+        "id": "ang-arch-001",
+        "question": "Angular architecture?",
+        "answer": "Templates: HTML view of Angular. Components: Binds the DOM and modal. Modules: Group of components. Data Binding: Defines how DOM and component communicate. Services, Pipes, Directives: Common logics. Dependency Injection: Helps to inject an instance across project using constructor. Lifecycle Hooks: Define life of component flow"
+      },
+      {
+        "id": "ang-arch-002",
+        "question": "SPA (Single Page Application)?",
+        "answer": "Application where the main UI loaded once and then needed UI is loaded on user request, rather than loading entire new pages from the server."
+      },
+      {
+        "id": "ang-arch-003",
+        "question": "What are the main building blocks of Angular?",
+        "answer": "Modules, Components, Templates, Directives, Services, Dependency Injection (DI), Router, Forms, HTTP Client, Pipes"
+      },
+      {
+        "id": "ang-arch-004",
+        "question": "What is NgModules?",
+        "answer": "An Angular module is a deployment sub-set of your whole Angular application. It's useful for splitting up an application into smaller parts and lazy load each separately, and to create libraries of components that can be easily imported into other applications. @NgModule: annotation is what actually defines the module. declarations: list the components, directives, and pipes. imports: import other modules. providers: list the services."
+      },
+      {
+        "id": "ang-arch-005",
+        "question": "How Angular knows which component to load and how the app starts?",
+        "answer": "1. index.html – has root tag (<app-root>). 2. Main Entry Point: main.ts - platformBrowserDynamic().bootstrapModule(AppModule). 3. App.module.ts - bootstrap: [AppComponent]. 4. Angular Compiler (JIT or AOT). 5. DOM Rendering Starts - Angular looks in your index.html for <app-root></app-root>. 6. Child Component Tree Loads"
+      }
+    ],
+    "performance": [
+      {
+        "id": "ang-perf-001",
+        "question": "Change detection in Angular?",
+        "answer": "Angular runs its change detection mechanism periodically so that changes to the data model are reflected in an application's view. Change detection strategies: Default strategy (whenever any data to @Input() decorated properties are changed, Angular runs the change detector to update the view), OnPush strategy (Angular runs change detector only when a new reference is passed to the @Input() decorated properties)"
+      },
+      {
+        "id": "ang-perf-002",
+        "question": "How many types of View Encapsulation in Angular?",
+        "answer": "The View Encapsulation in Angular is a strategy that determines how Angular hides (encapsulates) the styles defined in the component from bleeding over to the other parts of the application. ViewEncapsulation.None: used, when we do not want any encapsulation. ViewEncapsulation.Emulated: style does not spill out to other components when you use emulated mode. ViewEncapsulation.ShadowDOM: The browser keeps the shadow DOM separate from the main DOM."
+      },
+      {
+        "id": "ang-perf-003",
+        "question": "How do you ensure high performance and responsiveness in large Angular applications?",
+        "answer": "Use Lazy Loading, OnPush Change Detection, TrackBy with ngFor, debounceTime() for Inputs, Route Resolvers, Route Guards to protect, Reactive Forms for Complex validation, Optimizing Change Detection with Observables, Optimizing Bundle Size, Avoid Memory Leaks, Use Renderer2 or directives for safe DOM manipulations"
+      }
+    ],
+    "communication": [
+      {
+        "id": "ang-comm-001",
+        "question": "How many ways to communicate in between components?",
+        "answer": "There are several ways to share data between components: Binding (@Input & @Output), Reference (@ViewChild & @ContentChild), Provider (Service), Template Outlet, State management (ngrx)"
+      },
+      {
+        "id": "ang-comm-002",
+        "question": "How does Input/Output works?",
+        "answer": "Input: <app-child [name]=\"'Angular Developer'\"></app-child> and @Input() name!: string;. Output: @Output() greet = new EventEmitter<string>(); this.greet.emit('Hello from child!'); and <app-child (greet)=\"onChildGreet($event)\"></app-child>"
+      },
+      {
+        "id": "ang-comm-003",
+        "question": "Parent to child communication in Angular?",
+        "answer": "Answer pending..."
+      }
+    ],
+    "testing": [
+      {
+        "id": "ang-test-001",
+        "question": "Why unit testing is important?",
+        "answer": "Angular provides a robust testing framework that makes it easy to write and execute unit tests for components, services, and other parts of your application. ng test - This will run the tests and open a browser window with the Karma test runner."
+      },
+      {
+        "id": "ang-test-002",
+        "question": "What is mock in unit testing?",
+        "answer": "Answer pending..."
+      }
+    ],
+    "security": [
+      {
+        "id": "ang-sec-001",
+        "question": "How to handle security in Angular when calling API?",
+        "answer": "Use HTTPS API request, Use token for Authentication, Use role management so authorized users can perform specific actions, Use Cookies, localStorage for Secure Storage for Tokens, API server to include proper CORS headers, Proper Error Handling"
+      }
+    ],
+    "advanced": [
+      {
+        "id": "ang-adv-001",
+        "question": "What is SSR (Server Side Rendering)?",
+        "answer": "Server-side rendering (SSR) is an application's ability to convert HTML files on the server into a fully rendered HTML page for the client. Angular Universal, a technology that renders Angular applications on the server. A normal Angular application executes in the browser, rendering pages in the DOM in response to user actions. Angular Universal executes on the server, generating static application pages that later get bootstrapped on the client."
+      },
+      {
+        "id": "ang-adv-002",
+        "question": "Micro frontend?",
+        "answer": "A Micro Frontend is a design pattern where a single frontend application is broken into smaller, independently built and deployed pieces — just like microservices on the backend. Micro-frontend architecture is an architectural style where a front-end application is decomposed into smaller, more manageable pieces (micro-frontends), each developed and deployed independently by different teams."
+      },
+      {
+        "id": "ang-adv-003",
+        "question": "Module federation?",
+        "answer": "Module Federation is a Webpack 5 feature that allows JavaScript modules (including entire front-end applications) to be shared and consumed across different builds at runtime, enabling seamless integration of micro-frontends. Host Application: This is the main application that consumes remote modules. Remote Application: These are micro-frontends that expose their components or modules."
+      }
+    ]
+  },
+  "javascript": {
+    "basics": [
+      {
+        "id": "js-001",
+        "question": "What is JavaScript?",
+        "answer": "JS is a dynamic language means data types of the variables can change during the runtime. JS is client-side scripting language. JS language primarily used to make web pages interactive."
+      },
+      {
+        "id": "js-002",
+        "question": "Data types in JS?",
+        "answer": "Primitive Data Types: These are immutable (unable to be changed) and stored by value. Ex: string, number, boolean, BigInt, undefined, null, Symbol. Non-Primitive (Reference) Data Types: These are stored by reference. Ex: object, array, function"
+      },
+      {
+        "id": "js-003",
+        "question": "Difference between let, const and var?",
+        "answer": "let and const is block scope while, var is functional scope. let and const can't be redeclared while (SyntaxError), var can be redeclared. let and var can be reassign while, const can't be reassign. let and var can be declare without value assign while, const can't be declare without value assign(SyntaxError). Variable hoisting is possible with var but we can't with let and const (ReferenceError). const a = {}; a['newkey'] = 5 // it will successfully added in json"
+      },
+      {
+        "id": "js-004",
+        "question": "What is the Temporal Dead Zone (TDZ)?",
+        "answer": "The Temporal Dead Zone (TDZ) in JavaScript is the period between when a variable is declared with let or const and when it is initialized, during which accessing the variable throws a ReferenceError. Only let and const have a Temporal Dead Zone — var does not."
+      },
+      {
+        "id": "js-005",
+        "question": "What is hoisting?",
+        "answer": "Hoisting is a JavaScript mechanism that allows functions/variables to be used before they are declared in the code. In other words, JavaScript moves function declarations to the top of their respective scope, allowing them to be used even if they are declared later in the code."
+      },
+      {
+        "id": "js-006",
+        "question": "What is the difference between == and ===?",
+        "answer": "== Compares values, after converting types if needed. '5' == 5 // true, null == undefined // true. === Compares both value and type without conversion. null === undefined // false, 5 === 5 // true"
+      },
+      {
+        "id": "js-007",
+        "question": "Undefined vs Null?",
+        "answer": "Undefined means the variable has been declared but no value is assigned to it. Null indicates intentional absence of data. Null indicates it's not empty, it's just absence of data."
+      },
+      {
+        "id": "js-008",
+        "question": "Template literals?",
+        "answer": "Template literals (also called template strings) are a modern way to create strings, especially when including variables or expressions inside the string. Use backticks (` `) instead of quotes. Insert variables or expressions using ${ ... }. const result = `Sum: ${a + b}`;"
+      },
+      {
+        "id": "js-009",
+        "question": "What is the spread operator (...) and how is it used?",
+        "answer": "The spread operator (...) in JavaScript is used to expand elements of an iterable (like arrays or strings) or to copy/merge objects and arrays. Using for shallow copy. const obj1 = { a: 1 }; const obj2 = { b: 2 }; const combined = { ...obj1, ...obj2 };"
+      },
+      {
+        "id": "js-010",
+        "question": "Deep copy and shallow Copy in JavaScript?",
+        "answer": "A deep copy means that all of the values of the new variable are copied and disconnected from the original variable. const billiardGame = JSON.parse(JSON.stringify(billiard)). A shallow copy means that certain (sub-)values are still connected to the original variable. const billiardGame = { ...billiard }; const billiardGame = Object.assign({}, billiard);"
+      }
+    ],
+    "functions": [
+      {
+        "id": "js-func-001",
+        "question": "What is argument & parameter?",
+        "answer": "Arguments are values passed to the function when it is invoked. Parameters are variables listed as a part of the function definition. Function parameters are the names of variables present in the function definition. Function arguments are the real values that are passed to the function and received by them."
+      },
+      {
+        "id": "js-func-002",
+        "question": "Arrow function?",
+        "answer": "An arrow function expression is a compact alternative to a traditional function expression. The arrow function syntax is a shorthand way to define a function, which makes code more short and easier to read. The { braces } and ( parentheses ) and \"return\" are not required in Arrow function. Arrow function having lexical scope so it can use 'this' keyword. Useful in functional programming patterns like .map(), .filter(), .reduce(). const add = (a, b) => a + b;"
+      },
+      {
+        "id": "js-func-003",
+        "question": "What is callback function?",
+        "answer": "I'll call you back when I'm done. A callback function in JavaScript is a function passed as an argument to another function — and it's usually called later. This technique allows a function to call another function. Callbacks are commonly used to handle asynchronous operations"
+      },
+      {
+        "id": "js-func-004",
+        "question": "Higher order functions?",
+        "answer": "A higher-order function (HOF) in JavaScript is a function that does either 'Takes one or more functions as arguments' or 'Returns a function'."
+      },
+      {
+        "id": "js-func-005",
+        "question": "What is an IIFE (Immediately Invoked Function Expression)?",
+        "answer": "It is a function that runs immediately after it's defined, without being called explicitly later in the code. Using to create local scope, Runs code immediately. (function() { console.log('IIFE executed!'); })();"
+      },
+      {
+        "id": "js-func-006",
+        "question": "Nested Callbacks = \"Callback Hell\"?",
+        "answer": "When callbacks are deeply nested, it can become hard to read and maintain, to overcome this situation we can use Promises or async/await instead, or any other asynchronous operations."
+      },
+      {
+        "id": "js-func-007",
+        "question": "Function currying in JS?",
+        "answer": "We simply wrap function inside a function, which means we are going to return a function from another function to obtain this kind of translation. The parent function takes the first provided argument and returns the function that takes the next argument and this keeps on repeating till the number of arguments ends."
+      },
+      {
+        "id": "js-func-008",
+        "question": "What Are call, apply, and bind?",
+        "answer": "Call: Calls a function with a given this value and individual arguments. It invokes the function immediately. Apply: Same as call(), but arguments are passed as an array. It invokes the function immediately. Bind: Returns a new function with this bound to the given object. It does not call the function immediately."
+      },
+      {
+        "id": "js-func-009",
+        "question": "Closure in JS?",
+        "answer": "A closure gives you access to an outer function's scope from an inner function. In JavaScript, closures are created every time a function is created, at function creation time. A closure in JavaScript is when a function \"remembers\" the variables from its lexical scope, even after the outer function has finished executing."
+      },
+      {
+        "id": "js-func-010",
+        "question": "What is lexical Scope in JS?",
+        "answer": "A lexical scope in JavaScript means that a variable defined outside a function can be accessible inside another function defined after the variable declaration. But the opposite is not true; the variables defined inside a function will not be accessible outside that function."
+      }
+    ],
+    "async": [
+      {
+        "id": "js-async-001",
+        "question": "What are Promises and how do they help avoid callback hell?",
+        "answer": "A Promise is an object that represents the eventual completion (or failure) of an asynchronous operation and its resulting value. It has three states: Pending (Initial state) -> resolve Or reject"
+      },
+      {
+        "id": "js-async-002",
+        "question": "How async/await works for asynchronous programming in JavaScript?",
+        "answer": "async/await is a syntactic feature in JavaScript that simplifies working with asynchronous code, making it more readable and maintainable. It's built on top of promises and provides a way to write asynchronous code that looks and behaves a bit more like synchronous code."
+      },
+      {
+        "id": "js-async-003",
+        "question": "Event loop in JS?",
+        "answer": "Event Loop is the mechanism in JavaScript that Handles asynchronous operations. Priority Order: Synchronous code runs first, Microtasks (from queueMicrotask, Promise.then, etc.) run next, before any macrotasks, Macrotasks (like Timers, I/O, setTimeout etc.) are run after all current microtasks are done"
+      },
+      {
+        "id": "js-async-004",
+        "question": "What is the difference between microtasks and macrotasks?",
+        "answer": "The event loop always gives higher priority to the microtask queue, and will process all the callbacks in the microtask queue before moving on to the macrotask queue. The microtask queue contains the callbacks of operations that are considered more urgent or important, such as promises and mutation observers APIs. The macrotask queue contains the callbacks of operations that are less urgent such as timers, I/O events, and user interface events"
+      }
+    ],
+    "arrays": [
+      {
+        "id": "js-arr-001",
+        "question": "Array iteration methods in JS?",
+        "answer": "forEach(), map(), filter(), reduce(), reduceRight(), every(), some(), indexOf(), lastIndexOf(), find(), findIndex(), from(), keys(), entries(), includes()"
+      },
+      {
+        "id": "js-arr-002",
+        "question": "Sorting methods in JS?",
+        "answer": "Array.sort(): Sorting alphabetically works well for strings. Array.reverse(): Reverse method reverses the elements in an array. Array.sort((a, b) => a - b): Sort numbers in ascending order. Array.sort((a, b) => b - a): Sort numbers in descending order."
+      },
+      {
+        "id": "js-arr-003",
+        "question": "Difference between for & foreach loop?",
+        "answer": "for is original ways of iterating over an array. while foreach newer way with lesser code to iterate over an array. for is faster in performance. while foreach slower than the traditional loop in performance. for can use break statement to come out from the loop. while in foreach cannot be used because of the callback function. for works with await keyword while with foreach cannot be used due to the callback function."
+      },
+      {
+        "id": "js-arr-004",
+        "question": "Difference between filter & map?",
+        "answer": "filter method is used to filter the elements from an array based on a given condition. map does not discard any element instead it manipulates the value of elements. filter change the new array length. map doesn't changes the length of new Array"
+      },
+      {
+        "id": "js-arr-005",
+        "question": "Difference between slice and splice?",
+        "answer": "slice and splice are methods used in JavaScript arrays to retrieve certain elements or remove elements from the array. Slice(): It is used to cut out elements from an array. It does not affect the original array. array.slice(start, end). Splice(): It is used to remove elements from an array or replace them. array.splice(start, deleteCount, newElem1, newElem2, ..., newElemN);"
+      }
+    ],
+    "strings": [
+      {
+        "id": "js-str-001",
+        "question": "JavaScript String Methods?",
+        "answer": "String.length, slice(start, end), substring(start, end), substr(start, length), replace(preval, newval), String.toLowerCase(), String.toUpperCase(), String1.concat(String2), String.trim(), String.trimStart(), String.trimEnd(), String.charAt(2), String.charCodeAt(2), text[0], split(\"\")"
+      }
+    ],
+    "oop": [
+      {
+        "id": "js-oop-001",
+        "question": "OOP in JS?",
+        "answer": "Object-oriented programming is about modeling a system as a collection of objects, where each object represents some particular aspect of the system. Objects contain both functions (or methods) and data. OOP was made available with ES6 in 2015."
+      },
+      {
+        "id": "js-oop-002",
+        "question": "Objects and classes in JS?",
+        "answer": "Object: An object is a collection of key–value pairs (properties and methods) used to represent real-world entities like a person, product, or car. Class: A class is a blueprint for creating multiple similar objects with shared structure and behavior."
+      },
+      {
+        "id": "js-oop-003",
+        "question": "What is a Prototype in JavaScript?",
+        "answer": "In JavaScript, every object has a hidden internal link to another object called its prototype. This prototype object can contain shared properties and methods that all instances can access. We can set the prototype using __proto__"
+      },
+      {
+        "id": "js-oop-004",
+        "question": "Special keywords of OOP in js?",
+        "answer": "new keyword create a new object using class. constructor is a special method inside a JavaScript class that gets called automatically when a new object is created from that class. this keyword refers to the object that is executing the current function. extends keyword using to inherit another class data. super keyword using to call the constructor of it's parent class to access parent's properties and method"
+      },
+      {
+        "id": "js-oop-005",
+        "question": "What are the concepts of 4 pillars in OOP?",
+        "answer": "Abstraction: Hide complex logic, presenting essential information. Encapsulation: Group related data(properties) and methods typically an object or a class. It promotes data hiding. Inheritance: Inheritance allows one class to inherit the properties and methods of another class, promoting code reusability. Polymorphism: Polymorphism means \"many forms\" — the ability for different classes to define methods with the same name but different behaviors."
+      },
+      {
+        "id": "js-oop-006",
+        "question": "What is Method Overriding and Method Overloading?",
+        "answer": "Method Overriding: Method overriding is when a subclass provides a new implementation of a method that is already defined in its parent class. Method Overloading: Method overloading means defining multiple methods with the same name but different parameters. Note: Method overloading not supported by JS"
+      },
+      {
+        "id": "js-oop-007",
+        "question": "Getter and Setter in JS?",
+        "answer": "Answer pending..."
+      }
+    ],
+    "dom": [
+      {
+        "id": "js-dom-001",
+        "question": "DOM Manipulation Methods?",
+        "answer": "Accessing Elements: document.getElementById(\"id\"), document.getElementsByClassName(\"class\"), document.getElementsByTagName(\"tag\"), document.querySelector(\"selector\"), document.querySelectorAll(\"selector\"). Creating / Appending Elements: document.createElement(\"name\"), document.createTextNode(\"text\"), elem.appendChild(child), elem.removeChild(child), elem.replaceChild(newChild, oldChild). Modifying Elements: elem.innerHTML, elem.innerText, elem.textContent, elem.style.color, elem.outerHTML"
+      },
+      {
+        "id": "js-dom-002",
+        "question": "Event Bubbling vs. Event Capturing?",
+        "answer": "Event bubbling and capturing are two phases in how events propagate through the Document Object Model (DOM). Event Bubbling: An event propagates from the target element upwards to its parent elements. Event Capturing: An event propagates from the root element (document) downwards to the target element. Stopping Propagation: stopPropagation() method of the Event interface prevents further propagation of the current event in the capturing and bubbling phases."
+      }
+    ],
+    "tricky": [
+      {
+        "id": "js-trick-001",
+        "question": "console.log(1 + '2' + 3)?",
+        "answer": "Result: \"123\". Reason: number + string = string"
+      },
+      {
+        "id": "js-trick-002",
+        "question": "{1:1} == {1:1} and [1,2,3] == '1,2,3'?",
+        "answer": "{1:1} == {1:1} // False. [1,2,3] == '1,2,3' // True"
+      },
+      {
+        "id": "js-trick-003",
+        "question": "Event loop priority order?",
+        "answer": "Result: a f b e c d. queueMicrotask has higher priority than setTimeout, Promise.resolve().then() is a microtask"
+      },
+      {
+        "id": "js-trick-004",
+        "question": "Type conversions with + operator?",
+        "answer": "console.log(+true); // 1. console.log(+false); // 0. console.log(true+'1'); // \"true1\". console.log(true+1); // 2. console.log(false-'2'); // -2. console.log(false-2); // -2"
+      },
+      {
+        "id": "js-trick-005",
+        "question": "typeof NaN?",
+        "answer": "Result: \"number\". NaN means \"Not a Number\" but is actually of type 'number'"
+      },
+      {
+        "id": "js-trick-006",
+        "question": "typeof null?",
+        "answer": "Result: \"object\". JS bug"
+      },
+      {
+        "id": "js-trick-007",
+        "question": "Array length behavior?",
+        "answer": "let a = [1, 2, 3]; a[10] = 99; console.log(a.length); Result: 11. Setting a value at index 10 makes the length 11, rest will be undefined"
+      }
+    ],
+    "algorithms": [
+      {
+        "id": "js-algo-001",
+        "question": "Create Flat Array?",
+        "answer": "Method 1: const nestedArray = [1, [2, [3, [4, 5]]]]; const fullyFlatArray = nestedArray.flat(Infinity);. Method 2: Using recursive function"
+      },
+      {
+        "id": "js-algo-002",
+        "question": "Find 2nd largest number?",
+        "answer": "Method 1: Using sort - let array = arrayData.sort((a, b) => {return a-b;}); console.log(array[array.length-2]);. Method 2: Using filter - let maxNum = Math.max(...arrayData); let newArray = arrayData.filter((x) => x != maxNum); let newlargest = Math.max(...newArray);"
+      },
+      {
+        "id": "js-algo-003",
+        "question": "Sorting the array?",
+        "answer": "Method 1: Using sort() method. Method 2: Bubble Sort. Method 3: Selection Sort"
+      },
+      {
+        "id": "js-algo-004",
+        "question": "Get Unique number from array?",
+        "answer": "Method 1: Using Set - let array = [...new Set(arrayData)]. Method 2: Using includes(). Method 3: Using nested loops"
+      },
+      {
+        "id": "js-algo-005",
+        "question": "Reverse array?",
+        "answer": "let reverseArray = []; for (let i = arrayData.length-1; i >= 0; i--) { reverseArray.push(arrayData[i]) }"
+      },
+      {
+        "id": "js-algo-006",
+        "question": "Get factorial of a number?",
+        "answer": "A factorial is a function that multiplies a number by every number below it till 1. Method 1: Recursive. Method 2: Iterative"
+      },
+      {
+        "id": "js-algo-007",
+        "question": "Prime Number Check?",
+        "answer": "A prime number is a whole number greater than 1 that is only divisible by 1 and itself."
+      },
+      {
+        "id": "js-algo-008",
+        "question": "Check if a number is a palindrome?",
+        "answer": "A palindrome number is a number that remains the same when its digits are reversed. function isPalindrome(num) { const str = num.toString(); return str === str.split('').reverse().join(''); }"
+      },
+      {
+        "id": "js-algo-009",
+        "question": "String character count?",
+        "answer": "Given: stringData=\"aabbbccddea\" and Expected: \"3a3b2c2d1e\". Use object to count characters, then format output"
+      }
+    ],
+    "memory": [
+      {
+        "id": "js-mem-001",
+        "question": "Do you know about memory leaks?",
+        "answer": "Memory leak occurs when programmers create a memory in heap and forget to delete it. The consequences of memory leak is that it reduces the performance of the computer by reducing the amount of available memory. Unsubscribed Observables: this.subscription.unsubscribe();. Remove Event Listeners: window.removeEventListener('resize', this.handleResize);. Clear SetInterval / SetTimeout: clearInterval(this.intervalFn);"
+      },
+      {
+        "id": "js-mem-002",
+        "question": "What is the difference between setTimeout, setInterval, and debounce time?",
+        "answer": "setTimeout() method executes a function, after waiting a specified number of milliseconds. window.setTimeout(function, milliseconds);. The setInterval() method repeats a given function at every given time-interval. window.setInterval(function, milliseconds);"
+      }
+    ],
+    "cookies": [
+      {
+        "id": "js-cookie-001",
+        "question": "What is Cookie and what's the max length of cookie?",
+        "answer": "Cookies let you store user information in web pages. Cookies are data, stored in small text files, on your computer. JavaScript can create, read, and delete cookies with the document.cookie property. A cookie is an amount of information that persists between a server-side and a client-side. Maximum length of Cookie is 4KB."
+      }
+    ],
+    "typescript": [
+      {
+        "id": "js-ts-001",
+        "question": "How can you make an interface readonly?",
+        "answer": "1. Mark specific properties as readonly: interface User {readonly id: number;}. 2. Make all properties readonly using Readonly<T> utility type: const userData: Readonly<User> = { id: 1};. 3. Make entire array or object deeply readonly: const names: ReadonlyArray<string> = ['Alice', 'Bob'];"
+      },
+      {
+        "id": "js-ts-002",
+        "question": "How can we make a property read-only via a method?",
+        "answer": "type MakeReadonly<T, K extends keyof T> = Omit<T, K> & Readonly<Pick<T, K>>; type ReadonlyId = MakeReadonly<User, 'id'>; const userData: ReadonlyId = {id: 1};"
+      }
+    ]
+  },
+  "general": {
+    "git": [
+      {
+        "id": "gen-git-001",
+        "question": "GIT Basic Commands?",
+        "answer": "git clone [url], git pull origin master, git status, git add [file], git commit -a -m \"[message]\", git push origin master, git branch, git branch [branch name], git branch -d [branch name], git branch -b [branch name], git checkout [branch name], git log, git reset --hard [commit], git revert [commit], git stash, git stash apply"
+      },
+      {
+        "id": "gen-git-002",
+        "question": "Define cherry-picking and patch strategy?",
+        "answer": "Cherry-picking in Git refers to the process of selecting specific commits from one branch and applying them to another branch. This is useful when you want to incorporate specific changes or fixes from a different branch without merging the entire branch. git cherry-pick [log-Id]..."
+      },
+      {
+        "id": "gen-git-003",
+        "question": "What source control tool have you used?",
+        "answer": "Git: It allows multiple developers to collaborate on a project, track changes, and manage different versions of the codebase. GitHub: GitHub is a web-based platform built on top of Git. It provides additional collaboration features, such as issue tracking, pull requests, and project management. Bitbucket: Bitbucket is a Git repository hosting service by Atlassian. It supports both Git and Mercurial, and it provides features like pull requests, branching strategies, and integrations with other Atlassian products."
+      },
+      {
+        "id": "gen-git-004",
+        "question": "What is pull request in git?",
+        "answer": "Answer pending..."
+      }
+    ],
+    "programming": [
+      {
+        "id": "gen-prog-001",
+        "question": "OOPs (Object-Oriented Programming) concepts?",
+        "answer": "Class: Components, Services, Models are all classes. Object: Instances of components/services/models. Inheritance: Base component classes / Abstract classes that are extended. Encapsulation: Keeping logic inside services/components (private/public properties). Abstraction: Using abstract classes or interfaces to hide details and expose only necessary parts. Polymorphism: Methods with the same name behaving differently in different components or services (especially with interfaces/abstract classes). Interface: Defining data shapes — especially used with TypeScript for type safety (e.g., interface User, Product, etc.)"
+      },
+      {
+        "id": "gen-prog-002",
+        "question": "SOLID Principles?",
+        "answer": "The SOLID principles are a set of five design principles intended to make object-oriented designs more understandable, flexible, and maintainable. S - Single Responsibility Principle: A class should have only one reason to change. O - Open/Closed Principle: Software entities should be open for extension but closed for modification. L - Liskov Substitution Principle: Subtypes must be substitutable for their base types. I - Interface Segregation Principle: No client should be forced to depend on methods it does not use. D - Dependency Inversion Principle: High-level modules should not depend on low-level modules. Both should depend on abstractions."
+      },
+      {
+        "id": "gen-prog-003",
+        "question": "Access modifiers?",
+        "answer": "Concept of 'Encapsulation' is used to make class members public or private i.e. a class can control the visibility of its data members. There are three types of access modifiers in TypeScript: public, private and protected."
+      },
+      {
+        "id": "gen-prog-004",
+        "question": "What is interface?",
+        "answer": "Interface is a specification that identifies a related set of properties and methods to be implemented by a class. So basically using interface you can set some basic rules for your properties and methods using class. It defines the syntax for classes to follow, means a class which implements an interface is bound to implement all its members."
+      },
+      {
+        "id": "gen-prog-005",
+        "question": "RegExP?",
+        "answer": "The RegExp object is used for matching text with a pattern. Regular expressions are patterns used to match character combinations in strings. In JavaScript, regular expressions are also objects. These patterns are used with the exec() and test() methods of RegExp, and with the match(), matchAll(), replace(), replaceAll(), search(), and split() methods of String."
+      }
+    ],
+    "tools": [
+      {
+        "id": "gen-tool-001",
+        "question": "CI/CD tools?",
+        "answer": "CI and CD stand for continuous integration and continuous delivery/continuous deployment. A continuous integration and continuous deployment (CI/CD) pipeline is a series of steps that must be performed in order to deliver a new version of software. CI/CD pipelines are a practice focused on improving software delivery throughout the software development life cycle via automation. Ex GitLab, Asana, Jira, Trello, Google Drive"
+      },
+      {
+        "id": "gen-tool-002",
+        "question": "What is mock API?",
+        "answer": "MockAPI is a simple tool that lets you easily mock up APIs, generate custom data, and perform operations on it using RESTful interface. MockAPI is meant to be used as a prototyping/testing/learning tool."
+      }
+    ],
+    "interview": [
+      {
+        "id": "gen-int-001",
+        "question": "How do you approach designing complex Angular applications?",
+        "answer": "Understand the Business Requirements, Module and Component Design for specific feature, Use State Management, Performance Optimization, Unit Testing, API Integration and Error Handling, Documentation and Code Quality, CI/CD (CI pipelines/Continuous Deployment)"
+      },
+      {
+        "id": "gen-int-002",
+        "question": "How do you ensure high performance and responsiveness in large Angular applications?",
+        "answer": "Use Lazy Loading, OnPush Change Detection, TrackBy with ngFor, debounceTime() for Inputs, Route Resolvers, Route Guards to protect, Reactive Forms for Complex validation, Optimizing Change Detection with Observables, Optimizing Bundle Size, Avoid Memory Leaks, Use Renderer2 or directives for safe DOM manipulations"
+      },
+      {
+        "id": "gen-int-003",
+        "question": "What coding standards and best practices do you follow for Angular projects?",
+        "answer": "Folder Structure and Organization, Naming Conventions, State management (NgRx), Use of RxJS and Observables, Routing and Navigation, Error Handling, Testing, Security and Performance Optimization, Code Reviews and Collaboration, Version Control and Branching"
+      },
+      {
+        "id": "gen-int-004",
+        "question": "How do you ensure code quality and consistency across your team?",
+        "answer": "Automate Code Formatting, Code Reviews, Unit & End-to-End Tests passed, CI/CD Pipeline with Automated Quality Checks"
+      },
+      {
+        "id": "gen-int-005",
+        "question": "Can you describe a challenging project you worked on and how you successfully delivered it?",
+        "answer": "STAR Method: Situation: Briefly describe the project and why it was challenging. Task: What was your role? Action: What actions did you take to solve it? Result: What was the outcome?"
+      },
+      {
+        "id": "gen-int-006",
+        "question": "How do you handle situations where a critical feature breaks just before a release?",
+        "answer": "Stay calm and assess the situation, Prioritize the issue (based on impact), Communicate immediately with the team/stakeholders, Decide: fix immediately or rollback the feature, Test the fix carefully before deploying"
+      },
+      {
+        "id": "gen-int-007",
+        "question": "Describe a situation where you made a mistake in your Angular code. How did you identify and fix it?",
+        "answer": "Own the mistake (briefly explain the situation), Show how you found the issue (debugging skills), Explain how you fixed it (problem-solving), Mention what you learned (continuous improvement)"
+      },
+      {
+        "id": "gen-int-008",
+        "question": "Key things you can cover in Agile?",
+        "answer": "Requirements Gathering: business needs. Planning: Product Roadmaps, Release Planning, Sprint Planning, Capacity Planning. Design & Architecture: Focus on simplicity and scalability. Development: Ensure code meets the Definition, code reviews. Testing: unit, integration, e2e. Deployment: CI/CD. Iteration & Feedback: Daily Stand-ups, Sprint Reviews, Sprint Retrospectives, Gather customer/stakeholder feedback. Monitoring & Metrics: tracking tools like Jira, Trello, Azure DevOps. Team Collaboration & Roles: Cross-functional teams. Conduct backlog grooming/refinement sessions. Risk Management"
+      }
+    ]
+  }
+}

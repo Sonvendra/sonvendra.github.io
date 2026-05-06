@@ -1,0 +1,397 @@
+:root {
+  --bg-1: #0f172a;
+  --bg-2: #1e293b;
+  --card: #ffffff;
+  --text: #0f172a;
+  --muted: #64748b;
+  --border: #e2e8f0;
+  --green: #10b981;
+  --green-soft: #d1fae5;
+  --yellow: #f59e0b;
+  --yellow-soft: #fef3c7;
+  --red: #ef4444;
+  --red-soft: #fee2e2;
+  --blue: #3b82f6;
+  --shadow: 0 10px 30px rgba(2, 6, 23, 0.08);
+}
+
+* { box-sizing: border-box; }
+
+.skip-link {
+  position: absolute;
+  top: -40px;
+  left: 8px;
+  background: #0f172a;
+  color: #fff;
+  padding: 8px 14px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-size: 0.9rem;
+  font-weight: 600;
+  z-index: 100;
+  transition: top 0.15s ease;
+}
+
+.skip-link:focus {
+  top: 8px;
+  outline: 2px solid #fff;
+  outline-offset: 2px;
+}
+
+.noscript-fallback {
+  background: var(--card);
+  border-radius: 16px;
+  padding: 24px 28px;
+  box-shadow: var(--shadow);
+  margin-top: 16px;
+  border-left: 6px solid var(--blue);
+}
+
+.noscript-fallback h2 {
+  margin: 0 0 12px;
+}
+
+.noscript-fallback ol {
+  padding-left: 22px;
+  line-height: 1.7;
+}
+
+.noscript-fallback li { margin-bottom: 6px; }
+
+html, body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', system-ui, -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Arial, sans-serif;
+  color: var(--text);
+  background: linear-gradient(135deg, #f1f5f9 0%, #e0e7ff 100%);
+  min-height: 100vh;
+  line-height: 1.5;
+}
+
+header.hero {
+  background: linear-gradient(135deg, #0f172a 0%, #312e81 60%, #4c1d95 100%);
+  color: white;
+  padding: 48px 24px 36px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+header.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(circle at 20% 20%, rgba(99, 102, 241, 0.35), transparent 40%),
+    radial-gradient(circle at 80% 30%, rgba(236, 72, 153, 0.25), transparent 45%);
+  pointer-events: none;
+}
+
+header.hero h1 {
+  margin: 0 0 12px;
+  font-size: clamp(1.8rem, 3.5vw, 2.6rem);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  position: relative;
+}
+
+header.hero p {
+  margin: 0;
+  font-size: 1.05rem;
+  opacity: 0.85;
+  position: relative;
+}
+
+.container {
+  max-width: 1200px;
+  margin: -28px auto 60px;
+  padding: 0 20px;
+  position: relative;
+}
+
+.progress-card {
+  background: var(--card);
+  border-radius: 16px;
+  padding: 20px 24px;
+  box-shadow: var(--shadow);
+  margin-bottom: 28px;
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  flex-wrap: wrap;
+}
+
+.progress-info {
+  flex: 1;
+  min-width: 200px;
+}
+
+.progress-info h3 {
+  margin: 0 0 6px;
+  font-size: 1.05rem;
+}
+
+.progress-info span {
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+.progress-bar {
+  flex: 2;
+  min-width: 220px;
+  height: 14px;
+  background: #e2e8f0;
+  border-radius: 999px;
+  overflow: hidden;
+  position: relative;
+}
+
+.progress-bar-fill {
+  height: 100%;
+  width: 0%;
+  background: linear-gradient(90deg, #10b981, #3b82f6, #8b5cf6);
+  border-radius: 999px;
+  transition: width 0.4s ease;
+}
+
+.progress-percent {
+  font-weight: 700;
+  font-size: 1.4rem;
+  min-width: 70px;
+  text-align: right;
+  background: linear-gradient(90deg, #10b981, #6366f1);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.reset-btn {
+  background: #f1f5f9;
+  border: 1px solid var(--border);
+  color: var(--muted);
+  padding: 8px 14px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 0.85rem;
+  transition: all 0.15s ease;
+}
+
+.reset-btn:hover {
+  background: var(--red-soft);
+  color: var(--red);
+  border-color: var(--red);
+}
+
+.week {
+  background: var(--card);
+  border-radius: 16px;
+  padding: 24px;
+  margin-bottom: 22px;
+  box-shadow: var(--shadow);
+  border-left: 6px solid var(--green);
+}
+
+.week.level-easy   { border-left-color: var(--green); }
+.week.level-medium { border-left-color: var(--yellow); }
+.week.level-hard   { border-left-color: var(--red); }
+
+.week-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-bottom: 18px;
+}
+
+.week-title {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 0;
+  font-size: 1.25rem;
+  font-weight: 700;
+}
+
+.level-pill {
+  font-size: 0.75rem;
+  font-weight: 600;
+  padding: 4px 10px;
+  border-radius: 999px;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.level-easy .level-pill   { background: var(--green-soft);  color: #065f46; }
+.level-medium .level-pill { background: var(--yellow-soft); color: #92400e; }
+.level-hard .level-pill   { background: var(--red-soft);    color: #991b1b; }
+
+.week-progress {
+  font-size: 0.85rem;
+  color: var(--muted);
+  font-weight: 600;
+}
+
+.days-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 14px;
+}
+
+.day-card {
+  background: #f8fafc;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 14px 14px 14px 14px;
+  cursor: pointer;
+  transition: all 0.18s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.day-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(15, 23, 42, 0.08);
+  border-color: var(--blue);
+}
+
+.day-card.weekend {
+  background: linear-gradient(135deg, #fef9c3 0%, #fef3c7 100%);
+  border-color: #fde68a;
+}
+
+.day-card.done {
+  background: linear-gradient(135deg, #d1fae5 0%, #a7f3d0 100%);
+  border-color: #10b981;
+}
+
+.day-card.done .day-tasks {
+  text-decoration: line-through;
+  color: #047857;
+  opacity: 0.85;
+}
+
+.day-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 8px;
+}
+
+.day-label {
+  font-weight: 700;
+  font-size: 0.95rem;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.checkbox {
+  width: 22px;
+  height: 22px;
+  border: 2px solid #cbd5e1;
+  border-radius: 6px;
+  background: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  transition: all 0.15s ease;
+}
+
+.day-card.done .checkbox {
+  background: #10b981;
+  border-color: #10b981;
+}
+
+.checkbox svg {
+  width: 14px;
+  height: 14px;
+  stroke: white;
+  stroke-width: 3;
+  fill: none;
+  opacity: 0;
+  transition: opacity 0.15s ease;
+}
+
+.day-card.done .checkbox svg { opacity: 1; }
+
+.day-tasks {
+  font-size: 0.85rem;
+  color: #334155;
+  line-height: 1.5;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.day-tasks li {
+  position: relative;
+  padding-left: 14px;
+  margin-bottom: 3px;
+}
+
+.day-tasks li::before {
+  content: "•";
+  position: absolute;
+  left: 2px;
+  color: #94a3b8;
+}
+
+.output-line {
+  margin-top: 8px;
+  font-size: 0.78rem;
+  background: rgba(16, 185, 129, 0.12);
+  color: #065f46;
+  padding: 5px 8px;
+  border-radius: 6px;
+  font-weight: 600;
+}
+
+.completed-date {
+  margin-top: 8px;
+  font-size: 0.75rem;
+  color: #047857;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.completed-date svg {
+  width: 12px;
+  height: 12px;
+  flex-shrink: 0;
+}
+
+.completed-date input[type="date"] {
+  background: rgba(255, 255, 255, 0.7);
+  border: 1px solid #6ee7b7;
+  border-radius: 5px;
+  padding: 2px 6px;
+  font-size: 0.75rem;
+  color: #047857;
+  font-weight: 600;
+  font-family: inherit;
+  cursor: pointer;
+  outline: none;
+  transition: all 0.15s ease;
+}
+
+.completed-date input[type="date"]:hover,
+.completed-date input[type="date"]:focus {
+  background: white;
+  border-color: #10b981;
+}
+
+footer {
+  text-align: center;
+  color: var(--muted);
+  padding: 24px;
+  font-size: 0.85rem;
+}
+
+@media (max-width: 600px) {
+  .days-grid { grid-template-columns: 1fr; }
+  header.hero { padding: 36px 18px 28px; }
+}

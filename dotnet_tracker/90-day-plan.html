@@ -1,600 +1,164 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>90-Day Plan · Angular → .NET Full Stack</title>
-<style>
-  :root {
-    --bg-1: #0f172a;
-    --bg-2: #1e293b;
-    --card: #ffffff;
-    --text: #0f172a;
-    --muted: #64748b;
-    --border: #e2e8f0;
-    --green: #10b981;
-    --green-soft: #d1fae5;
-    --yellow: #f59e0b;
-    --yellow-soft: #fef3c7;
-    --red: #ef4444;
-    --red-soft: #fee2e2;
-    --blue: #3b82f6;
-    --shadow: 0 10px 30px rgba(2, 6, 23, 0.08);
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>90-Day Plan: Angular Developer to .NET Full Stack Engineer Roadmap</title>
+
+  <meta name="description" content="A free, interactive 90-day roadmap to transition from Angular developer to .NET full stack engineer. Daily tasks covering C#, OOP, ASP.NET Core, Entity Framework, JWT auth, clean architecture, testing, and deployment, with progress tracking saved in your browser." />
+  <meta name="keywords" content="90 day plan, .NET roadmap, Angular to .NET, full stack developer, C# learning plan, ASP.NET Core tutorial, Entity Framework Core, clean architecture, JWT authentication, .NET full stack engineer, Angular .NET integration, learn dotnet" />
+  <meta name="author" content="dotnet-tracker" />
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1" />
+  <meta name="theme-color" content="#312e81" />
+
+  <link rel="canonical" href="https://sonvendra.github.io/dotnet_tracker/90-day-plan.html" />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="90-Day Plan: Angular Developer to .NET Full Stack Engineer" />
+  <meta property="og:description" content="Interactive 90-day roadmap with daily tasks covering C#, ASP.NET Core, EF Core, authentication, clean architecture, testing, and deployment. Track your progress and completion dates locally." />
+  <meta property="og:url" content="https://sonvendra.github.io/dotnet_tracker/90-day-plan.html" />
+  <meta property="og:site_name" content=".NET Full Stack Tracker" />
+  <meta property="og:locale" content="en_US" />
+  <meta property="og:image" content="https://example.com/90-day-plan-preview.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:alt" content="90-Day Plan dashboard for becoming a .NET full stack engineer" />
+
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="90-Day Plan: Angular Developer to .NET Full Stack Engineer" />
+  <meta name="twitter:description" content="Interactive 90-day roadmap with daily tasks for C#, ASP.NET Core, EF Core, JWT auth, clean architecture, testing, and deployment." />
+  <meta name="twitter:image" content="https://example.com/90-day-plan-preview.png" />
+  <meta name="twitter:image:alt" content="90-Day Plan dashboard for becoming a .NET full stack engineer" />
+
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20100%20100%22%3E%3Crect%20width%3D%22100%22%20height%3D%22100%22%20rx%3D%2220%22%20fill%3D%22%23312e81%22%2F%3E%3Ctext%20x%3D%2250%22%20y%3D%2266%22%20text-anchor%3D%22middle%22%20font-family%3D%22Segoe%20UI%2Csans-serif%22%20font-weight%3D%22700%22%20font-size%3D%2250%22%20fill%3D%22%23fff%22%3E90%3C%2Ftext%3E%3C%2Fsvg%3E" />
+
+  <link rel="preload" href="90-day-plan.css" as="style" />
+  <link rel="preload" href="90-day-plan.js" as="script" />
+  <link rel="stylesheet" href="90-day-plan.css" />
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Course",
+    "name": "90-Day Plan: Angular Developer to .NET Full Stack Engineer",
+    "description": "A 90-day daily task plan that takes an Angular developer through C# fundamentals, OOP, advanced C#, ASP.NET Core, Entity Framework Core, API design, authentication, Angular integration, clean architecture, advanced APIs, testing, and deployment.",
+    "provider": {
+      "@type": "Organization",
+      "name": ".NET Full Stack Tracker",
+      "url": "https://example.com/"
+    },
+    "educationalLevel": "Beginner to Advanced",
+    "inLanguage": "en",
+    "timeRequired": "P90D",
+    "about": [
+      "C#",
+      "Object-Oriented Programming",
+      "ASP.NET Core",
+      "Entity Framework Core",
+      "REST APIs",
+      "JWT Authentication",
+      "Angular",
+      "Clean Architecture",
+      "CQRS",
+      "MediatR",
+      "xUnit Testing",
+      "Azure Deployment",
+      "CI/CD"
+    ],
+    "hasCourseInstance": {
+      "@type": "CourseInstance",
+      "courseMode": "online",
+      "courseWorkload": "P90D"
+    },
+    "syllabusSections": [
+      { "@type": "Syllabus", "name": "Week 1 · C# Basics" },
+      { "@type": "Syllabus", "name": "Week 2 · Object-Oriented Programming" },
+      { "@type": "Syllabus", "name": "Week 3 · Advanced C#" },
+      { "@type": "Syllabus", "name": "Week 4 · ASP.NET Core" },
+      { "@type": "Syllabus", "name": "Week 5 · Entity Framework Core" },
+      { "@type": "Syllabus", "name": "Week 6 · API Structure" },
+      { "@type": "Syllabus", "name": "Week 7 · Authentication" },
+      { "@type": "Syllabus", "name": "Week 8 · Angular Integration" },
+      { "@type": "Syllabus", "name": "Week 9 · Architecture" },
+      { "@type": "Syllabus", "name": "Week 10 · Advanced APIs" },
+      { "@type": "Syllabus", "name": "Week 11 · Testing" },
+      { "@type": "Syllabus", "name": "Week 12 · Final Phase" }
+    ]
   }
+  </script>
 
-  * { box-sizing: border-box; }
-
-  html, body {
-    margin: 0;
-    padding: 0;
-    font-family: 'Segoe UI', system-ui, -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Arial, sans-serif;
-    color: var(--text);
-    background: linear-gradient(135deg, #f1f5f9 0%, #e0e7ff 100%);
-    min-height: 100vh;
-    line-height: 1.5;
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://example.com/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "90-Day .NET Plan",
+        "item": "https://sonvendra.github.io/dotnet_tracker/90-day-plan.html"
+      }
+    ]
   }
-
-  header.hero {
-    background: linear-gradient(135deg, #0f172a 0%, #312e81 60%, #4c1d95 100%);
-    color: white;
-    padding: 48px 24px 36px;
-    text-align: center;
-    position: relative;
-    overflow: hidden;
-  }
-
-  header.hero::before {
-    content: "";
-    position: absolute;
-    inset: 0;
-    background:
-      radial-gradient(circle at 20% 20%, rgba(99, 102, 241, 0.35), transparent 40%),
-      radial-gradient(circle at 80% 30%, rgba(236, 72, 153, 0.25), transparent 45%);
-    pointer-events: none;
-  }
-
-  header.hero h1 {
-    margin: 0 0 12px;
-    font-size: clamp(1.8rem, 3.5vw, 2.6rem);
-    font-weight: 700;
-    letter-spacing: -0.02em;
-    position: relative;
-  }
-
-  header.hero p {
-    margin: 0;
-    font-size: 1.05rem;
-    opacity: 0.85;
-    position: relative;
-  }
-
-  .container {
-    max-width: 1200px;
-    margin: -28px auto 60px;
-    padding: 0 20px;
-    position: relative;
-  }
-
-  .progress-card {
-    background: var(--card);
-    border-radius: 16px;
-    padding: 20px 24px;
-    box-shadow: var(--shadow);
-    margin-bottom: 28px;
-    display: flex;
-    align-items: center;
-    gap: 18px;
-    flex-wrap: wrap;
-  }
-
-  .progress-info {
-    flex: 1;
-    min-width: 200px;
-  }
-
-  .progress-info h3 {
-    margin: 0 0 6px;
-    font-size: 1.05rem;
-  }
-
-  .progress-info span {
-    color: var(--muted);
-    font-size: 0.9rem;
-  }
-
-  .progress-bar {
-    flex: 2;
-    min-width: 220px;
-    height: 14px;
-    background: #e2e8f0;
-    border-radius: 999px;
-    overflow: hidden;
-    position: relative;
-  }
-
-  .progress-bar-fill {
-    height: 100%;
-    width: 0%;
-    background: linear-gradient(90deg, #10b981, #3b82f6, #8b5cf6);
-    border-radius: 999px;
-    transition: width 0.4s ease;
-  }
-
-  .progress-percent {
-    font-weight: 700;
-    font-size: 1.4rem;
-    min-width: 70px;
-    text-align: right;
-    background: linear-gradient(90deg, #10b981, #6366f1);
-    -webkit-background-clip: text;
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
-  }
-
-  .reset-btn {
-    background: #f1f5f9;
-    border: 1px solid var(--border);
-    color: var(--muted);
-    padding: 8px 14px;
-    border-radius: 8px;
-    cursor: pointer;
-    font-size: 0.85rem;
-    transition: all 0.15s ease;
-  }
-
-  .reset-btn:hover {
-    background: var(--red-soft);
-    color: var(--red);
-    border-color: var(--red);
-  }
-
-  .week {
-    background: var(--card);
-    border-radius: 16px;
-    padding: 24px;
-    margin-bottom: 22px;
-    box-shadow: var(--shadow);
-    border-left: 6px solid var(--green);
-  }
-
-  .week.level-easy   { border-left-color: var(--green); }
-  .week.level-medium { border-left-color: var(--yellow); }
-  .week.level-hard   { border-left-color: var(--red); }
-
-  .week-header {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    gap: 12px;
-    margin-bottom: 18px;
-  }
-
-  .week-title {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    margin: 0;
-    font-size: 1.25rem;
-    font-weight: 700;
-  }
-
-  .level-pill {
-    font-size: 0.75rem;
-    font-weight: 600;
-    padding: 4px 10px;
-    border-radius: 999px;
-    text-transform: uppercase;
-    letter-spacing: 0.04em;
-  }
-
-  .level-easy .level-pill   { background: var(--green-soft);  color: #065f46; }
-  .level-medium .level-pill { background: var(--yellow-soft); color: #92400e; }
-  .level-hard .level-pill   { background: var(--red-soft);    color: #991b1b; }
-
-  .week-progress {
-    font-size: 0.85rem;
-    color: var(--muted);
-    font-weight: 600;
-  }
-
-  .days-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
-    gap: 14px;
-  }
-
-  .day-card {
-    background: #f8fafc;
-    border: 1px solid var(--border);
-    border-radius: 12px;
-    padding: 14px 14px 14px 14px;
-    cursor: pointer;
-    transition: all 0.18s ease;
-    position: relative;
-    overflow: hidden;
-  }
-
-  .day-card:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 6px 18px rgba(15, 23, 42, 0.08);
-    border-color: var(--blue);
-  }
-
-  .day-card.weekend {
-    background: linear-gradient(135deg, #fef9c3 0%, #fef3c7 100%);
-    border-color: #fde68a;
-  }
-
-  .day-card.done {
-    background: linear-gradient(135deg, #d1fae5 0%, #a7f3d0 100%);
-    border-color: #10b981;
-  }
-
-  .day-card.done .day-tasks {
-    text-decoration: line-through;
-    color: #047857;
-    opacity: 0.85;
-  }
-
-  .day-head {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    margin-bottom: 8px;
-  }
-
-  .day-label {
-    font-weight: 700;
-    font-size: 0.95rem;
-    display: flex;
-    align-items: center;
-    gap: 6px;
-  }
-
-  .checkbox {
-    width: 22px;
-    height: 22px;
-    border: 2px solid #cbd5e1;
-    border-radius: 6px;
-    background: white;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-shrink: 0;
-    transition: all 0.15s ease;
-  }
-
-  .day-card.done .checkbox {
-    background: #10b981;
-    border-color: #10b981;
-  }
-
-  .checkbox svg {
-    width: 14px;
-    height: 14px;
-    stroke: white;
-    stroke-width: 3;
-    fill: none;
-    opacity: 0;
-    transition: opacity 0.15s ease;
-  }
-
-  .day-card.done .checkbox svg { opacity: 1; }
-
-  .day-tasks {
-    font-size: 0.85rem;
-    color: #334155;
-    line-height: 1.5;
-    margin: 0;
-    padding: 0;
-    list-style: none;
-  }
-
-  .day-tasks li {
-    position: relative;
-    padding-left: 14px;
-    margin-bottom: 3px;
-  }
-
-  .day-tasks li::before {
-    content: "•";
-    position: absolute;
-    left: 2px;
-    color: #94a3b8;
-  }
-
-  .output-line {
-    margin-top: 8px;
-    font-size: 0.78rem;
-    background: rgba(16, 185, 129, 0.12);
-    color: #065f46;
-    padding: 5px 8px;
-    border-radius: 6px;
-    font-weight: 600;
-  }
-
-  footer {
-    text-align: center;
-    color: var(--muted);
-    padding: 24px;
-    font-size: 0.85rem;
-  }
-
-  @media (max-width: 600px) {
-    .days-grid { grid-template-columns: 1fr; }
-    header.hero { padding: 36px 18px 28px; }
-  }
-</style>
+  </script>
 </head>
 <body>
 
-<header class="hero">
-  <h1>90-Day Daily Task Plan</h1>
-  <p>Angular Developer → .NET Full Stack Engineer</p>
-</header>
+  <a class="skip-link" href="#main-content">Skip to content</a>
 
-<div class="container">
-  <div class="progress-card">
-    <div class="progress-info">
-      <h3>Your Progress</h3>
-      <span id="progressText">0 of 90 days completed</span>
-    </div>
-    <div class="progress-bar">
-      <div class="progress-bar-fill" id="progressFill"></div>
-    </div>
-    <div class="progress-percent" id="progressPercent">0%</div>
-    <button class="reset-btn" onclick="resetProgress()">Reset</button>
-  </div>
+  <header class="hero" role="banner">
+    <h1>90-Day Daily Task Plan</h1>
+    <p>Angular Developer to .NET Full Stack Engineer</p>
+  </header>
 
-  <div id="weeksContainer"></div>
-</div>
+  <main id="main-content" class="container" role="main">
+    <section class="progress-card" aria-label="Overall progress">
+      <div class="progress-info">
+        <h3>Your Progress</h3>
+        <span id="progressText">0 of 90 days completed</span>
+      </div>
+      <div class="progress-bar" role="progressbar" aria-labelledby="progressText" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0">
+        <div class="progress-bar-fill" id="progressFill"></div>
+      </div>
+      <div class="progress-percent" id="progressPercent" aria-hidden="true">0%</div>
+      <button class="reset-btn" id="resetBtn" type="button" aria-label="Reset all progress">Reset</button>
+    </section>
 
-<footer>
-  Tip: click any day card to mark it complete. Your progress is saved locally in this browser.
-</footer>
+    <section id="weeksContainer" aria-label="Weekly study plan"></section>
 
-<script>
-  const plan = [
-    {
-      week: 1, title: "C# Basics", level: "easy",
-      days: [
-        { day: 1,  tasks: ["Install .NET SDK + VS Code/Visual Studio", "Create first console app", "Print variables"], output: "Hello + dynamic name program" },
-        { day: 2,  tasks: ["Data types, variables", "Operators", "Mini task: calculator program"] },
-        { day: 3,  tasks: ["if/else, switch", "Task: grading system"] },
-        { day: 4,  tasks: ["Loops (for, while)", "Task: print patterns"] },
-        { day: 5,  tasks: ["Methods", "Task: reusable functions"] },
-        { day: 6,  tasks: ["Arrays & Lists", "Solve 5 problems"], weekend: true },
-        { day: 7,  tasks: ["Revision", "Build mini console app (student system)"], weekend: true }
-      ]
-    },
-    {
-      week: 2, title: "OOP", level: "easy",
-      days: [
-        { day: 8,  tasks: ["Classes & Objects", "Create User class"] },
-        { day: 9,  tasks: ["Encapsulation", "Add getters/setters"] },
-        { day: 10, tasks: ["Inheritance", "Base class + derived"] },
-        { day: 11, tasks: ["Polymorphism", "Method overriding"] },
-        { day: 12, tasks: ["Interfaces", "Implement service"] },
-        { day: 13, tasks: ["Combine all OOP", "Task: Employee system"], weekend: true },
-        { day: 14, tasks: ["Mini Project: Bank system"], weekend: true }
-      ]
-    },
-    {
-      week: 3, title: "Advanced C#", level: "easy",
-      days: [
-        { day: 15, tasks: ["Exception handling", "Add try/catch in project"] },
-        { day: 16, tasks: ["Delegates (basic understanding)"] },
-        { day: 17, tasks: ["LINQ", "Filter list"] },
-        { day: 18, tasks: ["Collections deep dive"] },
-        { day: 19, tasks: ["Async/Await", "Simulate API delay"] },
-        { day: 20, tasks: ["File handling", "Save/read file"], weekend: true },
-        { day: 21, tasks: ["Revision + small project"], weekend: true }
-      ]
-    },
-    {
-      week: 4, title: "ASP.NET Core", level: "easy",
-      days: [
-        { day: 22, tasks: ["Create Web API project"] },
-        { day: 23, tasks: ["Controllers + routing"] },
-        { day: 24, tasks: ["GET API"] },
-        { day: 25, tasks: ["POST API"] },
-        { day: 26, tasks: ["Dependency Injection (compare Angular services)"] },
-        { day: 27, tasks: ["Middleware + config"], weekend: true },
-        { day: 28, tasks: ["CRUD API (in-memory)"], weekend: true }
-      ]
-    },
-    {
-      week: 5, title: "Entity Framework", level: "medium",
-      days: [
-        { day: 29, tasks: ["Install EF Core"] },
-        { day: 30, tasks: ["DbContext + models"] },
-        { day: 31, tasks: ["Migrations"] },
-        { day: 32, tasks: ["Insert data"] },
-        { day: 33, tasks: ["Update / Delete"] },
-        { day: 34, tasks: ["Relationships"], weekend: true },
-        { day: 35, tasks: ["Build Product API (DB)"], weekend: true }
-      ]
-    },
-    {
-      week: 6, title: "API Structure", level: "medium",
-      days: [
-        { day: 36, tasks: ["Repository pattern"] },
-        { day: 37, tasks: ["Service layer"] },
-        { day: 38, tasks: ["DTOs"] },
-        { day: 39, tasks: ["Validation"] },
-        { day: 40, tasks: ["Logging"] },
-        { day: 41, tasks: ["Global error handling"], weekend: true },
-        { day: 42, tasks: ["Refactor API"], weekend: true }
-      ]
-    },
-    {
-      week: 7, title: "Authentication", level: "medium",
-      days: [
-        { day: 43, tasks: ["Auth basics"] },
-        { day: 44, tasks: ["JWT"] },
-        { day: 45, tasks: ["Role-based auth"] },
-        { day: 46, tasks: ["Secure endpoints"] },
-        { day: 47, tasks: ["Refresh tokens"] },
-        { day: 48, tasks: ["Implement auth"], weekend: true },
-        { day: 49, tasks: ["Test APIs"], weekend: true }
-      ]
-    },
-    {
-      week: 8, title: "Angular Integration", level: "medium",
-      days: [
-        { day: 50, tasks: ["Connect Angular → API"] },
-        { day: 51, tasks: ["Create service"] },
-        { day: 52, tasks: ["Login UI"] },
-        { day: 53, tasks: ["Route guards"] },
-        { day: 54, tasks: ["Error handling"] },
-        { day: 55, tasks: ["Forms + API"], weekend: true },
-        { day: 56, tasks: ["Mini full stack app"], weekend: true }
-      ]
-    },
-    {
-      week: 9, title: "Architecture", level: "hard",
-      days: [
-        { day: 57, tasks: ["Layered architecture"] },
-        { day: 58, tasks: ["Clean architecture"] },
-        { day: 59, tasks: ["Folder structure"] },
-        { day: 60, tasks: ["Refactor project"] },
-        { day: 61, tasks: ["CQRS intro"] },
-        { day: 62, tasks: ["MediatR basics"], weekend: true },
-        { day: 63, tasks: ["Apply in project"], weekend: true }
-      ]
-    },
-    {
-      week: 10, title: "Advanced APIs", level: "hard",
-      days: [
-        { day: 64, tasks: ["Caching"] },
-        { day: 65, tasks: ["Pagination"] },
-        { day: 66, tasks: ["Filtering"] },
-        { day: 67, tasks: ["API versioning"] },
-        { day: 68, tasks: ["Rate limiting"] },
-        { day: 69, tasks: ["Background jobs"], weekend: true },
-        { day: 70, tasks: ["Optimize API"], weekend: true }
-      ]
-    },
-    {
-      week: 11, title: "Testing", level: "hard",
-      days: [
-        { day: 71, tasks: ["Unit testing (xUnit)"] },
-        { day: 72, tasks: ["Mocking"] },
-        { day: 73, tasks: ["Integration testing"] },
-        { day: 74, tasks: ["Test controllers"] },
-        { day: 75, tasks: ["Improve coverage"] },
-        { day: 76, tasks: ["Debugging"], weekend: true },
-        { day: 77, tasks: ["Practice"], weekend: true }
-      ]
-    },
-    {
-      week: 12, title: "Final Phase", level: "hard",
-      days: [
-        { day: "78–82", tasks: ["Build full project: Auth, CRUD, Roles, Angular UI"] },
-        { day: 83, tasks: ["Deployment basics"] },
-        { day: 84, tasks: ["Deploy to Azure"] },
-        { day: 85, tasks: ["CI/CD basics"] },
-        { day: 86, tasks: ["Resume update"] },
-        { day: 87, tasks: ["Interview questions"] },
-        { day: 88, tasks: ["Mock interview"] },
-        { day: 89, tasks: ["Fix weak areas"] },
-        { day: 90, tasks: ["Final revision"] }
-      ]
-    }
-  ];
+    <noscript>
+      <section class="noscript-fallback" aria-label="Plan summary">
+        <h2>90-Day .NET Full Stack Roadmap (12 weeks)</h2>
+        <p>This interactive plan needs JavaScript enabled to track progress. Here is the full curriculum:</p>
+        <ol>
+          <li><strong>Week 1 — C# Basics:</strong> .NET SDK setup, variables, operators, control flow, loops, methods, arrays and lists, mini console app.</li>
+          <li><strong>Week 2 — Object-Oriented Programming:</strong> classes, encapsulation, inheritance, polymorphism, interfaces, employee and bank system projects.</li>
+          <li><strong>Week 3 — Advanced C#:</strong> exception handling, delegates, LINQ, collections, async/await, file handling.</li>
+          <li><strong>Week 4 — ASP.NET Core:</strong> Web API project, controllers, routing, GET and POST endpoints, dependency injection, middleware, in-memory CRUD.</li>
+          <li><strong>Week 5 — Entity Framework Core:</strong> DbContext, migrations, CRUD with EF Core, relationships, Product API.</li>
+          <li><strong>Week 6 — API Structure:</strong> repository pattern, service layer, DTOs, validation, logging, global error handling.</li>
+          <li><strong>Week 7 — Authentication:</strong> auth basics, JWT, role-based authorization, securing endpoints, refresh tokens.</li>
+          <li><strong>Week 8 — Angular Integration:</strong> connecting Angular to the API, services, login UI, route guards, error handling, full stack mini app.</li>
+          <li><strong>Week 9 — Architecture:</strong> layered and clean architecture, folder structure, refactoring, CQRS, MediatR.</li>
+          <li><strong>Week 10 — Advanced APIs:</strong> caching, pagination, filtering, API versioning, rate limiting, background jobs, performance optimization.</li>
+          <li><strong>Week 11 — Testing:</strong> unit testing with xUnit, mocking, integration tests, controller tests, coverage, debugging.</li>
+          <li><strong>Week 12 — Final Phase:</strong> capstone full stack project, Azure deployment, CI/CD, resume update, mock interviews, final revision.</li>
+        </ol>
+      </section>
+    </noscript>
+  </main>
 
-  const STORAGE_KEY = "ninetyDayPlanProgress";
-  let completed = JSON.parse(localStorage.getItem(STORAGE_KEY) || "{}");
+  <footer role="contentinfo">
+    Tip: click any day card to mark it complete. Your progress is saved locally in this browser.
+  </footer>
 
-  const TOTAL_DAYS = 90;
-
-  const levelLabel = { easy: "Beginner", medium: "Intermediate", hard: "Advanced" };
-
-  function render() {
-    const container = document.getElementById("weeksContainer");
-    container.innerHTML = "";
-
-    plan.forEach(weekObj => {
-      const weekEl = document.createElement("section");
-      weekEl.className = `week level-${weekObj.level}`;
-
-      const weekDayKeys = weekObj.days.map(d => String(d.day));
-      const doneInWeek = weekDayKeys.filter(k => completed[k]).length;
-
-      weekEl.innerHTML = `
-        <div class="week-header">
-          <h2 class="week-title">
-            Week ${weekObj.week} · ${weekObj.title}
-            <span class="level-pill">${levelLabel[weekObj.level]}</span>
-          </h2>
-          <span class="week-progress">${doneInWeek} / ${weekObj.days.length} done</span>
-        </div>
-        <div class="days-grid"></div>
-      `;
-
-      const grid = weekEl.querySelector(".days-grid");
-
-      weekObj.days.forEach(d => {
-        const key = String(d.day);
-        const isDone = !!completed[key];
-        const card = document.createElement("div");
-        card.className = `day-card ${d.weekend ? "weekend" : ""} ${isDone ? "done" : ""}`;
-        card.dataset.key = key;
-
-        const tasksHtml = d.tasks.map(t => `<li>${t}</li>`).join("");
-        const outputHtml = d.output ? `<div class="output-line">Output: ${d.output}</div>` : "";
-
-        card.innerHTML = `
-          <div class="day-head">
-            <div class="day-label">Day ${d.day}${d.weekend ? " · Weekend" : ""}</div>
-            <div class="checkbox">
-              <svg viewBox="0 0 24 24"><polyline points="4 12 10 18 20 6"/></svg>
-            </div>
-          </div>
-          <ul class="day-tasks">${tasksHtml}</ul>
-          ${outputHtml}
-        `;
-
-        card.addEventListener("click", () => toggleDay(key));
-        grid.appendChild(card);
-      });
-
-      container.appendChild(weekEl);
-    });
-
-    updateOverallProgress();
-  }
-
-  function toggleDay(key) {
-    if (completed[key]) delete completed[key];
-    else completed[key] = true;
-    localStorage.setItem(STORAGE_KEY, JSON.stringify(completed));
-    render();
-  }
-
-  function updateOverallProgress() {
-    let doneDays = 0;
-    Object.keys(completed).forEach(k => {
-      if (k === "78–82") doneDays += 5;
-      else doneDays += 1;
-    });
-    const pct = Math.round((doneDays / TOTAL_DAYS) * 100);
-    document.getElementById("progressFill").style.width = pct + "%";
-    document.getElementById("progressPercent").textContent = pct + "%";
-    document.getElementById("progressText").textContent = `${doneDays} of ${TOTAL_DAYS} days completed`;
-  }
-
-  function resetProgress() {
-    if (confirm("Reset all progress? This cannot be undone.")) {
-      completed = {};
-      localStorage.removeItem(STORAGE_KEY);
-      render();
-    }
-  }
-
-  render();
-</script>
-
+  <script src="90-day-plan.js" defer></script>
 </body>
 </html>

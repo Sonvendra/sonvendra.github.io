@@ -1,148 +1,148 @@
 const plan = [
   {
-    week: 1, title: "C# Basics", level: "easy",
+    week: 1, title: ".NET & C# Foundations", level: "easy",
     days: [
-      { day: 1,  tasks: ["Install .NET SDK + VS Code/Visual Studio", "Create first console app", "Print variables"], output: "Hello + dynamic name program" },
-      { day: 2,  tasks: ["Data types, variables", "Operators", "Mini task: calculator program"] },
-      { day: 3,  tasks: ["if/else, switch", "Task: grading system"] },
-      { day: 4,  tasks: ["Loops (for, while)", "Task: print patterns"] },
-      { day: 5,  tasks: ["Methods", "Task: reusable functions"] },
-      { day: 6,  tasks: ["Arrays & Lists", "Solve 5 problems"], weekend: true },
-      { day: 7,  tasks: ["Revision", "Build mini console app (student system)"], weekend: true }
+      { day: 1,  tasks: ["Introduction to .NET", "What is .NET? Comparing .NET to other technologies", "Advantages, architecture & design goals of the .NET Framework", "Languages used in .NET; assemblies in .NET"], output: "Install .NET SDK + first console 'Hello World'" },
+      { day: 2,  tasks: ["Introducing the .NET framework", "CLR and DLR; Class Library", "CTS, MSIL, PE file format", "JIT Compiler"] },
+      { day: 3,  tasks: ["Reflection (load types/metadata at runtime)", "Garbage Collection (generations, dispose pattern)"] },
+      { day: 4,  tasks: ["What is C#.NET; comparing C# to C++ and Java", "Why C#; features of C#", "C# sample programs"] },
+      { day: 5,  tasks: [".NET namespaces", "Command line tools (dotnet CLI)", "Command line arguments in C#"] },
+      { day: 6,  tasks: ["Variables, data types, operators, expressions", "Type conversions; boxing and unboxing", "Access modifiers and access specifiers"], weekend: true },
+      { day: 7,  tasks: ["Conditional branching (if/else, switch)", "Repeating code blocks (for, while, do-while, foreach)", "Unconditional branching (break, continue, goto, return)", "Practice: calculator + grading system"], weekend: true }
     ]
   },
   {
-    week: 2, title: "OOP", level: "easy",
+    week: 2, title: "Arrays, Methods & OOP Basics", level: "easy",
     days: [
-      { day: 8,  tasks: ["Classes & Objects", "Create User class"] },
-      { day: 9,  tasks: ["Encapsulation", "Add getters/setters"] },
-      { day: 10, tasks: ["Inheritance", "Base class + derived"] },
-      { day: 11, tasks: ["Polymorphism", "Method overriding"] },
-      { day: 12, tasks: ["Interfaces", "Implement service"] },
-      { day: 13, tasks: ["Combine all OOP", "Task: Employee system"], weekend: true },
-      { day: 14, tasks: ["Mini Project: Bank system"], weekend: true }
+      { day: 8,  tasks: ["Introducing arrays; manipulating arrays", "Single, multi-dimensional and jagged arrays", "Arrays as collections"] },
+      { day: 9,  tasks: ["Methods (definition, signatures, return types)", "Method overloading", "Static members"] },
+      { day: 10, tasks: ["Parameter passing (ref, out, params, in)", "Constants and read-only fields"] },
+      { day: 11, tasks: ["Objects & classes", "Constructors and initialization"] },
+      { day: 12, tasks: ["Destructors / finalizers", "Properties and indexers", "Auto-implemented properties"] },
+      { day: 13, tasks: ["Encapsulation in practice", "Apply access specifiers across a class hierarchy"], weekend: true },
+      { day: 14, tasks: ["Mini project: User / Student class system"], weekend: true }
     ]
   },
   {
-    week: 3, title: "Advanced C#", level: "easy",
+    week: 3, title: "Advanced OOP", level: "easy",
     days: [
-      { day: 15, tasks: ["Exception handling", "Add try/catch in project"] },
-      { day: 16, tasks: ["Delegates (basic understanding)"] },
-      { day: 17, tasks: ["LINQ", "Filter list"] },
-      { day: 18, tasks: ["Collections deep dive"] },
-      { day: 19, tasks: ["Async/Await", "Simulate API delay"] },
-      { day: 20, tasks: ["File handling", "Save/read file"], weekend: true },
-      { day: 21, tasks: ["Revision + small project"], weekend: true }
+      { day: 15, tasks: ["Inheritance (single, multilevel)", "Base/derived constructors"] },
+      { day: 16, tasks: ["Method overriding (virtual, override, new)", "Polymorphism — compile-time and run-time"] },
+      { day: 17, tasks: ["Abstract classes", "Sealed classes"] },
+      { day: 18, tasks: ["Interfaces", "Implementing services through interfaces"] },
+      { day: 19, tasks: ["Operator overloading"] },
+      { day: 20, tasks: ["Combine all OOP — Employee management system"], weekend: true },
+      { day: 21, tasks: ["Mini project: Bank system"], weekend: true }
     ]
   },
   {
-    week: 4, title: "ASP.NET Core", level: "easy",
+    week: 4, title: "Collections, Generics, Strings & LINQ", level: "easy",
     days: [
-      { day: 22, tasks: ["Create Web API project"] },
-      { day: 23, tasks: ["Controllers + routing"] },
-      { day: 24, tasks: ["GET API"] },
-      { day: 25, tasks: ["POST API"] },
-      { day: 26, tasks: ["Dependency Injection (compare Angular services)"] },
-      { day: 27, tasks: ["Middleware + config"], weekend: true },
-      { day: 28, tasks: ["CRUD API (in-memory)"], weekend: true }
+      { day: 22, tasks: ["Non-generic collections: ArrayList, HashTable"] },
+      { day: 23, tasks: ["Working with Dictionaries, Stacks and Queues", "Generics and Lists (List<T>)"] },
+      { day: 24, tasks: ["Generic interfaces", "Generic constraints", "Generics and arrays"] },
+      { day: 25, tasks: ["Creating your own generic collection classes"] },
+      { day: 26, tasks: ["String and StringBuilder class", "String formatting", "Anonymous types"] },
+      { day: 27, tasks: ["Language Integrated Query (LINQ)", "LINQ queries; filtering, ordering, aggregation"], weekend: true },
+      { day: 28, tasks: ["LINQ inserts, deletes and updates", "LINQ transformations"], weekend: true }
     ]
   },
   {
-    week: 5, title: "Entity Framework", level: "medium",
+    week: 5, title: "Exceptions, Delegates, Events, Async & C# 4+ Features", level: "medium",
     days: [
-      { day: 29, tasks: ["Install EF Core"] },
-      { day: 30, tasks: ["DbContext + models"] },
-      { day: 31, tasks: ["Migrations"] },
-      { day: 32, tasks: ["Insert data"] },
-      { day: 33, tasks: ["Update / Delete"] },
-      { day: 34, tasks: ["Relationships"], weekend: true },
-      { day: 35, tasks: ["Build Product API (DB)"], weekend: true }
+      { day: 29, tasks: ["Exception fundamentals", "Structured exception handling (try / catch / finally)"] },
+      { day: 30, tasks: ["User-defined exception classes", "Inner exceptions; throw / rethrow"] },
+      { day: 31, tasks: ["Delegates", "Anonymous methods"] },
+      { day: 32, tasks: ["Lambda expressions", "Events (publisher / subscriber pattern)"] },
+      { day: 33, tasks: ["Async / await", "Asynchronous programming keywords (Task, ValueTask, ConfigureAwait)", "Simulate API delay"] },
+      { day: 34, tasks: ["C# 4+ features — dynamic data type", "Named & optional arguments", "Variance in generic interfaces (in / out)", "Automating Office (overview)"], weekend: true },
+      { day: 35, tasks: ["Refactor previous projects using delegates, lambdas, events and async"], weekend: true }
     ]
   },
   {
-    week: 6, title: "API Structure", level: "medium",
+    week: 6, title: "File I/O, Serialization, XML & GUI", level: "medium",
     days: [
-      { day: 36, tasks: ["Repository pattern"] },
-      { day: 37, tasks: ["Service layer"] },
-      { day: 38, tasks: ["DTOs"] },
-      { day: 39, tasks: ["Validation"] },
-      { day: 40, tasks: ["Logging"] },
-      { day: 41, tasks: ["Global error handling"], weekend: true },
-      { day: 42, tasks: ["Refactor API"], weekend: true }
+      { day: 36, tasks: ["Introduction to File I/O operations", "Directory and File classes"] },
+      { day: 37, tasks: ["FileStream, TextReader, TextWriter", "BinaryWriter, BinaryReader, MemoryStream"] },
+      { day: 38, tasks: ["Serialization and deserialization (binary, JSON, XML)", "Convert XPS file to bitmap"] },
+      { day: 39, tasks: ["XML in the .NET Framework", "XML namespaces and classes", "XmlReader and XmlWriter"] },
+      { day: 40, tasks: [".NET DOM parser", "XML serialization", "XPath and XSLT", "LINQ to XML — manipulating XML documents in memory", "XML and the web"] },
+      { day: 41, tasks: ["Introduction to Windows Forms", "Standard WinForm controls; properties and events", "Dialog boxes; menus, progress bar, tree view controls"], weekend: true },
+      { day: 42, tasks: ["MDI forms", "Build a small WinForms desktop tool"], weekend: true }
     ]
   },
   {
-    week: 7, title: "Authentication", level: "medium",
+    week: 7, title: "ADO.NET & Entity Framework Core", level: "medium",
     days: [
-      { day: 43, tasks: ["Auth basics"] },
-      { day: 44, tasks: ["JWT"] },
-      { day: 45, tasks: ["Role-based auth"] },
-      { day: 46, tasks: ["Secure endpoints"] },
-      { day: 47, tasks: ["Refresh tokens"] },
-      { day: 48, tasks: ["Implement auth"], weekend: true },
-      { day: 49, tasks: ["Test APIs"], weekend: true }
+      { day: 43, tasks: ["ADO.NET architecture", "Advantages of ADO.NET over ADO / OLEDB", "Connected vs disconnected data access architecture"] },
+      { day: 44, tasks: ["Data providers — SQL Server, OLEDB, ODBC, Oracle", "Connection, Command, DataReader"] },
+      { day: 45, tasks: ["DataAdapter and DataSet", "Handling tables in a DataSet", "Working with data controls"] },
+      { day: 46, tasks: ["Executing queries and SQL statements", "Stored procedures", "Multiple result sets; table schema", "XML and ADO.NET"] },
+      { day: 47, tasks: ["Install EF Core", "DbContext + models"] },
+      { day: 48, tasks: ["EF Core migrations", "CRUD with EF Core (insert / update / delete)"], weekend: true },
+      { day: 49, tasks: ["EF Core relationships (1:1, 1:N, N:N)", "Build Product API with SQL Server"], weekend: true }
     ]
   },
   {
-    week: 8, title: "Angular Integration", level: "medium",
+    week: 8, title: "ASP.NET Core Web API", level: "medium",
     days: [
-      { day: 50, tasks: ["Connect Angular → API"] },
-      { day: 51, tasks: ["Create service"] },
-      { day: 52, tasks: ["Login UI"] },
-      { day: 53, tasks: ["Route guards"] },
-      { day: 54, tasks: ["Error handling"] },
-      { day: 55, tasks: ["Forms + API"], weekend: true },
-      { day: 56, tasks: ["Mini full stack app"], weekend: true }
+      { day: 50, tasks: ["Create Web API project", "Project structure overview"] },
+      { day: 51, tasks: ["Controllers + routing (attribute & conventional)"] },
+      { day: 52, tasks: ["GET, POST, PUT and DELETE endpoints"] },
+      { day: 53, tasks: ["Dependency injection (compare to Angular services)"] },
+      { day: 54, tasks: ["Middleware pipeline", "Configuration (appsettings.json, environments)"] },
+      { day: 55, tasks: ["Repository pattern", "Service layer", "DTOs and AutoMapper"], weekend: true },
+      { day: 56, tasks: ["Validation (DataAnnotations / FluentValidation)", "Logging", "Global error handling"], weekend: true }
     ]
   },
   {
-    week: 9, title: "Architecture", level: "hard",
+    week: 9, title: "Authentication & Angular Integration", level: "hard",
     days: [
-      { day: 57, tasks: ["Layered architecture"] },
-      { day: 58, tasks: ["Clean architecture"] },
-      { day: 59, tasks: ["Folder structure"] },
-      { day: 60, tasks: ["Refactor project"] },
-      { day: 61, tasks: ["CQRS intro"] },
-      { day: 62, tasks: ["MediatR basics"], weekend: true },
-      { day: 63, tasks: ["Apply in project"], weekend: true }
+      { day: 57, tasks: ["Auth basics; ASP.NET Core Identity", "Password hashing"] },
+      { day: 58, tasks: ["JWT tokens (issue, validate)"] },
+      { day: 59, tasks: ["Role-based authorization", "Secure endpoints"] },
+      { day: 60, tasks: ["Refresh tokens"] },
+      { day: 61, tasks: ["Connect Angular → API; create HTTP service"] },
+      { day: 62, tasks: ["Login UI; route guards", "HTTP interceptor for tokens"], weekend: true },
+      { day: 63, tasks: ["Reactive forms + API; build a mini full stack app"], weekend: true }
     ]
   },
   {
-    week: 10, title: "Advanced APIs", level: "hard",
+    week: 10, title: "Architecture & Advanced APIs", level: "hard",
     days: [
-      { day: 64, tasks: ["Caching"] },
-      { day: 65, tasks: ["Pagination"] },
-      { day: 66, tasks: ["Filtering"] },
-      { day: 67, tasks: ["API versioning"] },
-      { day: 68, tasks: ["Rate limiting"] },
-      { day: 69, tasks: ["Background jobs"], weekend: true },
-      { day: 70, tasks: ["Optimize API"], weekend: true }
+      { day: 64, tasks: ["Layered architecture", "Clean architecture; folder structure"] },
+      { day: 65, tasks: ["CQRS intro", "MediatR basics; apply in project"] },
+      { day: 66, tasks: ["Caching (in-memory, distributed / Redis)"] },
+      { day: 67, tasks: ["Pagination", "Filtering & sorting"] },
+      { day: 68, tasks: ["API versioning", "Rate limiting"] },
+      { day: 69, tasks: ["Background jobs (Hangfire / Quartz / HostedService)"], weekend: true },
+      { day: 70, tasks: ["Optimize API performance"], weekend: true }
     ]
   },
   {
-    week: 11, title: "Testing", level: "hard",
+    week: 11, title: "Testing & Debugging", level: "hard",
     days: [
-      { day: 71, tasks: ["Unit testing (xUnit)"] },
-      { day: 72, tasks: ["Mocking"] },
-      { day: 73, tasks: ["Integration testing"] },
-      { day: 74, tasks: ["Test controllers"] },
-      { day: 75, tasks: ["Improve coverage"] },
-      { day: 76, tasks: ["Debugging"], weekend: true },
-      { day: 77, tasks: ["Practice"], weekend: true }
+      { day: 71, tasks: ["Unit testing with xUnit"] },
+      { day: 72, tasks: ["Mocking (Moq, NSubstitute)"] },
+      { day: 73, tasks: ["Integration testing (WebApplicationFactory)"] },
+      { day: 74, tasks: ["Test controllers and middleware"] },
+      { day: 75, tasks: ["Improve coverage; test naming patterns"] },
+      { day: 76, tasks: ["Debugging techniques; diagnostic tools"], weekend: true },
+      { day: 77, tasks: ["Practice; refactor with tests"], weekend: true }
     ]
   },
   {
-    week: 12, title: "Final Phase", level: "hard",
+    week: 12, title: "Capstone & Deployment", level: "hard",
     days: [
       { day: "78–82", tasks: ["Build full project: Auth, CRUD, Roles, Angular UI"] },
-      { day: 83, tasks: ["Deployment basics"] },
-      { day: 84, tasks: ["Deploy to Azure"] },
-      { day: 85, tasks: ["CI/CD basics"] },
-      { day: 86, tasks: ["Resume update"] },
-      { day: 87, tasks: ["Interview questions"] },
+      { day: 83, tasks: ["Deployment basics (IIS, Kestrel, Docker overview)"] },
+      { day: 84, tasks: ["Deploy to Azure App Service"] },
+      { day: 85, tasks: ["CI/CD basics (GitHub Actions / Azure DevOps)"] },
+      { day: 86, tasks: ["Resume update; LinkedIn polish"] },
+      { day: 87, tasks: ["Interview questions practice (C#, .NET, EF, Angular)"] },
       { day: 88, tasks: ["Mock interview"] },
       { day: 89, tasks: ["Fix weak areas"] },
-      { day: 90, tasks: ["Final revision"] }
+      { day: 90, tasks: ["Final revision; portfolio review"] }
     ]
   }
 ];
